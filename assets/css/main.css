@@ -3004,3 +3004,12 @@ p, h1, h2, h3, h4, h5, h6 {
   word-break: normal !important;
   overflow-wrap: normal !important;
 }
+/* === CME: witte titelbalken, goud broodkruimels, logo-accenten === */
+.page-title { background: #fff !important; }
+.page-title::before { background: none !important; }
+.page-title h1 { color: #111 !important; }                /* donkere titel op wit */
+.page-title .breadcrumbs li,
+.page-title .breadcrumbs a { color: #FFD700 !important; }  /* goud */
+.page-title .breadcrumbs li+li::before { color: #999 !important; }
+
+.logo .c-gold, .logo .dot-gold { color: #FFD700 !important; }
