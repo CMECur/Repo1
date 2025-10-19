@@ -2867,3 +2867,30 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+/* Hero fixes voor leesbaarheid en sizing (niet-brekend) */
+.hero .carousel-item img {
+  width: 100%;
+  height: 100vh;          /* vullend scherm zoals origineel */
+  object-fit: cover;      /* geen rare rek/zoom */
+  filter: brightness(0.75); /* iets donkerder voor betere tekst-contrast */
+}
+
+.hero .info {
+  position: absolute;
+  inset: 0;               /* vult de hele sectie */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;      /* ruimte voor de vaste header op mobiel */
+  text-align: center;
+}
+
+.hero .info h1,
+.hero .info p {
+  color: #fff;            /* duidelijke witte tekst op foto's */
+}
+
+.hero .btn-get-started {
+  display: inline-block;
+  margin-top: 12px;
+}
