@@ -2996,3 +2996,11 @@ h1, h2, h3, h4, h5 {
 .footer .sitename {
   color: var(--cme-primary);
 }
+/* === Fix voor streepjes in Nederlandse tekst === */
+p, h1, h2, h3, h4, h5, h6 {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
