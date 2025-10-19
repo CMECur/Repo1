@@ -2900,3 +2900,7 @@ section,
   font-size: 20px; /* mag je verhogen/verlaging naar smaak */
   line-height: 1.2;
 }
+
+.footer .sitename {
+  white-space: nowrap;  /* zorgt dat het niet afbreekt */
+}
