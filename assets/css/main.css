@@ -2894,3 +2894,9 @@ section,
   display: inline-block;
   margin-top: 12px;
 }
+/* Header branding fix */
+.header .sitename {
+  white-space: nowrap;
+  font-size: 20px; /* mag je verhogen/verlaging naar smaak */
+  line-height: 1.2;
+}
