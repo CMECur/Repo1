@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - Camille’s Multipurpose Employment</title>
-  <meta name="description" content="Explore the wide range of reliable and energetic services offered by Camille’s Multipurpose Employment across Curaçao.">
-  <meta name="keywords" content="Camille’s Multipurpose Employment, services, Curaçao, staffing, maintenance, cleaning, logistics, solutions">
+  <title>Diensten - CME Curaçao</title>
+  <meta name="description" content="Onze diensten bij CME Curaçao: bouw, renovatie, afwerking, projectmanagement en toezicht.">
+  <meta name="keywords" content="CME, bouwbedrijf, constructie, renovatie, projectmanagement, toezicht, Curaçao, afwerking, bouwservice">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,24 +27,30 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root { --cme-accent: #FFD200; }
+    .sitename { color: #fff; font-weight: 700; white-space: nowrap; }
+    .logo-c, .logo-dot { color: var(--cme-accent); }
+  </style>
 </head>
 
 <body class="services-page">
 
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex flex-column align-items-center">
-        <h1 class="sitename mb-0">Camille’s Multipurpose Employment</h1>
-        <p class="tagline mb-0" style="font-size: 14px; color: #ddd; font-style: italic;">“Energy in adversity”</p>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename mb-0"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">Over ons</a></li>
+          <li><a href="services.html" class="active">Diensten</a></li>
+          <li><a href="projects.html">Projecten</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -56,82 +62,61 @@
 
   <main class="main">
 
-    <!-- ======= Page Title ======= -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.jpg);">
-      <div class="container position-relative">
-        <h1>Our Services</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Services</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section light-background">
+    <!-- ======= Diensten Sectie ======= -->
+    <section id="services" class="services section">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-header text-center">
-          <h2>What We Offer</h2>
-          <p>At Camille’s Multipurpose Employment, we provide reliable, flexible and professional services — powered by our belief in “Energy in adversity”.</p>
+        <div class="section-header">
+          <h2>Onze diensten</h2>
+          <p>Wij leveren een breed scala aan bouw- en constructiediensten — van ruwbouw tot afwerking, altijd met kwaliteit en efficiëntie.</p>
         </div>
 
-        <div class="row gy-5">
+        <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6 service-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-box blue">
-              <i class="bi bi-people icon"></i>
-              <h3>Staffing & Assistance</h3>
-              <p>We connect clients with dependable, skilled workers for short- or long-term projects, ensuring your operations continue smoothly.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon"><i class="bi bi-bricks"></i></div>
+              <h3>Ruwbouw en Constructie</h3>
+              <p>Wij bouwen sterke, duurzame structuren — van fundering tot dak. Onze ervaring garandeert een stevig resultaat dat klaar is voor de toekomst.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 service-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box orange">
-              <i class="bi bi-brush icon"></i>
-              <h3>Cleaning & Maintenance</h3>
-              <p>From offices to residential spaces, our cleaning teams maintain tidy, healthy, and professional environments you can be proud of.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-brush"></i></div>
+              <h3>Renovatie en Afwerking</h3>
+              <p>Wij vernieuwen, herstellen en werken af met oog voor detail. Of het nu gaat om binnenmuren, vloeren of verfwerk — wij zorgen dat het netjes en strak is.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 service-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box green">
-              <i class="bi bi-truck icon"></i>
-              <h3>Logistics & Delivery Support</h3>
-              <p>We provide manpower and coordination for transport, moving, and delivery — handled with care, energy, and reliability.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-person-badge"></i></div>
+              <h3>Projectmanagement</h3>
+              <p>We coördineren projecten van begin tot eind. Van planning tot uitvoering zorgen we dat alles soepel verloopt, binnen tijd en budget.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 service-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-box red">
-              <i class="bi bi-hammer icon"></i>
-              <h3>General Repairs</h3>
-              <p>Our skilled team performs small repairs, maintenance, and support for construction-related work — safely and efficiently.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-eye"></i></div>
+              <h3>Toezicht en Uitvoering</h3>
+              <p>Onze ervaren toezichthouders en uitvoerders zorgen dat elk project volgens plan, veilig en met hoge kwaliteit wordt afgerond.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 service-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-box purple">
-              <i class="bi bi-house icon"></i>
-              <h3>Home Assistance</h3>
-              <p>Need help around your home or business? We’re here to assist with organization, cleaning, and general support tasks.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 service-item" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-box pink">
-              <i class="bi bi-lightning-charge icon"></i>
-              <h3>Custom Solutions</h3>
-              <p>Every challenge is unique — we adapt to your needs with personalized service plans and energetic problem-solving.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-tools"></i></div>
+              <h3>Herstel en Onderhoud</h3>
+              <p>Ook voor kleine herstelwerken of onderhoud aan bestaande gebouwen staan wij klaar. We zorgen dat alles stevig, veilig en netjes blijft.</p>
             </div>
           </div>
 
         </div>
 
       </div>
-    </section><!-- /Services Section -->
+    </section><!-- /Diensten Sectie -->
 
   </main>
 
@@ -139,52 +124,61 @@
   <footer id="footer" class="footer dark-background">
     <div class="container footer-top">
       <div class="row gy-4">
+
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Camille’s Multipurpose Employment</span>
+            <span class="sitename"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</span>
           </a>
           <div class="footer-contact pt-3">
             <p>Willemstad, Curaçao</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+59995114226</span></p>
-            <p><strong>Email:</strong> <span>info@cm-employment.com</span></p>
+            <p class="mt-3"><strong>Telefoon:</strong> <span>+59995114226</span></p>
+            <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Links</h4>
+          <h4>Nuttige links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">Over ons</a></li>
+            <li><a href="services.html">Diensten</a></li>
+            <li><a href="projects.html">Projecten</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Onze diensten</h4>
+          <ul>
+            <li><a href="#">Ruwbouw en Constructie</a></li>
+            <li><a href="#">Renovatie en Afwerking</a></li>
+            <li><a href="#">Projectmanagement</a></li>
+            <li><a href="#">Toezicht en Uitvoering</a></li>
+            <li><a href="#">Herstel en Onderhoud</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© 2025 <strong>Camille’s Multipurpose Employment</strong>. All Rights Reserved.</p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- Preloader -->
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
