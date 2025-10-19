@@ -1,41 +1,46 @@
 <?php
   /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
+  * Contact form for Camille’s Multipurpose Employment
+  * 
+  * Make sure the "PHP Email Form" library exists at:
+  * ../assets/vendor/php-email-form/php-email-form.php
+  * 
+  * If you don't have the pro version, you can replace this with your own mail() script later.
   */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  // Ontvanger: jouw echte bedrijfsadres
+  $receiving_email_address = 'info@cm-employment.com';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
+  // Controleer of de PHP Email Form library bestaat
+  if (file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php')) {
+    include($php_email_form);
   } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+    die('Unable to load the "PHP Email Form" Library!');
   }
 
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
+  // Basisinstellingen
+  $contact->to = $receiving_email_address;
+  $contact->from_name = isset($_POST['name']) ? $_POST['name'] : 'Anonymous';
+  $contact->from_email = isset($_POST['email']) ? $_POST['email'] : 'no-reply@cm-employment.com';
+  $contact->subject = isset($_POST['subject']) ? $_POST['subject'] : 'Contact Form Submission';
+
+  // SMTP (optioneel, alleen invullen als je via hostingprovider SMTP moet gebruiken)
   /*
   $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
+    'host' => 'mail.cm-employment.com',
+    'username' => 'info@cm-employment.com',
+    'password' => 'JOUW_EMAIL_WACHTWOORD_HIER',
     'port' => '587'
   );
   */
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+  // Berichten toevoegen
+  $contact->add_message($_POST['name'], 'From');
+  $contact->add_message($_POST['email'], 'Email');
+  $contact->add_message($_POST['message'], 'Message', 10);
 
   echo $contact->send();
 ?>
