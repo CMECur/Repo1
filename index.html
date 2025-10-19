@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Camille’s Multipurpose Employment</title>
-  <meta name="description" content="Camille’s Multipurpose Employment - Providing professional, reliable, and energetic services in Curaçao.">
-  <meta name="keywords" content="Camille’s Multipurpose Employment, Curaçao, employment, cleaning, maintenance, logistics, staffing">
+  <title>CME Curacao</title>
+  <meta name="description" content="Camille’s Multipurpose Employment – Bouwbedrijf in Willemstad, Curaçao. Ruwbouw, renovatie, afwerking, projectmanagement en toezicht.">
+  <meta name="keywords" content="bouwbedrijf, ruwbouw, renovatie, afwerking, projectmanagement, toezicht, Curaçao, Camille’s Multipurpose Employment">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,205 +27,297 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Kleine aanpassingen voor kleur en layout -->
+  <style>
+    :root { --cme-accent: #FFD200; } /* geel */
+    .header .sitename, .footer .sitename {
+      color:#fff; font-weight:700; white-space:nowrap; display:inline-block; letter-spacing:.3px;
+    }
+    .logo-c, .logo-dot { color: var(--cme-accent); }
+    @media (max-width: 576px){
+      .header .sitename{ font-size: clamp(16px, 4.2vw, 20px); }
+      .footer .sitename{ font-size: clamp(16px, 4vw, 19px); }
+    }
+    #hero .carousel-item img { width:100%; height:100vh; object-fit:cover; filter:brightness(.78); }
+    #hero .info { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding-top:80px; }
+    #hero .info h1, #hero .info h2, #hero .info p { color:#fff; }
+  </style>
 </head>
 
 <body class="index-page">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-  <h1 class="sitename mb-0">
-    <span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao
-  </h1>
-</a>
+        <h1 class="sitename mb-0">
+          <span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao
+        </h1>
+      </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">Over ons</a></li>
+          <li><a href="services.html">Diensten</a></li>
+          <li><a href="projects.html">Projecten</a></li>
           <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Meer</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="starter-page.html">Extra pagina</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <main class="main">
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="hero section dark-background">
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero section dark-background">
 
-  <div class="info d-flex align-items-center">
-    <div class="container">
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-lg-8 text-center">
-          <h2>Welkom bij Camille’s Multipurpose Employment</h2>
-<p class="fst-italic text-light mb-3">Energy in adversity</p>
-<p>Een betrouwbaar bouwbedrijf op Curaçao, gespecialiseerd in ruwbouw, renovatie en afwerking. Wij leveren kwaliteit, vakmanschap en energie in elk project — groot of klein.</p>
-          <a href="about.html" class="btn-get-started">Lees meer</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-item active">
-      <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="Bouwproject 1">
-    </div>
-
-    <div class="carousel-item">
-      <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="Bouwproject 2">
-    </div>
-
-    <div class="carousel-item">
-      <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="Bouwproject 3">
-    </div>
-
-    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-    </a>
-
-    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-    </a>
-  </div>
-</section>
-<!-- End Hero Section -->
-
-   <!-- ======= Over Ons Section ======= -->
-<section id="about" class="about section light-background">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4 align-items-center">
-      <div class="col-lg-6">
-        <img src="assets/img/about.jpg" class="img-fluid rounded-3 shadow-lg" alt="Over ons">
-      </div>
-      <div class="col-lg-6">
-        <h3>Over Ons</h3>
-        <p>
-          <strong>Camille’s Multipurpose Employment</strong> is een bouwbedrijf op Curaçao dat zich richt op kwaliteit, betrouwbaarheid en vakmanschap.
-          Wij voeren projecten uit van ruwbouw tot afwerking en renovatie met oog voor detail en duurzaamheid.
-        </p>
-        <p>
-          Ons team bestaat uit ervaren vakmensen die gespecialiseerd zijn in constructie, schilderwerk, projectmanagement en toezicht op de uitvoering.
-          Wij geloven in <em>“Energy in adversity”</em> met energie en vastberadenheid brengen wij ieder project tot een succesvol resultaat.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Over Ons Section -->
-
-   <!-- ======= Onze Diensten Section ======= -->
-<section id="services" class="services section">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header text-center">
-      <h2>Onze Diensten</h2>
-      <p>Professioneel. Betrouwbaar. Resultaatgericht.</p>
-    </div>
-
-    <div class="row gy-4">
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-bricks"></i></div>
-          <h3>Constructie & Ruwbouw</h3>
-          <p>Wij realiseren funderingen, muren, daken en complete bouwprojecten met oog voor kwaliteit en veiligheid.</p>
+      <div class="info d-flex align-items-center">
+        <div class="container">
+          <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-8 text-center">
+              <h2>Welkom bij Camille’s Multipurpose Employment</h2>
+              <p class="fst-italic mb-2">Energy in adversity</p>
+              <p>Betrouwbaar bouwbedrijf op Curaçao, gespecialiseerd in ruwbouw, renovatie, afwerking, projectmanagement en toezicht. Wij leveren kwaliteit, vakmanschap en duurzame resultaten in elk project groot of klein.</p>
+              <a href="about.html" class="btn-get-started">Lees meer</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-paint-bucket"></i></div>
-          <h3>Afwerking & Schilderwerk</h3>
-          <p>Van pleisterwerk tot schilderen en interieurafwerking wij zorgen dat elk detail perfect wordt uitgevoerd.</p>
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="Hero afbeelding 1">
+        </div>
+
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="Hero afbeelding 2">
+        </div>
+
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="Hero afbeelding 3">
+        </div>
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ======= Over ons ======= -->
+    <section id="about" class="about section light-background">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6">
+            <img src="assets/img/about.jpg" class="img-fluid rounded-3 shadow-lg" alt="Over ons">
+          </div>
+          <div class="col-lg-6">
+            <h3>Over ons</h3>
+            <p>
+              <strong>Camille’s Multipurpose Employment</strong> is een bouwbedrijf in Willemstad, Curaçao. Wij voeren projecten uit van ruwbouw tot afwerking en renovatie. Met ervaren vakmensen, strakke planning en duidelijke communicatie zorgen wij voor kwaliteit en betrouwbaarheid.
+            </p>
+            <p>
+              Onze aanpak is oplossingsgericht. We denken mee, werken veilig en leveren op volgens afspraak. Zo bouwen we aan duurzame resultaten en tevreden klanten.
+            </p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-person-workspace"></i></div>
-          <h3>Projectmanagement & Toezicht</h3>
-          <p>Wij begeleiden bouwprojecten van begin tot eind, houden toezicht op de uitvoering en zorgen dat deadlines worden gehaald.</p>
+    <!-- ======= Onze diensten ======= -->
+    <section id="services" class="services section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Onze diensten</h2>
+          <p>Professioneel. Betrouwbaar. Resultaatgericht.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bricks"></i></div>
+              <h3>Constructie en Ruwbouw</h3>
+              <p>Funderingen, wanden, daken en casco opleveringen. Degelijk uitgevoerd met oog voor veiligheid en kwaliteit.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-paint-bucket"></i></div>
+              <h3>Renovatie en Afwerking</h3>
+              <p>Pleisterwerk, metsel en timmerwerk, plafond en wandafwerking, en professioneel schilderwerk.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-person-workspace"></i></div>
+              <h3>Projectmanagement en Toezicht</h3>
+              <p>Van planning tot uitvoering. Wij organiseren, sturen aan en houden toezicht voor een strak resultaat.</p>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-<!-- /Onze Diensten Section -->
+    <!-- ======= Constructions ======= -->
+    <section id="constructions" class="constructions section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projectaanpak</h2>
+        <p>Wij werken netjes, veilig en volgens planning met heldere communicatie en duurzame kwaliteit.</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="assets/img/constructions-1.jpg" alt="Constructie 1"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Strakke voorbereiding</h4>
+                    <p>Van ontwerp tot werkinstructies. We starten elk project met een duidelijk plan en realistische planning.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="assets/img/constructions-2.jpg" alt="Constructie 2"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Vakmanschap op de bouw</h4>
+                    <p>Ervaren uitvoerders en vaklieden zorgen voor een veilige, nette en efficiënte uitvoering op locatie.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="assets/img/constructions-3.jpg" alt="Constructie 3"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Kwaliteit en controle</h4>
+                    <p>Tijdens het werk voeren we kwaliteitscontroles uit zodat elk onderdeel voldoet aan de afspraak.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="assets/img/constructions-4.jpg" alt="Constructie 4"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Oplevering zonder zorgen</h4>
+                    <p>Nazorg en oplevering met aandacht voor detail. We leveren op zoals beloofd zonder verrassingen.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
 
-  <div class="container footer-top">
-    <div class="row gy-4">
-
-      <div class="col-lg-4 col-md-6 footer-about">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <span class="sitename">
-  <span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao
-</span>
-        </a>
-        <div class="footer-contact pt-3">
-          <p>Willemstad, Curaçao</p>
-          <p class="mt-3"><strong>Telefoon:</strong> <span>+5999 511 4226</span></p>
-          <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Willemstad, Curaçao</p>
+            <p class="mt-3"><strong>Telefoon:</strong> <span>+59995114226</span></p>
+            <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Nuttige links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="projects.html">Projecten</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nuttige links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Over ons</a></li>
+            <li><a href="services.html">Diensten</a></li>
+            <li><a href="projects.html">Projecten</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
 
-      <div class="col-lg-3 col-md-3 footer-links">
-        <h4>Onze diensten</h4>
-        <ul>
-          <li><a href="#">Constructie & Ruwbouw</a></li>
-          <li><a href="#">Renovatie & Afwerking</a></li>
-          <li><a href="#">Projectmanagement</a></li>
-          <li><a href="#">Toezicht & Uitvoering</a></li>
-        </ul>
-      </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Onze diensten</h4>
+          <ul>
+            <li><a href="#">Constructie en Ruwbouw</a></li>
+            <li><a href="#">Renovatie en Afwerking</a></li>
+            <li><a href="#">Projectmanagement</a></li>
+            <li><a href="#">Toezicht en Uitvoering</a></li>
+          </ul>
+        </div>
 
+      </div>
     </div>
-  </div>
 
-  <div class="container copyright text-center mt-4">
-    <p>© 2025 <strong>Camille’s Multipurpose Employment</strong>. Alle rechten voorbehouden.</p>
-  </div>
-</footer>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
+    </div>
 
-  <!-- Scroll Top -->
+  </footer>
+
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
