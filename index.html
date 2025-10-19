@@ -58,26 +58,60 @@
   <main class="main">
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero section dark-background">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
-            <h2>Welcome to Camille’s Multipurpose Employment</h2>
-            <p>Providing dependable and professional multipurpose services across Curaçao — driven by energy, reliability, and care.</p>
-            <a href="about.html" class="btn-get-started">Learn More</a>
-          </div>
-        </div>
-      </div>
+<section id="hero" class="hero d-flex align-items-center">
 
-      <div class="hero-slider swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg);"></div>
-          <div class="swiper-slide" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg);"></div>
-          <div class="swiper-slide" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg);"></div>
+  <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg)">
+      <div class="carousel-container">
+        <div>
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Camille’s Multipurpose Employment</span></h2>
+          <p class="animate__animated animate__fadeInUp">
+            Providing dependable and professional multipurpose services across Curaçao — driven by energy, reliability, and care.
+          </p>
+          <a href="about.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-    </section><!-- /Hero Section -->
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg)">
+      <div class="carousel-container">
+        <div>
+          <h2 class="animate__animated animate__fadeInDown">Energy in Adversity</h2>
+          <p class="animate__animated animate__fadeInUp">
+            No matter the challenge — we bring positive energy and creative solutions to help our clients succeed.
+          </p>
+          <a href="services.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Our Services</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg)">
+      <div class="carousel-container">
+        <div>
+          <h2 class="animate__animated animate__fadeInDown">Your Reliable Partner</h2>
+          <p class="animate__animated animate__fadeInUp">
+            From staffing to maintenance — Camille’s Multipurpose Employment delivers with quality and dedication.
+          </p>
+          <a href="contact.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+
+  </div>
+
+</section><!-- End Hero Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about section light-background">
