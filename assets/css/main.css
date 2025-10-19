@@ -2904,3 +2904,59 @@ section,
 .footer .sitename {
   white-space: nowrap;  /* zorgt dat het niet afbreekt */
 }
+/* ========== KLEUREN VAN LOGO TOEPASSEN ========== */
+
+/* Hoofdkleur: donkerblauw */
+:root {
+  --cme-primary: #002E5D; /* donkerblauw uit logo */
+  --cme-accent: #FFD200; /* geel accent uit logo */
+}
+
+/* Bedrijfsnaam bovenaan */
+.header .sitename {
+  color: var(--cme-primary);
+  font-weight: 700;
+}
+
+/* Footer bedrijfsnaam en links */
+.footer .sitename,
+.footer a,
+.footer p,
+.footer h4 {
+  color: #f0f0f0;
+}
+
+/* Links hover in footer */
+.footer a:hover {
+  color: var(--cme-accent);
+}
+
+/* Knoppen (zoals 'Lees meer') */
+.btn-get-started,
+.scroll-top {
+  border-color: var(--cme-accent);
+  color: var(--cme-accent);
+}
+.btn-get-started:hover,
+.scroll-top:hover {
+  background-color: var(--cme-accent);
+  color: var(--cme-primary);
+}
+
+/* Titels op de website (zoals Welkom bij...) */
+h1, h2, h3, h4, h5 {
+  color: var(--cme-primary);
+}
+/* "Lees meer" knop in logo-stijl */
+.btn-get-started {
+  border: 2px solid var(--cme-accent);
+  background: transparent;
+  color: var(--cme-accent);
+  font-weight: 500;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.btn-get-started:hover {
+  background: var(--cme-accent);
+  color: var(--cme-primary);
+}
