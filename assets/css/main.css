@@ -2960,3 +2960,39 @@ h1, h2, h3, h4, h5 {
   background: var(--cme-accent);
   color: var(--cme-primary);
 }
+/* =============================
+   LOGO-KLEUREN VOLGENS HUISSTIJL
+   ============================= */
+
+/* Donkerblauw en geel uit het logo */
+:root {
+  --cme-primary: #002E5D; /* Donkerblauw */
+  --cme-accent: #FFD200; /* Geel */
+}
+
+/* Algemeen logo-stijl */
+.header .sitename {
+  font-weight: 700;
+  color: var(--cme-primary);
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+/* Gele 'C' */
+.header .logo-c {
+  color: var(--cme-accent);
+}
+
+/* Gele '.' na de C */
+.header .logo-dot {
+  color: var(--cme-accent);
+}
+
+/* Optioneel: zelfde stijl voor footer */
+.footer .sitename .logo-c,
+.footer .sitename .logo-dot {
+  color: var(--cme-accent);
+}
+.footer .sitename {
+  color: var(--cme-primary);
+}
