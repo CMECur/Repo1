@@ -577,3 +577,20 @@ body.scrolled .header {
 .page-title .breadcrumbs ol {
   display: none !important;
 }
+/* =====================================
+   🔧 CME Curaçao – Breadcrumb Verbergen Fix
+   ===================================== */
+
+/* Verberg ALLE breadcrumbs op alle pagina’s */
+.breadcrumbs,
+.page-title .breadcrumbs,
+.page-title ol,
+.breadcrumbs ol,
+.page-title nav.breadcrumbs {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
