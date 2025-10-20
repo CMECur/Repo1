@@ -819,3 +819,33 @@ section.section {
   margin: 14px auto 0;
   border-radius: 2px;
 }
+/* Hero titel fix – breedte en schaal netjes centreren */
+#hero .info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-size: clamp(36px, 4vw, 56px); /* iets kleiner, blijft responsief */
+  padding: 0 1rem; /* zorgt dat tekst niet tegen randen komt */
+}
+
+/* Tweede regel: iets kleiner zodat het niet buiten beeld valt */
+#hero .info h2 span {
+  display: block;
+  font-weight: 800;
+  font-size: 1em;       /* was 1.1em — nu iets subtieler */
+  white-space: nowrap;  /* houdt het op één rij */
+}
+
+/* Gele streep onder titel */
+#hero .info h2::after {
+  content: "";
+  display: block;
+  width: 80px;          /* iets korter zodat het gebalanceerd blijft */
+  height: 4px;
+  background: #FFD700;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
