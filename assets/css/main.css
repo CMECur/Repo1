@@ -409,3 +409,40 @@ a:hover {
 body.mobile-nav-active .navmenu {
   right: 0;
 }
+/* ==========================
+   FINAL MOBILE MENU FIX – CME Curaçao
+========================== */
+
+/* Overschrijf BootstrapMade wit menu volledig */
+body.mobile-nav-active .navmenu,
+.navmenu.mobile-nav-active {
+  background: rgba(0, 0, 0, 0.95) !important;
+  right: 0 !important;
+  width: 80% !important;
+  border-left: 3px solid #FFD700;
+  padding: 100px 40px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+  z-index: 9999 !important;
+}
+
+/* Menu links wit en leesbaar */
+body.mobile-nav-active .navmenu a,
+.navmenu.mobile-nav-active a {
+  color: #fff !important;
+  font-size: 18px !important;
+  font-weight: 500;
+}
+
+body.mobile-nav-active .navmenu a:hover,
+body.mobile-nav-active .navmenu .active {
+  color: #FFD700 !important;
+}
+
+/* Hamburger icoon wordt wit bij actief menu */
+body.mobile-nav-active .mobile-nav-toggle {
+  color: #fff !important;
+}
