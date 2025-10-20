@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +9,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +20,48 @@
 
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Page-specific FIXES (geen tekstwijzigingen, alleen stijl) -->
+  <style>
+    /* Logo exact volgens plan: Poppins, wit/goud in header boven hero */
+    .sitename{font-family:"Poppins",sans-serif;font-weight:700;letter-spacing:.5px}
+    #header:not(.scrolled) .sitename{color:#fff}
+    .logo-c,.logo-dot{color:#FFD700}
+
+    /* Navigatie boven hero wit; na scroll zwart (main.css regelt dit grotendeels al) */
+    #header:not(.scrolled) .navmenu a{color:#fff}
+
+    /* HERO: originele foto + strakkere overlay */
+    #hero{background-image:url("assets/img/hero-bg.jpg");background-size:cover;background-position:center}
+    #hero::before{background:rgba(0,0,0,.7)} /* iets donkerder voor leesbaarheid */
+
+    /* “Onze diensten” terug naar grijze kaarten met geel hover */
+    .services-grid{background:#f5f6f8}
+    .service-card{
+      background:#f5f6f8;border:0;border-radius:.75rem;padding:28px;
+      transition:.25s ease; box-shadow:0 6px 20px rgba(0,0,0,.06);
+      height:100%;
+    }
+    .service-card .icon{
+      width:56px;height:56px;border-radius:12px;display:inline-flex;
+      align-items:center;justify-content:center;font-size:28px;
+      background:#fff; box-shadow:0 4px 14px rgba(0,0,0,.08); margin-bottom:12px;
+      color:#111;
+    }
+    .service-card h5{margin:8px 0 6px}
+    .service-card:hover{transform:translateY(-6px); background:#FFD700}
+    .service-card:hover h5,
+    .service-card:hover p{color:#111}
+    .service-card:hover .icon{background:#111;color:#FFD700;box-shadow:none}
+
+    /* Footer-afbeelding + donkere overlay voor leesbaarheid */
+    #footer{position:relative;overflow:hidden}
+    #footer.bg-img{background-image:url("assets/img/footer-bg.jpg");background-size:cover;background-position:center}
+    #footer .overlay{position:absolute;inset:0;background:rgba(0,0,0,.88)}
+    #footer .container, #footer .copyright{position:relative;z-index:2}
+    #footer .sitename{color:#fff}
+    #footer a{color:#FFD700}
+  </style>
 </head>
 
 <body class="index-page">
@@ -50,21 +91,23 @@
     </div>
   </header>
 
-  <!-- ======= Hero Sectie ======= -->
-  <section id="hero" class="hero section dark-background" style="background-image: url('assets/img/hero-bg.jpg'); background-size: cover; background-position: center;">
-    <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.6); z-index:1;"></div>
-    <div class="container text-center position-relative" data-aos="fade-up" style="z-index:2;">
-      <h1 class="mb-2 text-white">Welkom bij Camille’s Multipurpose Employment</h1>
-      <p class="text-white fst-italic mb-3">Energy in adversity</p>
-      <p class="text-white">Een betrouwbaar bouwbedrijf op Curaçao, gespecialiseerd in constructie, renovatie en afwerking.</p>
-      <p class="text-white">Wij leveren kwaliteit, vakmanschap en energie in elk project — groot of klein.</p>
-      <a href="about.html" class="btn-get-started">Lees meer</a>
+  <!-- ======= Hero ======= -->
+  <section id="hero" class="hero section dark-background">
+    <div class="info d-flex align-items-center">
+      <div class="container text-center" data-aos="fade-up">
+        <h1>Welkom bij Camille’s Multipurpose Employment</h1>
+        <p class="fst-italic mb-3">Energy in adversity</p>
+        <p>Wij werken met kwaliteit en tijd. Meestal leveren wij ons werk sneller dan gepland, met hoge kwaliteit en een nette afwerking.</p>
+        <p>Ons doel is om klanten te helpen, creatief mee te denken en samen met onze partners duurzame oplossingen te vinden binnen hun budget.</p>
+        <p>Wij willen blije klanten, tevreden medewerkers en sterke resultaten. Wij bouwen voor de toekomst — degelijk, veilig en professioneel.</p>
+        <a href="about.html" class="btn-get-started">Lees meer</a>
+      </div>
     </div>
   </section>
 
   <main class="main">
 
-    <!-- ======= Over ons kort ======= -->
+    <!-- ======= Over ons (kort) ======= -->
     <section id="short-about" class="section">
       <div class="container" data-aos="fade-up">
         <div class="row gy-4 align-items-center">
@@ -73,7 +116,7 @@
           </div>
           <div class="col-lg-6">
             <h3>Over ons</h3>
-            <p>CME. Curaçao is een lokaal bouwbedrijf dat zich richt op kwaliteit, betrouwbaarheid en efficiëntie. 
+            <p>CME. Curaçao is een lokaal bouwbedrijf dat zich richt op kwaliteit, betrouwbaarheid en efficiëntie.
               Wij voeren bouwprojecten uit van ruwbouw tot afwerking en bieden ook toezicht, uitvoering en projectmanagement aan.</p>
             <a href="about.html" class="btn-get-started">Lees meer</a>
           </div>
@@ -81,40 +124,44 @@
       </div>
     </section>
 
-    <!-- ======= Diensten kort ======= -->
-    <section id="short-services" class="section light-background">
+    <!-- ======= Onze diensten (grijze kaarten + geel hover) ======= -->
+    <section id="short-services" class="section services-grid">
       <div class="container" data-aos="fade-up">
-        <div class="section-header text-center mb-4">
+        <div class="text-center mb-4">
           <h3>Onze diensten</h3>
           <p>Wij bieden een breed scala aan bouw- en renovatiediensten aan op Curaçao.</p>
         </div>
+
         <div class="row gy-4">
-          <div class="col-lg-3 col-md-6">
-            <div class="service-item text-center p-4">
-              <i class="bi bi-building text-warning fs-2 mb-3"></i>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="icon"><i class="bi bi-building"></i></div>
               <h5>Ruwbouw & Constructie</h5>
-              <p>Fundering, betonwerk, muren, staal en dakconstructies.</p>
+              <p class="mb-0">Fundering, betonwerk, muren, staal en dakconstructies.</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="service-item text-center p-4">
-              <i class="bi bi-brush text-warning fs-2 mb-3"></i>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="icon"><i class="bi bi-brush"></i></div>
               <h5>Renovatie & Afwerking</h5>
-              <p>Pleisterwerk, schilderen, vloeren en complete renovaties.</p>
+              <p class="mb-0">Pleisterwerk, schilderen, vloeren en complete renovaties.</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="service-item text-center p-4">
-              <i class="bi bi-clipboard-check text-warning fs-2 mb-3"></i>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="icon"><i class="bi bi-clipboard-check"></i></div>
               <h5>Projectmanagement</h5>
-              <p>Planning, toezicht, kwaliteitscontrole en rapportage.</p>
+              <p class="mb-0">Planning, toezicht, kwaliteitscontrole en rapportage.</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="service-item text-center p-4">
-              <i class="bi bi-person-check text-warning fs-2 mb-3"></i>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="icon"><i class="bi bi-person-check"></i></div>
               <h5>Toezicht & Uitvoering</h5>
-              <p>Uitvoering volgens plan, binnen tijd en budget.</p>
+              <p class="mb-0">Uitvoering volgens plan, binnen tijd en budget.</p>
             </div>
           </div>
         </div>
@@ -123,10 +170,10 @@
 
   </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer dark-background" style="background-image:url('assets/img/footer-bg.jpg'); background-size:cover; background-position:center;">
-    <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.85); z-index:1;"></div>
-    <div class="container footer-top position-relative" style="z-index:2;">
+  <!-- ======= Footer (met overlay voor leesbaarheid) ======= -->
+  <footer id="footer" class="footer dark-background bg-img">
+    <div class="overlay"></div>
+    <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
@@ -159,12 +206,12 @@
         </div>
       </div>
     </div>
-    <div class="container copyright text-center mt-4 position-relative" style="z-index:2;">
+    <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
     </div>
   </footer>
 
-  <!-- ======= Scripts ======= -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -173,6 +220,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <!-- Kleine JS: header-kleur bij scroll + mobiel menu -->
   <script>
     AOS.init({ once: true });
 
@@ -191,6 +239,5 @@
       navMenu.classList.toggle('mobile-nav-active');
     });
   </script>
-
 </body>
 </html>
