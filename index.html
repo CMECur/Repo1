@@ -92,64 +92,46 @@
   </header>
 
   <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero section">
-  
-  
-  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+<section id="hero" class="hero section" style="position: relative;">
+
+  <div class="carousel slide" id="heroCarousel" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
 
-      
       <!-- Slide 1 -->
       <div class="carousel-item active" style="background-image: url('assets/img/hero-1.jpg'); background-size: cover; background-position: center;">
-        <div class="container text-center">
-          <h2>Welkom bij<br><span>Camille’s Multipurpose Employment</span></h2>
-          <p>
-            Een betrouwbaar bouwbedrijf op Curaçao, gespecialiseerd in constructie, renovatie en afwerking.<br>
-            Wij leveren kwaliteit, vakmanschap en energie in elk project groot of klein.
+        <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.55); z-index:1;"></div>
+        <div class="container text-center position-relative" style="z-index:2; padding-top: 180px; padding-bottom: 120px;">
+          <h1 class="text-white fw-bold mb-3">Welkom bij<br>Camille’s Multipurpose Employment</h1>
+          <p class="text-white mb-3">
+            Een betrouwbaar bouwbedrijf op Curaçao, gespecialiseerd in constructie, renovatie en afwerking.
           </p>
-          <a href="#about" class="btn btn-outline-warning rounded-pill px-4 py-2 mt-3">Lees meer</a>
+          <p class="text-white mb-4">
+            Wij leveren kwaliteit, vakmanschap en energie in elk project, groot of klein.
+          </p>
+          <a href="#short-about" class="btn btn-outline-warning rounded-pill px-4 py-2 mt-2">Lees meer</a>
         </div>
       </div>
-
-      
 
       <!-- Slide 2 -->
       <div class="carousel-item" style="background-image: url('assets/img/hero-2.jpg'); background-size: cover; background-position: center;">
-        <div class="container text-center">
-          <h2>Betrouwbaarheid & Kwaliteit</h2>
-          <p>
-            Wij combineren vakmanschap, efficiëntie en aandacht voor detail bij elk project.
-          </p>
-          <a href="#services" class="btn btn-outline-warning rounded-pill px-4 py-2 mt-3">Onze diensten</a>
-        </div>
-      </div>
-
-      
-
-      <!-- Slide 3 -->
-      <div class="carousel-item" style="background-image: url('assets/img/hero-3.jpg'); background-size: cover; background-position: center;">
-        <div class="container text-center">
-          <h2>Van idee tot realisatie</h2>
-          <p>
-            CME. Curaçao bouwt met passie en precisie aan duurzame resultaten.
-          </p>
-          <a href="#projects" class="btn btn-outline-warning rounded-pill px-4 py-2 mt-3">Projecten</a>
+        <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.55); z-index:1;"></div>
+        <div class="container text-center position-relative" style="z-index:2; padding-top: 180px; padding-bottom: 120px;">
+          <h1 class="text-white fw-bold mb-3">Kwaliteit & Betrouwbaarheid</h1>
+          <p class="text-white mb-4">Wij bouwen degelijk, veilig en professioneel — altijd met oog voor detail.</p>
+          <a href="#short-services" class="btn btn-outline-warning rounded-pill px-4 py-2 mt-2">Onze diensten</a>
         </div>
       </div>
 
     </div>
-    
 
-    <!-- Carousel controls -->
-    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left"></span>
-    </a>
-
-    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon bi bi-chevron-right"></span>
-    </a>
+    </button>
   </div>
-
 </section>
 <!-- End Hero Section -->
 
