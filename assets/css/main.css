@@ -544,3 +544,27 @@ body.scrolled .header {
   color: #FFD700;
   margin: 0 6px;
 }
+/* ==========================
+   BREADCRUMB FIX – verwijder cijfers
+========================== */
+.breadcrumbs ol,
+.page-title ol {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.breadcrumbs ol li,
+.page-title ol li {
+  display: inline-block;
+  list-style: none;
+  font-weight: 500;
+  color: #555;
+}
+
+.breadcrumbs ol li + li::before,
+.page-title ol li + li::before {
+  content: "/";
+  color: #FFD700;
+  margin: 0 6px;
+}
