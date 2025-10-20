@@ -259,7 +259,29 @@ a:hover {
     font-size: 15px;
   }
 }
+/* ==========================
+   HERO v4.1 – Dim Overlay + Mobile Crop Fix
+========================== */
 
+/* Donkerdere overlay voor beter contrast */
+#hero::before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85));
+}
+
+/* Hero-afbeelding beter schalen op mobiel */
+@media (max-width: 768px) {
+  #hero .carousel-item {
+    background-position: center top; /* toont meer van bovenkant (minder ingezoomd effect) */
+    background-size: contain; /* voorkomt afsnijden */
+    background-repeat: no-repeat;
+    background-color: #000; /* vult randen netjes op als contain gebruikt wordt */
+  }
+
+  /* Iets extra padding zodat tekst niet te hoog zit */
+  #hero .info {
+    padding-top: 140px;
+  }
+}
 /* =====================
    FOOTER
 ===================== */
