@@ -849,3 +849,34 @@ section.section {
   margin: 12px auto 0;
   border-radius: 2px;
 }
+/* ===== Hero titel – Perfecte desktop en mobiel balans ===== */
+#hero .info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-size: clamp(32px, 3.8vw, 52px); /* iets kleiner, responsief */
+  padding: 0 2rem; /* extra marge links/rechts zodat tekst ademruimte heeft */
+}
+
+/* Tweede regel – "Camille’s Multipurpose Employment" */
+#hero .info h2 span {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05em;       /* iets kleiner zodat het nu netjes past */
+  white-space: nowrap;     /* houdt het op één rij */
+  letter-spacing: 0.2px;   /* subtiele ruimte tussen letters voor balans */
+}
+
+/* Gouden streep */
+#hero .info h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #FFD700;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
