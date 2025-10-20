@@ -782,3 +782,11 @@ section.section {
   text-align: center;
   white-space: normal;                /* mag wel afbreken op mobiel */
 }
+/* ===== Hero titel desktop fix: "Camille’s Multipurpose Employment" op één regel ===== */
+@media (min-width: 992px) {
+  #hero .info h2 {
+    white-space: nowrap;   /* Houd alles op één regel */
+    font-size: 64px;       /* Zet vaste grootte voor desktop */
+    line-height: 1.1;
+  }
+}
