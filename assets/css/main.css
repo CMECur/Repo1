@@ -603,3 +603,124 @@ a:hover {
     font-size: 15px;
   }
 }
+/* ==========================
+   HERO - CME Curaçao v3 Final
+========================== */
+#hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#hero .carousel,
+#hero .carousel-item {
+  width: 100%;
+  height: 100vh;
+}
+
+#hero .carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Overlay */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Info (centreren + spacing) */
+#hero .info {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 15px 0;
+  text-align: center;
+}
+
+#hero .info h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Gouden lijn */
+#hero .divider {
+  width: 60px;
+  height: 4px;
+  background: #FFD700;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+
+/* Tekst */
+#hero .info p {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Knop – originele ovale stijl */
+.btn-get-started-outline {
+  display: inline-block;
+  color: #fff;
+  border: 2px solid #FFD700;
+  background: transparent;
+  padding: 10px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  text-transform: none;
+}
+
+.btn-get-started-outline:hover {
+  background: #FFD700;
+  color: #111;
+}
+
+/* Pijlen fix – enkel Bootstrap icon zichtbaar */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) brightness(100%);
+  width: 2rem;
+  height: 2rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+  z-index: 3;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  #hero {
+    height: 100vh;
+  }
+
+  #hero .info {
+    padding-top: 100px;
+  }
+
+  #hero .info h1 {
+    font-size: 30px;
+  }
+
+  #hero .info p {
+    font-size: 15px;
+  }
+}
