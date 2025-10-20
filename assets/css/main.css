@@ -880,3 +880,34 @@ section.section {
   margin: 12px auto 0;
   border-radius: 2px;
 }
+/* === HERO TITEL - FINAL PERFECT ALIGN === */
+#hero .info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-size: clamp(32px, 3.8vw, 52px);
+  padding: 0 4vw; /* meer lucht links/rechts zodat tekst nooit tegen de rand komt */
+}
+
+/* Tweede regel */
+#hero .info h2 span {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05em;
+  white-space: nowrap;
+  letter-spacing: 0.25px;
+}
+
+/* Gouden streep */
+#hero .info h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #FFD700;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
