@@ -282,6 +282,76 @@ a:hover {
     padding-top: 140px;
   }
 }
+/* ==========================
+   HERO - CME Curaçao v4.2 Final Tuned
+   Based on UpConstruction contrast & overlay logic
+========================== */
+
+/* Donkerdere overlay (zelfde sterkte als originele template) */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.85)
+  ); /* dim intensiteit */
+  z-index: 1;
+}
+
+/* Heldere foto maar niet overbelicht */
+#hero .carousel-item {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: brightness(0.8) contrast(1.05);
+  transition: opacity 1s ease-in-out;
+}
+
+/* Tekstkleuren behouden hoog contrast */
+#hero .info h1,
+#hero .info p {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Knop blijft duidelijk zichtbaar */
+.btn-get-started-outline {
+  border: 2px solid #ffd700;
+  color: #fff;
+  background: transparent;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 32px;
+  transition: all 0.4s ease;
+}
+
+.btn-get-started-outline:hover {
+  background: #ffd700;
+  color: #111;
+}
+
+/* Mobiele optimalisatie – minder zoom en betere framing */
+@media (max-width: 768px) {
+  #hero .carousel-item {
+    background-position: center top;
+    background-size: cover;
+    filter: brightness(0.7) contrast(1.1);
+  }
+
+  #hero .info {
+    padding-top: 120px; /* tekst iets lager */
+  }
+
+  #hero .info h1 {
+    font-size: 28px;
+  }
+
+  #hero .info p {
+    font-size: 15px;
+  }
+}
+
 /* =====================
    FOOTER
 ===================== */
