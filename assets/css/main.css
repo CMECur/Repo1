@@ -594,3 +594,9 @@ body.scrolled .header {
   margin: 0 !important;
   padding: 0 !important;
 }
+.navbar a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #111;
+}  /* ← deze accolade ontbrak */
