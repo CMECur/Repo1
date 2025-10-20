@@ -776,3 +776,9 @@ section.section {
   background-color: rgba(255,255,255,0.2);
   border-radius: 50%;
 }
+#hero .info h2 {
+  font-size: clamp(32px, 4vw, 60px);  /* schaal dynamisch */
+  line-height: 1.1;
+  text-align: center;
+  white-space: normal;                /* mag wel afbreken op mobiel */
+}
