@@ -515,3 +515,32 @@ body.scrolled .header {
   color: #FFD700;
   margin: 0 6px;
 }
+/* =====================================
+   ULTIEME FIX – Verberg cijfers bij breadcrumb
+===================================== */
+
+.breadcrumbs ol,
+.page-title ol,
+.breadcrumb ol {
+  list-style: none !important;
+  counter-reset: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.breadcrumbs ol li,
+.page-title ol li,
+.breadcrumb ol li {
+  list-style-type: none !important;
+  display: inline-block !important;
+  color: #fff;
+  font-weight: 500;
+}
+
+.breadcrumbs ol li + li::before,
+.page-title ol li + li::before,
+.breadcrumb ol li + li::before {
+  content: "/";
+  color: #FFD700;
+  margin: 0 6px;
+}
