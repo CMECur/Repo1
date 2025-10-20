@@ -790,3 +790,32 @@ section.section {
     line-height: 1.1;
   }
 }
+/* ===== Hero titel op twee regels, perfect gecentreerd ===== */
+#hero .info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-size: clamp(38px, 5vw, 60px);
+}
+
+/* Tweede regel (Camille’s Multipurpose Employment) */
+#hero .info h2 span {
+  display: block;
+  font-weight: 800;
+  font-size: 1.1em;
+  white-space: nowrap;  /* Zorgt dat alles op één rij blijft */
+}
+
+/* Gele streep onder titel */
+#hero .info h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #FFD700;
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
