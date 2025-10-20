@@ -446,3 +446,20 @@ body.mobile-nav-active .navmenu .active {
 body.mobile-nav-active .mobile-nav-toggle {
   color: #fff !important;
 }
+/* ==========================
+   BLOG & PROJECT HEADER FIX
+========================== */
+
+body.blog-page .header,
+body.projects-page .header {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Zorg dat hij pas wit wordt bij scroll */
+body.scrolled .header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
