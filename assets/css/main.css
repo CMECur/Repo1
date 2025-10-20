@@ -211,6 +211,10 @@ a:hover {
     font-size: 15px;
   }
 }
+/* Ruimte tussen hero en volgende sectie */
+#hero {
+  margin-bottom: 60px; /* vergroot afstand */
+}
 /* ==========================
    HERO v4.3 – Deep Contrast Fix (Dim Level 4)
 ========================== */
@@ -241,5 +245,28 @@ a:hover {
   #hero .carousel-item {
     filter: brightness(0.7) contrast(1.1);
     background-position: center top;
+  }
+}
+/* Header fix – leesbaar op desktop */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header .navmenu a {
+  color: #111;
+}
+
+.header .navmenu a:hover,
+.header .navmenu .active {
+  color: #FFD700 !important;
+}
+@media (max-width: 768px) {
+  #hero .carousel-item {
+    background-attachment: initial !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    filter: brightness(0.7) contrast(1.1);
   }
 }
