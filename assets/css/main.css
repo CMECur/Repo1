@@ -568,3 +568,12 @@ body.scrolled .header {
   color: #FFD700;
   margin: 0 6px;
 }
+/* ==========================
+   Breadcrumb HIDE – CME Curaçao
+========================== */
+.page-title .breadcrumbs,
+.page-title nav.breadcrumbs,
+.page-title ol,
+.page-title .breadcrumbs ol {
+  display: none !important;
+}
