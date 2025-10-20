@@ -403,7 +403,9 @@ a:hover {
   .navmenu ul {
     display: none;
   }
+}
+
+/* ✅ Deze regel hoort buiten media queries */
 body.mobile-nav-active .navmenu {
   right: 0;
-}   
 }
