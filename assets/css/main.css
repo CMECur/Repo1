@@ -686,3 +686,93 @@ section.section {
 
 /* Zorg dat header boven de hero blijft en niet doorschijnt in de tekst */
 .header { z-index: 1000; }
+
+/* ========= HERO – herstel originele CME look (zoals mobiele versie) ========= */
+
+/* Overlay voor helderheid */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+/* Hero container */
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tekst op hero */
+#hero .info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+/* Titel */
+#hero .info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: #fff;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+/* Gele streep onder de titel */
+#hero .info h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #FFD700;
+  margin: 18px auto 0;
+  border-radius: 2px;
+}
+
+/* Subtekst */
+#hero .info p {
+  color: #fff;
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 700px;
+  margin: 20px auto 0;
+}
+
+/* Lees meer knop */
+#hero .btn-get-started {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 36px;
+  border: 2px solid #FFD700;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease;
+  background: transparent;
+}
+
+#hero .btn-get-started:hover {
+  background: #FFD700;
+  color: #111;
+}
+
+/* Carousel navigatie (pijltjes) */
+#hero .carousel-control-prev-icon,
+#hero .carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
