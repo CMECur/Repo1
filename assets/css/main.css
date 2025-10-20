@@ -956,3 +956,53 @@ section.section {
     white-space: normal; /* mag afbreken indien te lang */
   }
 }
+/* ===== HERO TITEL – FINAL RESPONSIVE BALANCE ===== */
+
+/* Basisstijl */
+#hero .info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-size: clamp(28px, 3.5vw, 48px); /* iets kleiner voor breed scherm */
+  padding: 0 6vw; /* extra lucht aan zijkanten */
+  max-width: 1000px; /* voorkomt dat tekst te ver uitrekt */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tweede regel */
+#hero .info h2 span {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05em;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+/* Gouden streep */
+#hero .info h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #FFD700;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Mobiel fix ===== */
+@media (max-width: 768px) {
+  #hero .info h2 {
+    font-size: clamp(22px, 5vw, 32px);
+    padding: 0 1rem;
+    max-width: 90%;
+  }
+
+  #hero .info h2 span {
+    white-space: normal; /* breekt netjes als nodig */
+    font-size: 1em;
+  }
+}
