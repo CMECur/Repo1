@@ -121,7 +121,27 @@ a:hover {
 /* =====================
    HERO
 ===================== */
+/* ===== Hero achtergrond carousel fix ===== */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 60px;
+  background: url("img/hero-carousel/hero-carousel-1.jpg") center center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
 
+/* Donkere overlay zodat tekst leesbaar blijft */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
 #hero {
   position: relative;
   width: 100%;
