@@ -165,5 +165,39 @@
    * Initiate Pure Counter
    */
   new PureCounter();
+// =============================
+// CME Curaçao Header & Mobile Nav Fix
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+  const navMenu = document.querySelector(".navmenu");
+  const navToggle = document.querySelector(".mobile-nav-toggle");
 
+  // Zorg dat header scroll-effect ook werkt op pagina’s zonder sticky class
+  function fixScrolledHeader() {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  }
+  window.addEventListener("scroll", fixScrolledHeader);
+  window.addEventListener("load", fixScrolledHeader);
+
+  // Correcte mobiele navigatie voor CME-structuur
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("mobile-nav-active");
+      navToggle.classList.toggle("bi-x");
+    });
+
+    // sluit menu bij klik op link
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("mobile-nav-active");
+        navToggle.classList.remove("bi-x");
+      });
+    });
+  }
+});
 })();
