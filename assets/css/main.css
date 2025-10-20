@@ -403,4 +403,7 @@ a:hover {
   .navmenu ul {
     display: none;
   }
+body.mobile-nav-active .navmenu {
+  right: 0;
+}   
 }
