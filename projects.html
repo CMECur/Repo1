@@ -1,154 +1,163 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head> <link href="assets/css/main.css?v=3" rel="stylesheet">
+
+<head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projecten - CME Curaçao</title>
-  <meta name="description" content="Bekijk onze bouwprojecten op Curaçao. CME Curaçao levert kwaliteit in constructie, renovatie en projectmanagement.">
-  <meta name="keywords" content="CME, bouwbedrijf, projecten, renovatie, nieuwbouw, Curaçao, projectmanagement, afwerking, constructie">
 
+  <title>Projecten - CME Curaçao</title>
+  <meta name="description" content="Bekijk onze recente projecten bij CME Curaçao.">
+  <meta name="keywords" content="CME Curaçao, bouwprojecten, renovatie, constructie, projectmanagement">
+
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700|Poppins:300,400,600,700" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-    :root { --cme-accent: #FFD200; }
-    .sitename { color:#fff; font-weight:700; white-space:nowrap; }
-    .logo-c, .logo-dot { color: var(--cme-accent); }
-  </style>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body class="projects-page">
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
       <a href="index.html" class="logo d-flex align-items-center">
-  <h1><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</h1>
-</a>
-      <nav id="navmenu" class="navmenu">
+        <h1>
+          <span class="logo-c" style="color: #FFD700;">C</span>ME<span class="logo-dot" style="color: #FFD700;">.</span> Curaçao
+        </h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Over ons</a></li>
           <li><a href="services.html">Diensten</a></li>
           <li><a href="projects.html" class="active">Projecten</a></li>
-          <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
   </header>
 
-  <main class="main">
-
-  <!-- Titelbalk wit -->
-  <div class="page-title">
-    <div class="container position-relative">
-      <h1>Projecten</h1>
-      <nav class="breadcrumbs">
+  <!-- ======= Hero Section ======= -->
+  <main id="main">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/projects-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <h2 style="color: white;">Projecten</h2>
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li class="current">Projecten</li>
+          <li><a href="index.html" style="color: #FFD700;">Home</a></li>
+          <li style="color: white;">Projecten</li>
         </ol>
-      </nav>
-    </div>
-  </div>
-
-  <!-- Projecten Sectie -->
-  <section id="projects" class="projects section">
-    <div class="container" data-aos="fade-up">
-
-      <div class="row gy-4">
-
-        <!-- Project 1 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="project-item">
-            <img src="assets/img/projects/project-1.jpg" class="img-fluid" alt="Brakapeut project">
-            <div class="project-info">
-              <h4>Brakapeut Project</h4>
-              <p>Volledige woningrenovatie met uitbreiding en afwerking.</p>
-              <a href="project-details-1.html" class="stretched-link">Bekijk project</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="project-item">
-            <img src="assets/img/projects/project-2.jpg" class="img-fluid" alt="Privé huis budget deal">
-            <div class="project-info">
-              <h4>Privé Huis – Budget Deal</h4>
-              <p>Betaalbare woning met slimme bouwoplossingen en sterke structuur.</p>
-              <a href="project-details-2.html" class="stretched-link">Bekijk project</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="project-item">
-            <img src="assets/img/projects/project-3.jpg" class="img-fluid" alt="Commerciële opslag">
-            <div class="project-info">
-              <h4>Commerciële Opslag</h4>
-              <p>Grote opslagloods met betonnen vloer en staalconstructie.</p>
-              <a href="project-details-3.html" class="stretched-link">Bekijk project</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="project-item">
-            <img src="assets/img/projects/project-4.jpg" class="img-fluid" alt="Appartement renovatie">
-            <div class="project-info">
-              <h4>Appartement Renovatie</h4>
-              <p>Volledige interieurvernieuwing en moderne afwerking.</p>
-              <a href="project-details-4.html" class="stretched-link">Bekijk project</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="project-item">
-            <img src="assets/img/projects/project-5.jpg" class="img-fluid" alt="Betonwerk & Toezicht">
-            <div class="project-info">
-              <h4>Betonwerk & Toezicht</h4>
-              <p>Betonconstructies met professioneel toezicht en kwaliteitscontrole.</p>
-              <a href="project-details-5.html" class="stretched-link">Bekijk project</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-
     </div>
-  </section>
 
-</main>
+    <!-- ======= Projecten Sectie ======= -->
+    <section id="projects" class="projects section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Onze recente projecten</h2>
+          <p>Een selectie van enkele projecten die wij met trots hebben uitgevoerd voor onze klanten.</p>
+        </div>
 
-  <footer id="footer" class="footer section-bg" style="background-color: #1a1a1a; color: #fff;">
+        <div class="row gy-4">
+
+          <!-- Project 1 -->
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <img src="assets/img/projects/project-1.jpg" class="img-fluid" alt="">
+              <div class="project-info">
+                <h4>Brakapleut Project</h4>
+                <p>Volledige ruwbouw en afwerking voor een woningproject.</p>
+                <a href="project-details.html" class="stretched-link">Bekijk project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <img src="assets/img/projects/project-2.jpg" class="img-fluid" alt="">
+              <div class="project-info">
+                <h4>Budget Deal Woning</h4>
+                <p>Een slim en betaalbaar bouwconcept voor particuliere klanten.</p>
+                <a href="project-details.html" class="stretched-link">Bekijk project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <img src="assets/img/projects/project-3.jpg" class="img-fluid" alt="">
+              <div class="project-info">
+                <h4>Toezicht & Uitvoering</h4>
+                <p>Projectbegeleiding en kwaliteitscontrole voor zakelijke klant.</p>
+                <a href="project-details.html" class="stretched-link">Bekijk project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <img src="assets/img/projects/project-4.jpg" class="img-fluid" alt="">
+              <div class="project-info">
+                <h4>Appartement Complex</h4>
+                <p>Constructie van een modern appartementencomplex op Curaçao.</p>
+                <a href="project-details.html" class="stretched-link">Bekijk project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <img src="assets/img/projects/project-5.jpg" class="img-fluid" alt="">
+              <div class="project-info">
+                <h4>Privéwoning Luxe</h4>
+                <p>Een luxe woning met focus op duurzaamheid en design.</p>
+                <a href="project-details.html" class="stretched-link">Bekijk project</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer section-bg">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</span>
+            <span class="sitename">
+              <span class="logo-c" style="color: #FFD700;">C</span>ME<span class="logo-dot" style="color: #FFD700;">.</span> Curaçao
+            </span>
           </a>
           <div class="footer-contact pt-3">
             <p>Willemstad, Curaçao</p>
-            <p class="mt-3"><strong>Telefoon:</strong> <span>+59995114226</span></p>
+            <p><strong>Telefoon:</strong> <span>+5999 511 4226</span></p>
             <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
           </div>
         </div>
+
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nuttige links</h4>
           <ul>
@@ -159,6 +168,7 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+
         <div class="col-lg-3 col-md-3 footer-links">
           <h4>Onze diensten</h4>
           <ul>
@@ -170,12 +180,13 @@
         </div>
       </div>
     </div>
+
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
+      <p>© Copyright <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> Alle rechten voorbehouden.</p>
     </div>
   </footer>
 
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
