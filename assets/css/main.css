@@ -1,6 +1,6 @@
 /* =========================================================
-   CME. Curaçao – MAIN CSS (Final Clean Version)
-   Author: GPT-5 | Styleguide based on Master Command Plan
+   CME. Curaçao – MAIN CSS (Final v6)
+   Author: GPT-5 | Clean + Stable Version
    ========================================================= */
 
 /* =====================
@@ -22,62 +22,44 @@ a {
 
 a:hover {
   color: #d4af37;
-  text-decoration: none;
 }
 
 /* =====================
-   LOGO STIJL
+   LOGO
 ===================== */
 .logo-c {
   color: #FFD700;
   font-weight: 700;
 }
-
 .logo-dot {
   color: #FFD700;
 }
 
 /* =====================
-   HEADER FIX – Final (CME Curaçao)
+   HEADER
 ===================== */
 .header {
   background: transparent;
-  color: #111;
   transition: all 0.4s ease;
   z-index: 997;
   padding: 20px 0;
-  box-shadow: none;
+  position: fixed;
+  width: 100%;
 }
 
-/* Bij scroll of witte achtergrond */
 .header.scrolled {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Logo */
 .header .logo h1 {
   font-size: 28px;
   margin: 0;
   font-weight: 700;
-  letter-spacing: 1px;
   color: #111;
 }
 
-/* Menu */
-.navmenu a {
-  color: #111;
-  padding: 10px 20px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-/* Hover en active */
-.navmenu a:hover,
-.navmenu .active {
-  color: #FFD700 !important;
-}
 /* =====================
    NAVIGATIE
 ===================== */
@@ -93,16 +75,59 @@ a:hover {
   padding: 0;
   display: flex;
 }
-/* <-- DIT sluit het open blok correct af ↑ */
 
-/* ==========================
-   HERO - CME Curaçao v4.2 Final Tuned
-========================== */
+.navmenu li {
+  margin-left: 20px;
+}
+
+.navmenu a {
+  color: #111;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  color: #FFD700 !important;
+}
+
+/* Mobiel menu fix */
+@media (max-width: 991px) {
+  .navmenu ul {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .navmenu ul.active {
+    display: block;
+  }
+
+  .navmenu li {
+    margin: 10px 0;
+  }
+
+  .navmenu a {
+    color: #111;
+  }
+}
+
+/* =====================
+   HERO
+===================== */
 #hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
+  margin-bottom: 60px;
 }
 
 #hero .carousel,
@@ -114,26 +139,20 @@ a:hover {
 #hero .carousel-item {
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  filter: brightness(0.8) contrast(1.05);
   transition: opacity 1s ease-in-out;
+  filter: brightness(0.65) contrast(1.05);
 }
 
-/* Donkerdere overlay (UpConstruction style) */
+/* Overlay */
 #hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.85)
-  );
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
-/* Tekst */
+/* Info */
 #hero .info {
   position: absolute;
   inset: 0;
@@ -151,25 +170,22 @@ a:hover {
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Gouden lijn */
 #hero .divider {
   width: 60px;
   height: 4px;
   background: #FFD700;
-  margin: 0 auto 20px auto;
+  margin: 10px auto 20px;
   border-radius: 2px;
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }
 
-/* Paragraaf */
 #hero .info p {
   color: #fff;
   font-size: 16px;
   margin-bottom: 30px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Knop */
@@ -182,7 +198,6 @@ a:hover {
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.4s ease;
-  text-transform: none;
 }
 
 .btn-get-started-outline:hover {
@@ -190,7 +205,7 @@ a:hover {
   color: #111;
 }
 
-/* Navigatiepijlen */
+/* Pijlen */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1) brightness(100%);
@@ -198,25 +213,16 @@ a:hover {
   height: 2rem;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 8%;
-  z-index: 3;
-}
-
-/* Mobiel */
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 768px) {
   #hero {
     height: 100vh;
   }
 
-  #hero .carousel-item {
-    background-position: center top;
-    filter: brightness(0.7) contrast(1.1);
-  }
-
   #hero .info {
-    padding-top: 120px;
+    padding-top: 100px;
   }
 
   #hero .info h1 {
@@ -226,81 +232,11 @@ a:hover {
   #hero .info p {
     font-size: 15px;
   }
-}
-/* Ruimte tussen hero en volgende sectie */
-#hero {
-  margin-bottom: 60px; /* vergroot afstand */
-}
-/* ==========================
-   HERO v4.3 – Deep Contrast Fix (Dim Level 4)
-========================== */
 
-/* Sterkere overlay – maakt foto’s duidelijk donkerder maar behoud kleur */
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.9)
-  );
-  z-index: 1;
-}
-
-/* Verlaag globale helderheid een tikkie extra */
-#hero .carousel-item {
-  filter: brightness(0.65) contrast(1.05);
-  background-size: cover;
-  background-position: center center;
-  transition: opacity 1s ease-in-out;
-}
-
-/* Mobiel behoudt iets meer helderheid (anders wordt het te donker) */
-@media (max-width: 768px) {
   #hero .carousel-item {
+    background-attachment: initial !important;
+    background-position: center center !important;
+    background-size: cover !important;
     filter: brightness(0.7) contrast(1.1);
-    background-position: center top;
   }
-}
-/* =====================
-   HEADER FIX – Final (CME Curaçao)
-===================== */
-.header {
-  background: transparent;
-  color: #111;
-  transition: all 0.4s ease;
-  z-index: 997;
-  padding: 20px 0;
-  box-shadow: none;
-}
-
-/* Bij scroll of witte achtergrond */
-.header.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Logo */
-.header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #111;
-}
-
-/* Menu */
-.navmenu a {
-  color: #111;
-  padding: 10px 20px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-/* Hover en active */
-.navmenu a:hover,
-.navmenu .active {
-  color: #FFD700 !important;
 }
