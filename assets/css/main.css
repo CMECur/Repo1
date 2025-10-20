@@ -463,3 +463,32 @@ body.scrolled .header {
   backdrop-filter: blur(4px) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+/* ==========================
+   GLOBAL HEADER BLUR & TRANSPARENCY POLISH – CME Curaçao
+   ========================== */
+
+/* Basis transparantie en blur (altijd actief) */
+.header {
+  background: rgba(255, 255, 255, 0.85); /* subtiel doorzichtig wit */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Hero-pagina’s starten volledig transparant */
+body:not(.scrolled) .header {
+  background: rgba(255, 255, 255, 0); /* transparant bij bovenaan hero */
+  box-shadow: none;
+}
+
+/* Bij scroll wordt hij iets steviger wit voor leesbaarheid */
+body.scrolled .header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Donker achtergrond → logo en menu wit maken */
+.dark-background .header a {
+  color: #fff;
+}
