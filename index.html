@@ -266,3 +266,20 @@
   </script>
 </body>
 </html>
+<script>
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('.navmenu');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('mobile-nav-active');
+    navToggle.classList.toggle('bi-x'); // verandert het icoon (list → X)
+  });
+
+  // Optioneel: sluit menu als je op een link klikt
+  document.querySelectorAll('.navmenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('mobile-nav-active');
+      navToggle.classList.remove('bi-x');
+    });
+  });
+</script>
