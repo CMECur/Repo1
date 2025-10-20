@@ -1,10 +1,12 @@
 /* =====================
-   ALGEMENE STIJL
+   BASIS STIJL
 ===================== */
 body {
   font-family: "Open Sans", sans-serif;
   color: #444;
   background: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -18,14 +20,15 @@ a:hover {
 }
 
 /* =====================
-   HEADER & NAVIGATIE
+   HEADER / LOGO
 ===================== */
 .header {
-  background: #111;
-  color: #fff;
+  background: #fff;
+  color: #111;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .header .logo h1 {
@@ -33,7 +36,7 @@ a:hover {
   margin: 0;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #fff;
+  color: #111;
 }
 
 .logo-c {
@@ -45,7 +48,9 @@ a:hover {
   color: #FFD700;
 }
 
-/* Navbar links */
+/* =====================
+   NAVIGATIE
+===================== */
 .navbar {
   padding: 0;
 }
@@ -67,7 +72,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  color: #ffffff;
+  color: #111;
   font-weight: 500;
   transition: 0.3s;
   font-size: 15px;
@@ -79,115 +84,43 @@ a:hover {
   color: #FFD700;
 }
 
-/* Mobile nav */
+/* Mobiele navigatie */
 .mobile-nav-toggle {
-  color: #fff;
+  color: #111;
   font-size: 28px;
   cursor: pointer;
   display: none;
 }
 
-/* =====================
-   HERO SECTION
-===================== */
-#hero {
-  width: 100%;
-  height: 90vh;
-  background: url("../img/hero-carousel/hero-carousel-1.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
 
-#hero h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-}
+  .navbar ul {
+    display: none;
+  }
 
-#hero p {
-  font-size: 18px;
-  color: #fff;
-  margin-top: 10px;
-}
+  .navbar.mobile-nav-active ul {
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
 
-.btn-get-started {
-  font-weight: 600;
-  color: #111;
-  background: #FFD700;
-  padding: 10px 28px;
-  border-radius: 4px;
-  transition: 0.4s;
-}
+  .navbar.mobile-nav-active a {
+    color: #111;
+    display: block;
+    padding: 10px 20px;
+  }
 
-.btn-get-started:hover {
-  background: #d4af37;
-  color: #111;
-}
-
-/* =====================
-   DIENSTEN SECTIE
-===================== */
-.section-bg {
-  background: #f8f9fa;
-}
-
-.section-header h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #111;
-}
-
-.section-header p {
-  color: #555;
-}
-
-.service-item {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  transition: all 0.4s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.service-item .icon {
-  font-size: 40px;
-  color: #FFD700;
-  margin-bottom: 20px;
-}
-
-.service-item h4 {
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 15px;
-}
-
-.service-item p {
-  color: #555;
-  font-size: 15px;
-}
-
-/* =====================
-   PROJECTEN
-===================== */
-.project-details h3 {
-  color: #111;
-}
-
-.project-info ul {
-  padding: 0;
-  list-style: none;
-}
-
-.project-info li {
-  padding: 5px 0;
-  color: #333;
+  .navbar.mobile-nav-active a:hover {
+    color: #FFD700;
+  }
 }
 
 /* =====================
@@ -247,8 +180,22 @@ a:hover {
 }
 
 /* =====================
-   SCROLL BUTTON
+   BUTTONS & SCROLL
 ===================== */
+.btn-get-started {
+  font-weight: 600;
+  color: #111;
+  background: #FFD700;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.btn-get-started:hover {
+  background: #d4af37;
+  color: #111;
+}
+
 .scroll-top {
   position: fixed;
   right: 15px;
@@ -268,37 +215,4 @@ a:hover {
 .scroll-top:hover {
   background: #d4af37;
   color: #fff;
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-
-  .navbar.mobile-nav-active ul {
-    display: block;
-    background: #111;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 10px 0;
-  }
-
-  .navbar.mobile-nav-active a {
-    color: #fff;
-    display: block;
-    padding: 10px 20px;
-  }
-
-  .navbar.mobile-nav-active a:hover {
-    color: #FFD700;
-  }
 }
