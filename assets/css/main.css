@@ -391,8 +391,8 @@ a:hover {
   background: rgba(255, 215, 0, 0.1);
   transform: translateY(-6px);
 }
-/* =====================
-   FOOTER – MET FOTO + MOOI OPGERUIMD
+//* =====================
+   FOOTER – FINAL CLEAN DESIGN (CME Curaçao)
 ===================== */
 .footer {
   background: url("assets/img/footer-bg.jpg") center center/cover no-repeat;
@@ -408,64 +408,99 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.78);
   z-index: -1;
 }
 
-/* Teksten en links */
+/* LOGO */
+.footer .logo-c {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+.footer .logo-dot {
+  color: #FFD700;
+}
+
+/* Algemene layout */
+.footer .footer-about,
+.footer .footer-links {
+  color: #ddd;
+}
+
 .footer h4 {
   color: #FFD700;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.footer p,
-.footer a,
-.footer span {
-  color: #ddd;
+/* Tekst en contact */
+.footer p {
   font-size: 15px;
-  text-decoration: none;
   line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .footer a:hover {
-  color: #FFD700;
-}
-
-/* Telefoon en e-mail klikbaar maken */
-.footer .footer-contact span {
-  display: block;
-}
-.footer .footer-contact span:nth-child(2),
-.footer .footer-contact span:nth-child(3) {
-  color: #FFD700;
-  transition: color 0.3s ease;
-}
-.footer .footer-contact span:nth-child(2):hover,
-.footer .footer-contact span:nth-child(3):hover {
   color: #fff;
 }
 
-/* Footer verdeling */
-.footer .row {
-  justify-content: space-between;
+/* Lijsten dichter bij elkaar (PC) */
+.footer .footer-links ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
+.footer .footer-links ul li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.footer .row {
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Copyright */
 .footer .copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 40px;
   padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 14px;
   color: #bbb;
 }
 
-/* Mobiel */
+/* ===== Mobiel optimalisatie ===== */
 @media (max-width: 768px) {
+  .footer {
+    background-attachment: scroll; /* voorkomt springend effect op mobiel */
+  }
+
   .footer .row {
     text-align: center;
   }
+
+  .footer .footer-links ul {
+    list-style: none; /* verwijdert de bolletjes */
+    padding: 0;
+  }
+
+  .footer .footer-links ul li {
+    margin-bottom: 8px;
+  }
+
   .footer .footer-about,
   .footer .footer-links {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
