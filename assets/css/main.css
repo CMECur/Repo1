@@ -238,6 +238,58 @@ a:hover {
   .hero p {
     font-size: 16px;
   }
+   /* =====================
+   HERO – VISUELE UPGRADE
+===================== */
+
+/* Donkere overlay subtieler en dynamisch */
+.hero .carousel-container {
+  background: rgba(0, 0, 0, 0.55); /* iets donkerder */
+  animation: fadeInHero 1s ease-out;
+}
+
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero titel met goudaccent */
+.hero h2 span {
+  color: #FFD700;
+  font-weight: 800;
+}
+
+/* Gouden glansknop */
+.hero .btn-get-started {
+  background: linear-gradient(135deg, #FFD700, #d4af37);
+  color: #111;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.hero .btn-get-started:hover {
+  background: linear-gradient(135deg, #d4af37, #FFD700);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Gouden indicatoren */
+.carousel-indicators [data-bs-target] {
+  background-color: #FFD700;
+  opacity: 0.6;
+}
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+/* Hero-pijlen (wit met goud hover) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  transition: all 0.3s ease;
+}
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: invert(83%) sepia(85%) saturate(749%) hue-rotate(3deg) brightness(105%) contrast(101%);
+}
 }
 /* Mobiel netter centreren */
 @media (max-width: 768px) {
