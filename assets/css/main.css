@@ -1044,3 +1044,50 @@ a:hover {
   min-height: 100vh;
   padding-top: 120px;
 }
+/* ===== HEADER & NAV STIJL FIX ===== */
+
+/* Tekst standaard wit */
+.header .navmenu a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Hover-effect goud */
+.header .navmenu a:hover {
+  color: #FFD700;
+}
+
+/* Active link goud */
+.header .navmenu a.active {
+  color: #FFD700;
+}
+
+/* CME Curaçao logo wit behalve C en punt */
+.header .sitename {
+  color: #fff;
+}
+
+/* C en punt blijven goud */
+.header .sitename .logo-c,
+.header .sitename .logo-dot {
+  color: #FFD700;
+}
+
+/* Wanneer header 'scrolled' is */
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.header.scrolled .sitename {
+  color: #fff;
+}
+
+.header.scrolled .navmenu a {
+  color: #fff;
+}
+
+.header.scrolled .navmenu a:hover,
+.header.scrolled .navmenu a.active {
+  color: #FFD700;
+}
