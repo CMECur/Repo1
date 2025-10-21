@@ -243,20 +243,18 @@ a:hover {
     font-size: 1em;
   }
 }
-/* === HERO TEST === */
+/* === HERO FINAL IMAGE === */
 #hero {
-  background: url("../img/hero-carousel/hero-carousel-1.jpg") no-repeat center center/cover !important;
+  background: url("../img/hero-carousel/hero-carousel-1.jpg") center center/cover no-repeat !important;
   min-height: 100vh !important;
-  border: 5px solid red !important;
-  position: relative !important;
-  z-index: 5 !important;
+  position: relative;
+  overflow: hidden;
 }
-/* === HERO TEST 2 === */
-#hero {
-  background: red !important;
-  background-image: url("https://picsum.photos/1920/1080") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  border: 5px solid lime !important;
-  min-height: 100vh !important;
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
