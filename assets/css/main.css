@@ -849,89 +849,53 @@ a:hover {
     font-size: 16px;
   }
 }
-/* === PROJECTSECTIE LAYOUT FIX === */
-
-/* Algemene stijl: zorgt dat elk projectblok er consistent uitziet */
-.project-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* === PROJECTGRID RESPONSIVE FIX === */
+#cme-project-preview .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+#cme-project-preview .col-md-4 {
+  flex: 0 0 30%;
+  max-width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
-/* Foto’s mooi uitlijnen */
-.project-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Info netjes gepositioneerd */
-.project-info {
-  padding: 15px;
-  text-align: center;
-}
-
-/* Mobiel – extra ruimte tussen blokken */
-@media (max-width: 767px) {
-  .project-item {
-    margin-bottom: 25px; /* extra afstand tussen blokken */
-  }
-}
-
-/* Desktop – 3 blokken naast elkaar */
-@media (min-width: 992px) {
-  .row[data-aos="zoom-in"] {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-  }
-
-  .project-item {
-    flex: 1 1 calc(33.333% - 25px); /* 3 per rij met ruimte ertussen */
-    max-width: calc(33.333% - 25px);
-  }
-
-  .project-item img {
-    height: 220px; /* iets kleiner zodat ze mooi in 1 rij passen */
-  }
-}
-/* === PROJECTGRID FIX === */
 #cme-project-preview .project-item {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 360px; /* houdt de kaarten mooi in balans */
 }
 
 #cme-project-preview .project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 #cme-project-preview img {
   width: 100%;
-  height: 220px;
+  height: 230px;
   object-fit: cover;
+  object-position: center;
 }
 
 #cme-project-preview .project-info {
-  padding: 18px;
+  padding: 18px 15px 25px;
   text-align: center;
 }
 
-/* Mobiel spacing */
-@media (max-width: 767px) {
+/* Mobiel: blokken netjes onder elkaar */
+@media (max-width: 991px) {
   #cme-project-preview .col-md-4 {
-    margin-bottom: 25px;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
