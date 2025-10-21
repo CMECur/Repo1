@@ -242,14 +242,15 @@
     });
   </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll("#hero img");
   const next = document.querySelector(".hero-next");
   const prev = document.querySelector(".hero-prev");
   let current = 0;
+  let interval;
 
-  function showSlide(index) {
-    slides.forEach((img, i) => img.classList.toggle("active", i === index));
+  function showSlide(i) {
+    slides.forEach((img, idx) => img.classList.toggle("active", idx === i));
   }
 
   function nextSlide() {
@@ -257,16 +258,25 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(current);
   }
 
-  function prevSlide() {
+  function prevSlideFunc() {
     current = (current - 1 + slides.length) % slides.length;
     showSlide(current);
   }
 
-  next.addEventListener("click", nextSlide);
-  prev.addEventListener("click", prevSlide);
+  function startAuto() {
+    interval = setInterval(nextSlide, 6000);
+  }
 
-  // Automatisch wisselen elke 6 seconden
-  setInterval(nextSlide, 6000);
+  function resetAuto() {
+    clearInterval(interval);
+    startAuto();
+  }
+
+  next.addEventListener("click", () => { nextSlide(); resetAuto(); });
+  prev.addEventListener("click", () => { prevSlideFunc(); resetAuto(); });
+
+  showSlide(current);
+  startAuto();
 });
 </script>
 </body>
