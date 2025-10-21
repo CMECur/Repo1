@@ -1232,3 +1232,31 @@ a:hover {
 .header .sitename .logo-dot {
   color: #FFD700 !important;
 }
+
+/* ===== DIENSTEN ===== */
+.services .service-item i {
+  font-size: 4rem; /* was waarschijnlijk ~1rem → 4× groter */
+  color: #FFD700;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.services .service-item:hover i {
+  transform: scale(1.1);
+}
+
+/* Titel dikker en duidelijker */
+.services .service-item h4 {
+  font-weight: 700; /* dikker dan standaard */
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* optioneel: maakt titels krachtiger */
+}
+
+/* Tekst iets groter voor balans */
+.services .service-item p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
