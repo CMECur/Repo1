@@ -944,3 +944,32 @@ a:hover {
   text-decoration: none;
   white-space: nowrap;
 }
+/* ====== ABOUT PAGE LOGO BACKGROUND ====== */
+.about-page .section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7); /* lichte sluier voor leesbaarheid */
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 60px 30px;
+}
+
+.about-page .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/logo.png") center/contain no-repeat;
+  opacity: 0.15; /* logo subtiel zichtbaar */
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.about-page .section * {
+  position: relative;
+  z-index: 1; /* tekst boven de achtergrond */
+}
+.about-page .section::before {
+  background-attachment: fixed;
+}
