@@ -1260,3 +1260,10 @@ a:hover {
   line-height: 1.6;
   color: #444;
 }
+/* ===== DIENSTEN - TEKST ZICHTBAAR MAKEN ===== */
+.services .service-item p {
+  color: #fff !important; /* maakt tekst helder wit */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* subtiele schaduw voor leesbaarheid */
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
