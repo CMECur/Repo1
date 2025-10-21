@@ -58,7 +58,20 @@ a:hover {
   margin: 0;
   font-weight: 700;
   color: #111;
+  /* ===== HEADER GLASS EFFECT ===== */
+.header {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+} 
+
 
 /* =====================
    NAVIGATIE
@@ -537,4 +550,34 @@ a:hover {
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
   z-index: -1;
-}
+ /* ===== FOOTER MOBILE LAYOUT FIX ===== */
+@media (max-width: 768px) {
+  #footer .footer-top {
+    text-align: center;
+  }
+
+  #footer .footer-about,
+  #footer .footer-links {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  #footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+  }
+
+  #footer .footer-links ul li {
+    margin: 8px 0;
+  }
+
+  #footer .footer-links ul li::before {
+    content: "•";
+    color: #FFD700;
+    margin-right: 10px;
+  }
+  
