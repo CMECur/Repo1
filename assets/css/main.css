@@ -945,12 +945,12 @@ a:hover {
   white-space: nowrap;
 }
 
-/* ====== ABOUT PAGE - LUXE BACKGROUND & TEXT STYLE ====== */
+/* ====== ABOUT PAGE - FULL LUXURY EDITION ====== */
 .about-page .section {
   position: relative;
-  background: rgba(25, 25, 25, 0.6); /* donkerder grijs voor luxe contrast */
+  background: rgba(20, 20, 20, 0.75); /* donkerder, dekt hele pagina */
   overflow: hidden;
-  padding: 140px 30px 80px;
+  padding: 160px 30px 100px; /* extra top space */
   backdrop-filter: blur(8px);
   min-height: 100vh;
   display: flex;
@@ -958,41 +958,37 @@ a:hover {
   justify-content: center;
 }
 
-/* Logo achtergrond met donkere basislaag en sterkere zichtbaarheid */
+/* Volledige donkere laag + groot centraal logo */
 .about-page .section::before {
   content: "";
-  position: absolute;
+  position: fixed; /* zorgt dat het de hele viewport bedekt */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-
-  /* donkergrijze onderlaag + logo */
   background:
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.7)
     ),
-    url("../img/logo.png") center/contain no-repeat;
-
-  opacity: 0.6; /* goed zichtbaar, maar niet storend */
-  filter: blur(1.5px);
+    url("../img/logo.png") center center/55% no-repeat; /* groter logo */
+  opacity: 0.7;
+  filter: blur(1.2px);
   z-index: 0;
-  background-attachment: fixed;
 }
 
-/* Mobiel: volledige dekking + logo iets hoger */
+/* Mobiel: nog groter logo en iets hoger geplaatst */
 @media (max-width: 768px) {
   .about-page .section::before {
     background:
       linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.75)
       ),
-      url("../img/logo.png") center 35%/70% no-repeat;
-    opacity: 0.7;
+      url("../img/logo.png") center 38%/85% no-repeat; /* logo hoger en groter */
+    opacity: 0.8;
   }
 }
 
@@ -1000,27 +996,28 @@ a:hover {
 .about-page .section * {
   position: relative;
   z-index: 1;
-  color: #f8f8f8; /* luxe lichtgrijs wit */
+  color: #f8f8f8;
 }
 
-/* Luxe titelstijl */
+/* Luxe titelstijl met subtiele glow */
 .about-page h2 {
   font-weight: 700;
   letter-spacing: -0.3px;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 3px 10px rgba(255, 215, 0, 0.25); /* zachte gouden gloed */
   margin-bottom: 1.5rem;
 }
 
-/* Tekst iets groter voor balans */
+/* Tekst iets groter en ruimtelijker */
 .about-page p {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.75;
   color: #e5e5e5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* Padding bovenaan zodat header niet overlapt */
+/* Padding bovenaan voor header */
 .about-page main {
   padding-top: 120px;
 }
