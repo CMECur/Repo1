@@ -1,11 +1,8 @@
 /* =========================================================
-   CME. Curaçao – MAIN CSS (Final v6)
-   Author: GPT-5 | Clean + Stable Version
+   CME. Curaçao – Stable Version (Hero + Footer + Layout OK)
    ========================================================= */
 
-/* =====================
-   BASIS STIJL
-===================== */
+/* ===== BASIS ===== */
 body {
   font-family: "Open Sans", sans-serif;
   color: #444;
@@ -19,14 +16,11 @@ a {
   text-decoration: none;
   transition: 0.3s;
 }
-
 a:hover {
   color: #d4af37;
 }
 
-/* =====================
-   LOGO
-===================== */
+/* ===== LOGO ===== */
 .logo-c {
   color: #FFD700;
   font-weight: 700;
@@ -35,77 +29,90 @@ a:hover {
   color: #FFD700;
 }
 
-/* =====================
-   HEADER
-===================== */
+/* ===== HEADER ===== */
 .header {
-  background: rgba(255, 255, 255, 0.15); /* licht transparant */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.98);
+  transition: all 0.4s ease;
   z-index: 997;
   padding: 20px 0;
   position: fixed;
   width: 100%;
 }
-
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.9); /* iets minder transparant bij scroll */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
-
 .header .logo h1 {
   font-size: 28px;
   margin: 0;
   font-weight: 700;
   color: #111;
 }
-
-/* =====================
-   NAVIGATIE
-===================== */
-.navmenu {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
+.navmenu a {
+  color: #111;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: 0.3s;
 }
-
-.navmenu ul {
+.navmenu a:hover,
+.navmenu .active {
   color: #FFD700 !important;
 }
 
-/* Mobiel menu fix */
-@media (max-width: 991px) {
-  .navmenu ul {
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.97);
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .navmenu ul.active {
-    display: block;
-  }
-
-  .navmenu li {
-    margin: 10px 0;
-  }
-
-  .navmenu a {
-    color: #111;
-  }
+/* ===== HERO ===== */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.hero .carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.hero .carousel-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.45);
+}
+.hero h2 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+}
+.hero p {
+  color: #eee;
+  font-size: 18px;
+  margin: 15px 0 25px;
 }
 
-/* =====================
-   FOOTER
-===================== */
+/* ===== FOOTER ===== */
+#footer {
+  background-image: url("https://cmecur.github.io/Repo1/assets/img/footer-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+#footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
@@ -113,81 +120,29 @@ a:hover {
 }
 .footer .footer-links ul li {
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 .footer .footer-links ul li::before {
   content: "•";
   color: #FFD700;
   font-weight: bold;
-  font-size: 16px;
+  margin-right: 6px;
 }
-
-/* ===== LAYOUT ===== */
-.footer .row {
-  justify-content: space-between;
-  gap: 40px;
-}
-
-/* ===== COPYRIGHT ===== */
 .footer .copyright {
   text-align: center;
-  margin-top: 40px;
-  padding-top: 20px;
+  padding: 25px 0;
   font-size: 14px;
   color: #bbb;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ===== FOOTER IMAGE HARD FIX ===== */
-#footer {
-  background-image: url("https://cmecur.github.io/Repo1/assets/img/footer-bg.jpg") !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  min-height: 400px !important;
-  color: #fff !important;
-  position: relative;
-}
-
-#footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: -1;
-}
-
-/* ===== FOOTER MOBILE LAYOUT FIX ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
   #footer .footer-top {
     text-align: center;
-  }
-
-  #footer .footer-about,
-  #footer .footer-links {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 25px;
-  }
-
-  #footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    text-align: left;
-  }
-
-  #footer .footer-links ul li {
-    margin: 8px 0;
-  }
-
-  #footer .footer-links ul li::before {
-    content: "•";
-    color: #FFD700;
-    margin-right: 10px;
   }
 }
