@@ -38,24 +38,25 @@ a:hover {
 /* =====================
    HEADER
 ===================== */
+/* ==== HEADER FIX (mooier glas, niet te wit) ==== */
 .header {
-  background: rgba(255, 255, 255, 0.08); /* ✨ subtiel transparant */
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.05); /* minder wit, meer glas */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
   z-index: 997;
   padding: 20px 0;
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25); /* zachte scheiding */
 }
 
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.25); /* iets steviger bij scroll */
+  background: rgba(255, 255, 255, 0.2); /* iets zichtbaarder bij scroll */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .header .logo h1 {
