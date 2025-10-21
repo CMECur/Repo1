@@ -503,3 +503,21 @@ a:hover {
     margin-bottom: 25px;
   }
 }
+/* --- Forceer footer achtergrondafbeelding zichtbaar --- */
+footer.footer {
+  background-image: url("assets/img/footer-bg.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  position: relative;
+  z-index: 1;
+}
+
+footer.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
