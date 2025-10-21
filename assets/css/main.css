@@ -1267,3 +1267,91 @@ a:hover {
   font-size: 1.05rem;
   line-height: 1.6;
 }
+/* ===========================
+   PROJECTEN - ZICHTBAARHEID & STIJL
+=========================== */
+
+/* Tekstkleur helder wit met subtiele schaduw */
+.projects .project-info h4,
+.projects .project-info p {
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Zorg dat content niet onder header schuift */
+.projects {
+  padding-top: 120px;
+}
+
+/* Gouden glasachtige knop */
+.projects .project-info a {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1.5px solid #FFD700;
+  border-radius: 30px;
+  color: #FFD700;
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.projects .project-info a:hover {
+  background: rgba(255, 215, 0, 0.2);
+  color: #fff;
+  border-color: #FFD700;
+}
+
+/* Projecttegels zelf licht en uitnodigend */
+.projects .project-wrap {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.projects .project-wrap:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
+}
+
+/* Overlay over afbeelding voor meer contrast */
+.projects .project-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0.2));
+  z-index: 0;
+}
+
+.projects .project-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+/* ===== PROJECT DETAILS ===== */
+.project-details {
+  padding-top: 120px;
+  color: #fff;
+}
+
+.project-details h2, 
+.project-details h3, 
+.project-details p, 
+.project-details li {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+.project-details .project-description {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(8px);
+}
