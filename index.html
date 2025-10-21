@@ -280,5 +280,21 @@ document.addEventListener("DOMContentLoaded", () => {
   startAuto();
 });
 </script>
+
+<script>
+  // --- MOBIEL MENU ---
+  document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+    const navMenu = document.querySelector("#navmenu ul");
+
+    navToggle.addEventListener("click", function() {
+      navMenu.classList.toggle("active");
+      // Verander icoon (list ↔ X)
+      this.classList.toggle("bi-list");
+      this.classList.toggle("bi-x");
+    });
+  });
+</script>  
+  
 </body>
 </html>
