@@ -51,9 +51,11 @@ a:hover {
 .header .logo h1 {
   font-size: 28px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
   color: #111;
-}
+  letter-spacing: -0.5px;
+}  
+
 
 /* =====================
    NAVIGATIE (1x, sluit goed af)
