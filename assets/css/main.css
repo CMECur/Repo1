@@ -943,17 +943,17 @@ a:hover {
   outline: none;
   text-decoration: none;
   white-space: nowrap;
-}
-/* ====== ABOUT PAGE LOGO BACKGROUND (v2 - zichtbaar logo) ====== */
+}/* ====== ABOUT PAGE LOGO BACKGROUND (for transparent PNG logo) ====== */
 .about-page .section {
   position: relative;
-  background: rgba(255, 255, 255, 0.4); /* minder wit, zodat logo zichtbaar wordt */
+  background: rgba(255, 255, 255, 0.35); /* soft glass look for readability */
   overflow: hidden;
   border-radius: 16px;
-  padding: 100px 30px 60px; /* extra ruimte bovenaan, zodat header niet overlapt */
-  backdrop-filter: blur(4px); /* zachte blur, tekst blijft leesbaar */
+  padding: 100px 30px 60px;
+  backdrop-filter: blur(5px);
 }
 
+/* Background logo + subtle gradient for contrast */
 .about-page .section::before {
   content: "";
   position: absolute;
@@ -961,19 +961,29 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../img/logo.png") center/contain no-repeat;
-  opacity: 0.25; /* logo beter zichtbaar */
-  filter: blur(3px); /* minder blur zodat silhouet duidelijk is */
+
+  /* gradient to darken behind transparent areas + logo */
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("../img/logo.png") center/contain no-repeat;
+
+  opacity: 0.4;             /* stronger visibility for transparent logo */
+  filter: blur(2.5px);      /* subtle blur so edges are soft */
   z-index: 0;
-  background-attachment: fixed; 
+  background-attachment: fixed; /* elegant depth effect */
 }
 
+/* Ensure text stays crisp above the overlay */
 .about-page .section * {
   position: relative;
-  z-index: 1; /* tekst blijft boven logo */
+  z-index: 1;
 }
 
-/* Extra marge zodat tekst niet achter header zit */
+/* Add space so content doesn't hide behind header */
 .about-page main {
-  padding-top: 180px;
+  padding-top: 140px;
 }
