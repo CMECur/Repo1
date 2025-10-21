@@ -944,13 +944,14 @@ a:hover {
   text-decoration: none;
   white-space: nowrap;
 }
-/* ====== ABOUT PAGE LOGO BACKGROUND ====== */
+/* ====== ABOUT PAGE LOGO BACKGROUND (v2 - zichtbaar logo) ====== */
 .about-page .section {
   position: relative;
-  background: rgba(255, 255, 255, 0.7); /* lichte sluier voor leesbaarheid */
+  background: rgba(255, 255, 255, 0.4); /* minder wit, zodat logo zichtbaar wordt */
   overflow: hidden;
   border-radius: 16px;
-  padding: 60px 30px;
+  padding: 100px 30px 60px; /* extra ruimte bovenaan, zodat header niet overlapt */
+  backdrop-filter: blur(4px); /* zachte blur, tekst blijft leesbaar */
 }
 
 .about-page .section::before {
@@ -961,15 +962,17 @@ a:hover {
   right: 0;
   bottom: 0;
   background: url("../img/logo.png") center/contain no-repeat;
-  opacity: 0.15; /* logo subtiel zichtbaar */
-  filter: blur(12px);
+  opacity: 0.25; /* logo beter zichtbaar */
+  filter: blur(3px); /* minder blur zodat silhouet duidelijk is */
   z-index: 0;
 }
 
 .about-page .section * {
   position: relative;
-  z-index: 1; /* tekst boven de achtergrond */
+  z-index: 1; /* tekst blijft boven logo */
 }
-.about-page .section::before {
-  background-attachment: fixed;
+
+/* Extra marge zodat tekst niet achter header zit */
+.about-page main {
+  padding-top: 140px;
 }
