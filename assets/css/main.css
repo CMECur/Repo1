@@ -1192,3 +1192,43 @@ a:hover {
 .header.scrolled .navmenu a.active {
   color: #FFD700;
 }
+/* ===== FIX: LOGO-GROOTTE + HEADER-KLEUR ===== */
+
+/* --- Logo zichtbaar, groot en gecentreerd --- */
+.about-page::before {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../img/logo.png") center center/40% no-repeat; /* was 35% → iets groter */
+}
+
+/* --- Logo extra groot op pc --- */
+@media (min-width: 1024px) {
+  .about-page::before {
+    background-size: 140%; /* ongeveer 4× groter dan nu */
+    background-position: center 45%;
+  }
+}
+
+/* --- Logo extra groot op mobiel --- */
+@media (max-width: 768px) {
+  .about-page::before {
+    background-size: 170%; /* ongeveer 2× groter */
+    background-position: center 42%;
+  }
+}
+
+/* --- CME. Curaçao blijft wit bij scrollen --- */
+.header .sitename {
+  color: #fff !important;
+}
+.header.scrolled .sitename {
+  color: #fff !important;
+}
+.header .sitename .logo-c,
+.header .sitename .logo-dot {
+  color: #FFD700 !important;
+}
