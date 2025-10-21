@@ -35,24 +35,25 @@ a:hover {
   color: #FFD700;
 }
 
-/* =====================
-   HEADER
-===================== */
-/* ==== HEADER FIX (mooier glas, niet te wit) ==== */
+/* =========================================================
+   HEADER + HERO FIX (glasachtig, netjes uitgelijnd)
+========================================================= */
+
+/* ---- Header ---- */
 .header {
-  background: rgba(255, 255, 255, 0.05); /* minder wit, meer glas */
+  background: rgba(255, 255, 255, 0.06); /* zacht glas effect */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
   z-index: 997;
-  padding: 20px 0;
+  padding: 18px 0;
   position: fixed;
   width: 100%;
 }
 
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.2); /* iets zichtbaarder bij scroll */
+  background: rgba(255, 255, 255, 0.2); /* iets minder transparant bij scroll */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -65,6 +66,52 @@ a:hover {
   font-weight: 700;
   color: #111;
 }
+
+/* ---- Navigatie ---- */
+.navmenu a {
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  color: #FFD700 !important;
+}
+
+/* ---- Mobiel menu fix ---- */
+@media (max-width: 991px) {
+  .navmenu ul {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .navmenu ul.active {
+    display: block;
+  }
+
+  .navmenu li {
+    margin: 10px 0;
+  }
+}
+
+/* ---- Hero fix (zodat header niets overlapt) ---- */
+.hero {
+  padding-top: 100px; /* ruimte onder vaste header */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+  }
+
 /* =====================
    NAVIGATIE
 ===================== */
