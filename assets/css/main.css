@@ -945,20 +945,20 @@ a:hover {
   white-space: nowrap;
 }
 
-/* ====== ABOUT PAGE LOGO BACKGROUND (V3 - stronger & full-height) ====== */
+/* ====== ABOUT PAGE - LUXE BACKGROUND & TEXT STYLE ====== */
 .about-page .section {
   position: relative;
-  background: rgba(255, 255, 255, 0.25); /* minder wit -> meer contrast */
+  background: rgba(25, 25, 25, 0.6); /* donkerder grijs voor luxe contrast */
   overflow: hidden;
-  padding: 140px 30px 80px; /* meer top space voor header */
-  backdrop-filter: blur(6px);
-  min-height: 100vh; /* vult hele schermhoogte voor consistentie */
+  padding: 140px 30px 80px;
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Logo achtergrond met subtiele donkere laag en betere zichtbaarheid */
+/* Logo achtergrond met donkere basislaag en sterkere zichtbaarheid */
 .about-page .section::before {
   content: "";
   position: absolute;
@@ -966,35 +966,61 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
+
+  /* donkergrijze onderlaag + logo */
   background:
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.25)
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
     ),
     url("../img/logo.png") center/contain no-repeat;
-  opacity: 0.45; /* steviger zichtbaarheid */
-  filter: blur(2px);
+
+  opacity: 0.6; /* goed zichtbaar, maar niet storend */
+  filter: blur(1.5px);
   z-index: 0;
   background-attachment: fixed;
 }
 
-/* Op mobiel: logo iets hoger plaatsen */
+/* Mobiel: volledige dekking + logo iets hoger */
 @media (max-width: 768px) {
   .about-page .section::before {
-    background-position: center 30%; /* logo iets hoger */
-    opacity: 0.5; /* iets sterker contrast voor kleine schermen */
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("../img/logo.png") center 35%/70% no-repeat;
+    opacity: 0.7;
   }
 }
 
-/* Tekst blijft leesbaar erboven */
+/* Tekst erboven */
 .about-page .section * {
   position: relative;
   z-index: 1;
-  color: #111;
+  color: #f8f8f8; /* luxe lichtgrijs wit */
 }
 
-/* Extra marge zodat tekst niet onder header schuift */
+/* Luxe titelstijl */
+.about-page h2 {
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+/* Tekst iets groter voor balans */
+.about-page p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e5e5e5;
+}
+
+/* Padding bovenaan zodat header niet overlapt */
 .about-page main {
   padding-top: 120px;
 }
