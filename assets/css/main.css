@@ -75,52 +75,30 @@ a:hover {
 };
 }
 
-/* ===== FOOTER ===== */
-#footer {
-  background-image: url("https://cmecur.github.io/Repo1/assets/img/footer-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  position: relative;
+/* =====================
+   FOOTER (clean + image)
+===================== */
+#footer{
+  background-image:url("https://cmecur.github.io/Repo1/assets/img/footer-bg.jpg");
+  background-position:center; background-repeat:no-repeat; background-size:cover;
+  color:#fff; position:relative;
 }
-#footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
-.footer .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer .footer-links ul li {
-  margin-bottom: 8px;
-}
-.footer .footer-links ul li::before {
-  content: "•";
-  color: #FFD700;
-  font-weight: bold;
-  margin-right: 6px;
-}
-.footer .copyright {
-  text-align: center;
-  padding: 25px 0;
-  font-size: 14px;
-  color: #bbb;
+#footer::before{
+  content:""; position:absolute; inset:0; background:rgba(0,0,0,.72); z-index:-1;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 28px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-  #footer .footer-top {
-    text-align: center;
-  }
+/* bullets & lijsten */
+.footer .footer-links ul{ list-style:none; padding:0; margin:0; }
+.footer .footer-links ul li{ margin:8px 0; display:flex; align-items:center; gap:6px; }
+.footer .footer-links ul li::before{ content:"•"; color:#FFD700; font-weight:700; }
+
+/* Copyright */
+.footer .copyright{ text-align:center; padding:25px 0; font-size:14px; color:#bbb; }
+
+/* Mobiel netter centreren */
+@media (max-width:768px){
+  #footer .footer-top{ text-align:center; }
+  #footer .footer-about, #footer .footer-links{ width:100%; max-width:100%; margin-bottom:22px; }
+  #footer .footer-links ul{ display:inline-block; text-align:left; }
+}
 }
