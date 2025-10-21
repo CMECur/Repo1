@@ -251,3 +251,12 @@ a:hover {
   position: relative !important;
   z-index: 5 !important;
 }
+/* === HERO TEST 2 === */
+#hero {
+  background: red !important;
+  background-image: url("https://picsum.photos/1920/1080") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  border: 5px solid lime !important;
+  min-height: 100vh !important;
+}
