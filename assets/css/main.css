@@ -965,6 +965,7 @@ a:hover {
   opacity: 0.25; /* logo beter zichtbaar */
   filter: blur(3px); /* minder blur zodat silhouet duidelijk is */
   z-index: 0;
+  background-attachment: fixed; 
 }
 
 .about-page .section * {
