@@ -964,12 +964,28 @@ a:hover {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.7)
     ),
-    url("../img/logo.png") center center/55% no-repeat;
-  opacity: 0.9; /* meer zichtbaar logo */
-  filter: brightness(1.3) blur(1px); /* logo lichter en iets zachter */
+    url("../img/logo.png") center center/25% no-repeat; /* logo 2x groter dan voorheen */
+  opacity: 0.9;
+  filter: brightness(1.3) blur(1px);
   background-attachment: fixed;
+  background-size: 25%; /* vergroot */
   z-index: 0;
 }
+
+/* Mobiel: extra groot en iets hoger gecentreerd */
+@media (max-width: 768px) {
+  .about-page::before {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url("../img/logo.png") center 45%/75% no-repeat;
+    opacity: 0.95;
+    filter: brightness(1.35) blur(1px);
+  }
+
 
 /* Sectie-inhoud */
 .about-page .section {
