@@ -1426,3 +1426,39 @@ a:hover {
     right: 15px;
   }
 }
+
+/* ===========================
+   TITEL EN ONDERTITEL WIT MAKEN (PROJECTEN)
+=========================== */
+
+.projects .section-header h2 {
+  color: #ffffff !important;
+  font-weight: 800;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+.projects .section-header p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+/* Zorg dat de tekst niet achter overlay verdwijnt */
+.section-header {
+  position: relative;
+  z-index: 3;
+}
+
+/* Extra contrast op mobiele apparaten */
+@media (max-width: 768px) {
+  .projects .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .projects .section-header p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
