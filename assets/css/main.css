@@ -903,3 +903,53 @@ a:hover {
     height: 220px; /* iets kleiner zodat ze mooi in 1 rij passen */
   }
 }
+/* === PROJECTGRID FIX === */
+#cme-project-preview .project-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cme-project-preview .project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+#cme-project-preview img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+#cme-project-preview .project-info {
+  padding: 18px;
+  text-align: center;
+}
+
+/* Mobiel spacing */
+@media (max-width: 767px) {
+  #cme-project-preview .col-md-4 {
+    margin-bottom: 25px;
+  }
+}
+
+/* Zelfde knopstijl als hero */
+.btn-get-started {
+  display: inline-block;
+  background: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  border-radius: 50px;
+  padding: 10px 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background: #FFD700;
+  color: #111;
+  transform: scale(1.05);
+}
