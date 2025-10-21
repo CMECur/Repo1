@@ -792,3 +792,30 @@ a:hover {
   -webkit-backdrop-filter: blur(12px) !important;
   box-shadow: none !important;
 }
+/* === HERO TEKST LAYOUT PC vs MOBIEL FIX === */
+
+/* Op PC: “Welkom bij” boven “Camille’s Multipurpose Employment” */
+@media (min-width: 992px) {
+  #hero .info h2 {
+    display: flex;
+    flex-direction: column; /* zet tekst onder elkaar */
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px; /* optisch iets hoger */
+    line-height: 1.2;
+    white-space: normal; /* mag nu netjes afbreken */
+  }
+  #hero .info h2 span {
+    display: block; /* zorgt dat “Camille’s...” op de volgende regel komt */
+  }
+}
+
+/* Op mobiel blijft alles automatisch onder elkaar */
+@media (max-width: 991px) {
+  #hero .info h2 {
+    display: block;
+    white-space: normal;
+    margin-top: 0;
+    text-align: center;
+  }
+}
