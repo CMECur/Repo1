@@ -951,6 +951,7 @@ a:hover {
   position: relative;
 }
 
+/* ===== Achtergrond met logo ===== */
 .about-page::before {
   content: "";
   position: fixed;
@@ -964,27 +965,45 @@ a:hover {
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.7)
     ),
-    url("../img/logo.png") center center/25% no-repeat; /* logo 2x groter dan voorheen */
+    url("../img/logo.png") center center/35% no-repeat;
+  background-attachment: fixed;
   opacity: 0.9;
   filter: brightness(1.3) blur(1px);
-  background-attachment: fixed;
-  background-size: 25%; /* vergroot */
-  z-index: 0;
+  z-index: -1; /* << belangrijk: nu achter alles */
 }
 
-/* Mobiel: extra groot en iets hoger gecentreerd */
+/* ===== Mobiel: logo groter en iets hoger ===== */
 @media (max-width: 768px) {
   .about-page::before {
     background:
       linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.75)
+        rgba(0, 0, 0, 0.8)
       ),
-      url("../img/logo.png") center 45%/75% no-repeat;
+      url("../img/logo.png") center 40%/85% no-repeat;
+    background-attachment: fixed;
     opacity: 0.95;
     filter: brightness(1.35) blur(1px);
+    z-index: -1;
   }
+}
+
+/* ===== Tekst erboven blijft zichtbaar ===== */
+.about-page .section {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  min-height: 100vh;
+  padding: 160px 30px 100px;
+}
+
+/* ===== Scroll fix ===== */
+.about-page main {
+  min-height: 120vh;
+  background: transparent;
+  padding-top: 120px;
+}
 
 
 /* Sectie-inhoud */
