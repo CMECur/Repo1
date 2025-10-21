@@ -943,17 +943,22 @@ a:hover {
   outline: none;
   text-decoration: none;
   white-space: nowrap;
-}/* ====== ABOUT PAGE LOGO BACKGROUND (for transparent PNG logo) ====== */
-.about-page .section {
-  position: relative;
-  background: rgba(255, 255, 255, 0.35); /* soft glass look for readability */
-  overflow: hidden;
-  border-radius: 16px;
-  padding: 100px 30px 60px;
-  backdrop-filter: blur(5px);
 }
 
-/* Background logo + subtle gradient for contrast */
+/* ====== ABOUT PAGE LOGO BACKGROUND (V3 - stronger & full-height) ====== */
+.about-page .section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.25); /* minder wit -> meer contrast */
+  overflow: hidden;
+  padding: 140px 30px 80px; /* meer top space voor header */
+  backdrop-filter: blur(6px);
+  min-height: 100vh; /* vult hele schermhoogte voor consistentie */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo achtergrond met subtiele donkere laag en betere zichtbaarheid */
 .about-page .section::before {
   content: "";
   position: absolute;
@@ -961,29 +966,35 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-
-  /* gradient to darken behind transparent areas + logo */
   background:
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.15)
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.25)
     ),
     url("../img/logo.png") center/contain no-repeat;
-
-  opacity: 0.4;             /* stronger visibility for transparent logo */
-  filter: blur(2.5px);      /* subtle blur so edges are soft */
+  opacity: 0.45; /* steviger zichtbaarheid */
+  filter: blur(2px);
   z-index: 0;
-  background-attachment: fixed; /* elegant depth effect */
+  background-attachment: fixed;
 }
 
-/* Ensure text stays crisp above the overlay */
+/* Op mobiel: logo iets hoger plaatsen */
+@media (max-width: 768px) {
+  .about-page .section::before {
+    background-position: center 30%; /* logo iets hoger */
+    opacity: 0.5; /* iets sterker contrast voor kleine schermen */
+  }
+}
+
+/* Tekst blijft leesbaar erboven */
 .about-page .section * {
   position: relative;
   z-index: 1;
+  color: #111;
 }
 
-/* Add space so content doesn't hide behind header */
+/* Extra marge zodat tekst niet onder header schuift */
 .about-page main {
-  padding-top: 140px;
+  padding-top: 120px;
 }
