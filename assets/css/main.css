@@ -1611,3 +1611,81 @@ body.index-page .sitename .logo-dot {
   color: #FFD700;
   margin-bottom: 15px;
 }
+/* =====================================
+   CME Curaçao - FIX ICONS, HEADER, DIENSTEN STIJL
+===================================== */
+
+/* === 1. HEADER OP WITTE INDEXPAGINA === */
+body.index-page .header {
+  background: rgba(0, 0, 0, 0.78) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.4s ease;
+}
+body.index-page .header .navmenu a {
+  color: #fff !important;
+}
+body.index-page .header .navmenu a:hover,
+body.index-page .header .navmenu a.active {
+  color: #FFD700 !important;
+}
+body.index-page .sitename {
+  color: #fff !important;
+}
+body.index-page .sitename .logo-c,
+body.index-page .sitename .logo-dot {
+  color: #FFD700 !important;
+}
+
+/* === 2. ICONS GROTER OP HOME (ONZE DIENSTEN) === */
+.index-page .services .service-item i {
+  font-size: 3.4rem !important; /* ~215% groter */
+  color: #FFD700;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+.index-page .services .service-item:hover i {
+  transform: scale(1.15);
+}
+
+/* === 3. DIENSTENPAGINA - GLASACHTIG & GOUD RANDJE === */
+.services .service-item {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255, 215, 0, 0.45);
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
+
+.services .service-item:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 28px rgba(255, 215, 0, 0.3);
+}
+
+.services .service-item i {
+  font-size: 3.2rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.services .service-item h4,
+.services .service-item p {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* === Mobiel: nette weergave === */
+@media (max-width: 768px) {
+  .services .service-item {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .services .service-item i {
+    font-size: 2.8rem;
+  }
+}
