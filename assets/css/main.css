@@ -1819,3 +1819,56 @@ body.index-page .sitename .logo-dot {
 .index-page .icon-box p {
   color: #111 !important;
 }
+/* === FIX: GLASACHTIGE STIJL VOOR HOME – OOK OP PC === */
+#cme-services .icon-box {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+/* Hover-effect (goud accent en iets helderder glas) */
+#cme-services .icon-box:hover {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: #FFD700;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
+  transform: translateY(-6px);
+}
+
+/* Icoontjes groot en goudkleurig */
+#cme-services .icon-box .icon i {
+  font-size: 3.4rem; /* groter, goed zichtbaar */
+  color: #FFD700;
+  margin-bottom: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#cme-services .icon-box:hover .icon i {
+  color: #111;
+  transform: scale(1.1);
+}
+
+/* Tekst */
+#cme-services .icon-box h4,
+#cme-services .icon-box p {
+  color: #111 !important;
+}
+
+/* Zorg dat alle blokken dezelfde hoogte hebben */
+#cme-services .icon-box {
+  min-height: 250px;
+}
+
+/* Mobiel aanpassing */
+@media (max-width: 768px) {
+  #cme-services .icon-box {
+    background: rgba(255, 255, 255, 0.25);
+    min-height: auto;
+  }
+}
