@@ -1553,3 +1553,28 @@ a:hover {
     font-size: 2.4rem;
   }
 }
+/* ===========================
+   HEADER FIX OP WITTE INDEXPAGINA
+=========================== */
+
+body.index-page .header {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+body.index-page .header .navmenu a {
+  color: #fff;
+}
+
+body.index-page .header .navmenu a:hover {
+  color: #FFD700;
+}
+
+/* Zorg dat logo wit blijft */
+body.index-page .sitename {
+  color: #fff !important;
+}
+body.index-page .sitename .logo-c,
+body.index-page .sitename .logo-dot {
+  color: #FFD700 !important;
+}
