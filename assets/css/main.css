@@ -2106,3 +2106,7 @@ body.index-page .sitename .logo-dot {
     background: linear-gradient(to bottom, rgba(240,240,240,0.9), rgba(220,220,220,0.9));
   }
 }
+/* === Projectknoppen tijdelijk verbergen === */
+.projects .project-info a {
+  display: none !important;
+}
