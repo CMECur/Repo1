@@ -2158,3 +2158,38 @@ a[href*="project.html"] {
     padding: 0 !important;
   }
 }
+   
+/* ======== MENU KLEUREN & HAMBURGER FIX ======== */
+
+/* Mobiel menu icoon wit maken */
+.mobile-nav-toggle.bi-list,
+.mobile-nav-toggle.bi-x {
+  color: #fff !important;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobiel menu links zwart maken */
+@media (max-width: 991px) {
+  #navmenu ul {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 12px;
+    padding: 15px;
+  }
+
+  #navmenu ul li a {
+    color: #000 !important;
+    font-weight: 600;
+  }
+
+  #navmenu ul li a.active {
+    color: #d4af37 !important; /* goud accent voor actieve link */
+  }
+}
+
+/* Desktop: hamburgermenu verbergen */
+@media (min-width: 992px) {
+  .mobile-nav-toggle {
+    display: none !important;
+  }
+}
