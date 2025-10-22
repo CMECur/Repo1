@@ -1944,3 +1944,41 @@ body.index-page .sitename .logo-dot {
     font-size: 2.8rem;
   }
 }
+/* === FIX: GLAS & GOUD VOOR PC (FORCE DESKTOP VIEW) === */
+@media (min-width: 992px) {
+  #cme-services .icon-box {
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    border: 1px solid rgba(255, 215, 0, 0.45) !important;
+    border-radius: 20px !important;
+    padding: 40px 30px !important;
+    color: #111 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.4s ease !important;
+  }
+
+  #cme-services .icon-box:hover {
+    background: rgba(255, 255, 255, 0.45) !important;
+    border-color: #FFD700 !important;
+    transform: translateY(-6px) !important;
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25) !important;
+  }
+
+  #cme-services .icon-box .icon i {
+    font-size: 3.4rem !important;
+    color: #FFD700 !important;
+    margin-bottom: 15px !important;
+    transition: color 0.3s ease, transform 0.3s ease !important;
+  }
+
+  #cme-services .icon-box:hover .icon i {
+    color: #111 !important;
+    transform: scale(1.1) !important;
+  }
+
+  #cme-services .icon-box h4,
+  #cme-services .icon-box p {
+    color: #111 !important;
+  }
+}
