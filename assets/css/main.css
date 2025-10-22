@@ -2034,3 +2034,63 @@ body.index-page .sitename .logo-dot {
     color: #111 !important;
   }
 }
+/* === CME SERVICES - UNIVERSAL FIX === */
+#cme-services .icon-box {
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  border: 1px solid rgba(255, 215, 0, 0.45) !important;
+  border-radius: 20px !important;
+  padding: 40px 30px !important;
+  text-align: center !important;
+  color: #111 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.4s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-height: 320px !important; /* maakt alle blokken even hoog */
+}
+
+/* Hover-effect */
+#cme-services .icon-box:hover {
+  background: rgba(255, 255, 255, 0.45) !important;
+  border-color: #FFD700 !important;
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25) !important;
+  transform: translateY(-6px) !important;
+}
+
+/* Icon styling */
+#cme-services .icon-box .icon i {
+  font-size: 3.4rem !important;
+  color: #FFD700 !important;
+  margin-bottom: 15px !important;
+  transition: color 0.3s ease, transform 0.3s ease !important;
+}
+
+/* Hover icon kleur */
+#cme-services .icon-box:hover .icon i {
+  color: #111 !important;
+  transform: scale(1.1) !important;
+}
+
+/* Tekst styling */
+#cme-services .icon-box h4,
+#cme-services .icon-box p {
+  color: #111 !important;
+}
+
+/* Zorg dat de rijen niet te dicht op elkaar zitten */
+#cme-services .row {
+  row-gap: 25px !important;
+  column-gap: 25px !important;
+}
+
+/* Desktop layout fix */
+@media (min-width: 992px) {
+  #cme-services .col-lg-3 {
+    flex: 1 1 calc(25% - 25px) !important;
+    display: flex !important;
+  }
+}
