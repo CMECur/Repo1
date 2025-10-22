@@ -2121,3 +2121,40 @@ body.index-page .sitename .logo-dot {
   margin: 0 !important;
   padding: 0 !important;
 }
+/* === FORCE HIDE 'BEKIJK PROJECT' BUTTONS OP ALLE SCHERMEN === */
+.projects .project-info a,
+#cme-project-preview .project-info a,
+.section.projects .project-info a,
+.section .project-info a,
+a.btn-view,
+a.btn-get-started[href*="project"],
+a[href*="project-details"],
+a[href*="project.html"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* === EXTRA DESKTOP FORCE === */
+@media (min-width: 992px) {
+  .projects .project-info a,
+  #cme-project-preview .project-info a,
+  .section.projects .project-info a,
+  .section .project-info a,
+  a.btn-view,
+  a.btn-get-started[href*="project"],
+  a[href*="project-details"],
+  a[href*="project.html"] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
