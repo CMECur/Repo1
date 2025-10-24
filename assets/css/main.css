@@ -2193,3 +2193,44 @@ a[href*="project.html"] {
     display: none !important;
   }
 }
+/* --- Fix: Bekijk project-knop zichtbaar op mobiel --- */
+.project-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.project-info a {
+  display: inline-block;
+  background: gold;
+  color: black;
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: background 0.3s ease;
+}
+
+.project-info a:hover {
+  background: #fff4c2;
+}
+
+/* Mobiel: tekst en knop altijd zichtbaar */
+@media (max-width: 992px) {
+  .project-info {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}   
