@@ -2391,4 +2391,9 @@ a:hover {
     color: #FFD700 !important;
   }
 }  
+.logo .sitename,
+h1.sitename {
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+}   
 } /* sluit @layer custom */
