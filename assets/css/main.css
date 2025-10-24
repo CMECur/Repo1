@@ -2243,3 +2243,58 @@ a[href*="project.html"] {
   padding: 8px 18px !important;
   margin-top: 10px !important;
 }
+/* ================================
+   🧩 CME Curaçao – Responsive Fix Patch
+   ================================ */
+
+/* Zorg dat desktop (grote schermen) dezelfde basis heeft als mobiel */
+@media (min-width: 1200px) {
+  #cme-services .icon-box,
+  .projects .project-wrap,
+  .services-grid .icon-box {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border: 1px solid rgba(255, 215, 0, 0.45) !important;
+    border-radius: 20px !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    transition: all 0.4s ease-in-out !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Hover effect voor PC (gouden rand en lichte schaduw) */
+  #cme-services .icon-box:hover,
+  .services-grid .icon-box:hover,
+  .projects .project-wrap:hover {
+    border-color: gold !important;
+    box-shadow: 0 8px 22px rgba(255, 215, 0, 0.25) !important;
+    transform: translateY(-3px);
+  }
+
+  /* Fix dat hover niet dingen verschuift */
+  .projects .project-wrap img {
+    transition: transform 0.3s ease;
+  }
+
+  .projects .project-wrap:hover img {
+    transform: scale(1.03);
+  }
+
+  /* Zorg dat de 'Bekijk project' knoppen op desktop zichtbaar blijven */
+  .projects .project-info a {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Glas effect blijft behouden ook bij bredere schermen */
+  .services-grid .icon-box {
+    color: white !important;
+  }
+
+  /* Prevent overwriting door bootstrap bij >1400px */
+  .container,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px !important;
+  }
+}
