@@ -2384,4 +2384,11 @@ a:hover {
     display: block !important;
   }
 }   
+ @media (min-width: 1200px) {
+  a,
+  .footer a,
+  .header a {
+    color: #FFD700 !important;
+  }
+}  
 } /* sluit @layer custom */
