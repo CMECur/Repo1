@@ -2322,3 +2322,10 @@ a[href*="project.html"] {
   margin-top: 15px !important; /* kleine afstand van de foto erboven */
   line-height: 1.7;
 }
+/* === Projectdetails spacing fix – meer ruimte tussen blur en tekst === */
+.project-details .project-description {
+  padding-top: 50px !important;   /* meer ruimte boven de tekst */
+  padding-bottom: 40px !important; /* iets luchtiger onderaan */
+  margin-top: 25px !important;     /* duwt het blok iets naar beneden */
+  border-radius: 18px;             /* optioneel: zachte rand */
+}
