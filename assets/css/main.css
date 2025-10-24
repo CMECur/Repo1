@@ -2298,3 +2298,21 @@ a[href*="project.html"] {
     max-width: 1320px !important;
   }
 }
+/* === FIX: Toon 'Bekijk project' knop voor Brakapeut op alle apparaten === */
+.projects .project-info a[href="project1.html"] {
+  display: inline-block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  height: auto !important;
+  padding: 8px 18px !important;
+  margin-top: 10px !important;
+  background: gold !important;
+  color: black !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: background 0.3s ease !important;
+}
+.projects .project-info a[href="project1.html"]:hover {
+  background: #fff4c2 !important;
+}
