@@ -1,7 +1,15 @@
 /* =========================================================
    CME. Curaçao – Stable Version (Hero + Footer + Layout OK)
    ========================================================= */
+/* ======================================
+   CME Curaçao - Main CSS
+   ====================================== */
 
+/* Laad Bootstrap in als layer, zodat onze stijlen sterker zijn */
+@layer bootstrap, custom;
+@import url("../vendor/bootstrap/css/bootstrap.min.css") layer(bootstrap);
+
+@layer custom {
 /* ===== BASIS ===== */
 body {
   font-family: "Open Sans", sans-serif;
@@ -2329,3 +2337,4 @@ a[href*="project.html"] {
   margin-top: 25px !important;     /* duwt het blok iets naar beneden */
   border-radius: 18px;             /* optioneel: zachte rand */
 }
+} /* sluit @layer custom */
