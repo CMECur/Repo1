@@ -2357,4 +2357,31 @@ a:hover {
   color: #d4af37 !important;
   text-decoration: none !important;
 }
+@media (min-width: 992px) {
+  .mobile-nav-toggle {
+    display: none !important;
+  }
+
+  #navmenu ul {
+    display: flex !important;
+  }
+
+  #navmenu ul.active {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 991px) {
+  #navmenu ul {
+    display: none;
+  }
+
+  #navmenu ul.active {
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    display: block !important;
+  }
+}   
 } /* sluit @layer custom */
