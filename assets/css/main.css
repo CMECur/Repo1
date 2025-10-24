@@ -2316,3 +2316,9 @@ a[href*="project.html"] {
 .projects .project-info a[href="project1.html"]:hover {
   background: #fff4c2 !important;
 }
+/* === Project details tekstruimte fix === */
+.project-details .project-description {
+  padding: 35px 30px !important; /* meer ruimte rondom de tekst */
+  margin-top: 15px !important; /* kleine afstand van de foto erboven */
+  line-height: 1.7;
+}
