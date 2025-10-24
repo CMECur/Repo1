@@ -5,15 +5,6 @@
    CME Curaçao - Main CSS
    ====================================== */
 
-/* Laad Bootstrap in als layer, zodat onze stijlen sterker zijn */
-@layer bootstrap, custom;
-@import url("../vendor/bootstrap/css/bootstrap.min.css") layer(bootstrap);
-
-@layer custom {
-   :root {
-  --bs-link-color: #FFD700;
-  --bs-link-hover-color: #d4af37;
-}
 /* ===== BASIS ===== */
 body {
   font-family: "Open Sans", sans-serif;
@@ -2396,4 +2387,3 @@ h1.sitename {
   font-weight: 700 !important;
   letter-spacing: 0.5px;
 }   
-} /* sluit @layer custom */
