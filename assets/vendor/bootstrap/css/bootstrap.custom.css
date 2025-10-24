@@ -1,0 +1,7 @@
+@import url("bootstrap.min.css");
+
+/* verwijder standaard marges/paddings */
+body, p {
+  margin: 0;
+  padding: 0;
+}
