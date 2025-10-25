@@ -416,11 +416,11 @@ img.img-fluid {
   color: #FFD700;
   font-weight: 600;
 }
-/* ==== HEADER (UNIFORME FIX VOOR ALLE PAGINA'S) ==== */
+/* ==== HEADER FIXED EN RESPONSIVE ==== */
 .header {
   background: rgba(0, 0, 0, 0.9);
   padding: 10px 0;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
   position: fixed;
   top: 0;
@@ -428,45 +428,36 @@ img.img-fluid {
   transition: all 0.3s ease;
 }
 
-.header.scrolled {
-  background: #000;
-}
-
-/* LOGO */
-.logo-c {
-  color: #FFD700;
-  font-weight: 700;
-}
-.logo-dot {
-  color: #FFD700;
-}
+/* Logo styling */
+.logo-c { color: #FFD700; font-weight: 700; }
+.logo-dot { color: #FFD700; }
 .header .sitename {
   color: #fff;
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 700;
-  letter-spacing: -0.8px; /* compacter */
+  letter-spacing: -0.7px;
   margin: 0;
 }
 
-/* DESKTOP NAV MENU */
+/* Menu standaard (desktop) */
 .navmenu {
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: flex-end;
 }
 
 .navmenu ul {
   display: flex;
+  gap: 25px;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 25px;
 }
 
 .navmenu a {
   color: #fff;
-  font-weight: 500;
   text-decoration: none;
+  font-weight: 500;
   font-size: 16px;
   transition: 0.3s;
 }
@@ -476,34 +467,35 @@ img.img-fluid {
   color: #FFD700;
 }
 
-/* HAMBURGER TOGGLE — standaard onzichtbaar */
+/* Hamburger (alleen mobiel) */
 .mobile-nav-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 30px;
   color: #fff;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/* ==== MOBIEL (onder 991px) ==== */
+/* ==== MOBIEL ==== */
 @media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
   .navmenu ul {
-    flex-direction: column;
     position: absolute;
     top: 70px;
-    right: 20px;
+    right: 15px;
     background: rgba(0, 0, 0, 0.95);
-    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 15px 20px;
+    border-radius: 10px;
     display: none;
   }
 
-  .navmenu ul.active {
+  .navmenu ul.show {
     display: flex;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
   }
 }
