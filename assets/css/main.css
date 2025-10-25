@@ -9,7 +9,7 @@
 .logo-dot {
   color: #FFD700;
 }
-
+.dark-background { background-color: #000000; }
 /* ...overige CSS... */
 
 /* Mobile menu: standaard verborgen, tonen bij actief */
