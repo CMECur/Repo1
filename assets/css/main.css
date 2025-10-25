@@ -416,11 +416,15 @@ img.img-fluid {
   color: #FFD700;
   font-weight: 600;
 }
-/* ==== HEADER GLOBAAL ==== */
+/* ==== HEADER (UNIFORME FIX VOOR ALLE PAGINA'S) ==== */
 .header {
   background: rgba(0, 0, 0, 0.9);
   padding: 10px 0;
   z-index: 999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   transition: all 0.3s ease;
 }
 
@@ -428,31 +432,42 @@ img.img-fluid {
   background: #000;
 }
 
-/* Logo styling */
-.logo-c { color: #FFD700; font-weight: 700; }
-.logo-dot { color: #FFD700; }
+/* LOGO */
+.logo-c {
+  color: #FFD700;
+  font-weight: 700;
+}
+.logo-dot {
+  color: #FFD700;
+}
 .header .sitename {
   color: #fff;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700;
-  letter-spacing: -0.5px; /* minder ruimte tussen letters */
+  letter-spacing: -0.8px; /* compacter */
+  margin: 0;
 }
 
-/* Navmenu standaard (desktop) */
+/* DESKTOP NAV MENU */
+.navmenu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 .navmenu ul {
   display: flex;
-  gap: 25px;
   list-style: none;
   margin: 0;
   padding: 0;
-  align-items: center;
+  gap: 25px;
 }
 
 .navmenu a {
   color: #fff;
   font-weight: 500;
-  font-size: 16px;
   text-decoration: none;
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -461,39 +476,34 @@ img.img-fluid {
   color: #FFD700;
 }
 
-/* Hamburger knop (alleen op mobiel zichtbaar) */
+/* HAMBURGER TOGGLE — standaard onzichtbaar */
 .mobile-nav-toggle {
+  display: none;
   font-size: 28px;
   color: #fff;
   background: none;
   border: none;
   cursor: pointer;
-  display: none; /* standaard onzichtbaar */
 }
 
-/* ==== MOBIEL MENU ==== */
+/* ==== MOBIEL (onder 991px) ==== */
 @media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block; /* zichtbaar op mobiel */
-  }
-
   .navmenu ul {
+    flex-direction: column;
     position: absolute;
     top: 70px;
     right: 20px;
     background: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
     border-radius: 10px;
     padding: 15px 20px;
-    display: none; /* standaard verborgen */
+    display: none;
   }
 
   .navmenu ul.active {
-    display: flex; /* opengeklapt */
+    display: flex;
   }
 
-  .navmenu a {
-    padding: 10px 0;
-    font-size: 18px;
+  .mobile-nav-toggle {
+    display: block;
   }
 }
