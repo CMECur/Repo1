@@ -1,2389 +1,383 @@
 /* =========================================================
-   CME. Curaçao – Stable Version (Hero + Footer + Layout OK)
+   CME. Curaçao – Website hoofdstijl (opgeschoond)
    ========================================================= */
-/* ======================================
-   CME Curaçao - Main CSS
-   ====================================== */
+/* Logo-kleuren */
+.logo-c { color: #FFD700; font-weight: 700; }
+.logo-dot { color: #FFD700; }
 
-/* ===== BASIS ===== */
+/* Basisstijl en layout */
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444;
-  background: #fff;
-  margin: 0;
-  padding: 0;
+  color: #111;
 }
-
 a {
-  color: #FFD700;
+  color: #111;
   text-decoration: none;
-  transition: 0.3s;
 }
 a:hover {
-  color: #d4af37;
-}
-
-/* ===== LOGO ===== */
-.logo-c {
   color: #FFD700;
-  font-weight: 700;
+  text-decoration: none;
 }
-.logo-dot {
-  color: #FFD700;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
-
-/* =====================
-   HEADER – SMOOTH GLASS EFFECT
-===================== */
+section {
+  padding: 60px 0;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #FFD700;
+  bottom: -5px;
+  left: 0;
+}
+p {
+  line-height: 1.8;
+}
+.container {
+  max-width: 1140px;
+}
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/* Header */
 .header {
-  background: rgba(255, 255, 255, 0.05); /* bijna transparant bovenaan */
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  transition: background 0.6s ease, backdrop-filter 0.6s ease, box-shadow 0.6s ease;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0;
-  position: fixed;
-  width: 100%;
 }
-
-/* Bij scrollen wordt het iets witter + meer blur (glasachtig) */
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: #000;
 }
-
-/* Logo en navigatie blijven goed leesbaar */
 .header .logo h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin: 0;
-  font-weight: 800;
-  color: #111;
-  letter-spacing: -0.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
-
-.header .navmenu a {
-  color: #111;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.header .sitename {
+  font-size: 24px;
+  font-weight: 600;
 }
-
-.header .navmenu a:hover,
-.header .navmenu .active {
-  color: #FFD700 !important;
+.header .logo-c, .header .logo-dot {
+  font-size: 1em;
 }
-
-/* =====================
-   NAVIGATIE (1x, sluit goed af)
-===================== */
-.navmenu {
-  margin-left: auto;
+.header .logo-dot {
+  margin-right: 5px;
+}
+.header .navmenu {
   display: flex;
-  align-items: center;
 }
-.navmenu ul {
+.header .navmenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-.navmenu li {
-  margin-left: 20px;
+.header .navmenu li {
+  position: relative;
 }
-.navmenu a {
-  color: #111;
-  font-weight: 500;
+.header .navmenu a {
+  color: #fff;
   padding: 10px 15px;
-  transition: .3s;
+  transition: color 0.3s;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
 }
-.navmenu a:hover,
-.navmenu .active {
+.header .navmenu a:hover, .header .navmenu a.active {
   color: #FFD700 !important;
 }
-
-@media (max-width: 991px) {
-  .navmenu ul {
-    flex-direction: column;
-    background: rgba(255,255,255,.97);
+.header .mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+}
+@media (max-width: 1199px) {
+  .header .mobile-nav-toggle {
+    display: block;
+  }
+  .header .navmenu ul {
     position: absolute;
     top: 60px;
     right: 15px;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
     width: 200px;
     border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     display: none;
   }
-  .navmenu ul.active {
+  .header .navmenu ul.active {
     display: block;
   }
-  .navmenu li {
+  .header .navmenu li {
     margin: 10px 0;
   }
-  .navmenu a {
+  .header .navmenu a {
     color: #111;
   }
 }
-
-/* =====================
-   FOOTER (clean + image)
-===================== */
-#footer {
-  background-image: url("https://cmecur.github.io/Repo1/assets/img/footer-bg.jpg");
+/* Hero sectie (homepage slider) */
+#hero {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+#hero .carousel-inner {
+  width: 100%;
+  height: 100vh;
+}
+#hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#hero img.active {
+  opacity: 1;
+}
+.hero-next, .hero-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #FFD700;
+  cursor: pointer;
+}
+.hero-next {
+  right: 20px;
+}
+.hero-prev {
+  left: 20px;
+}
+/* Secties algemeen */
+.section {
+  padding: 60px 0;
+}
+.section .section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.section .section-title::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background: #FFD700;
+  margin: 4px;
+}
+/* Over ons pagina */
+#about {
+  background: #f9f9f9;
+}
+#about .content p {
+  font-size: 16px;
+}
+/* Diensten pagina */
+#services .service-item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  transition: all 0.4s;
+}
+#services .service-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+}
+#services .service-item p {
+  font-size: 15px;
+}
+#services .service-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+/* Projecten pagina */
+#projects .project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#projects .project-item img {
+  transition: transform 0.3s;
+}
+#projects .project-item:hover img {
+  transform: scale(1.1);
+}
+#projects .project-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+#projects .project-info h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#projects .project-info p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+#projects .project-info a {
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: underline;
+}
+/* Project detail (projectX.html) */
+.project-hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("assets/img/photo (11).jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 140px 0 100px;
+  text-align: center;
+}
+.project-hero h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+.project-description {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid gold;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  margin-top: -50px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+.project-gallery img {
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.project-gallery img:hover {
+  transform: scale(1.03);
+  border-color: gold;
+}
+.project-gallery {
+  margin-top: 40px;
+}
+/* Contact pagina */
+.contact p {
+  font-size: 16px;
+}
+.contact strong {
+  font-weight: 600;
+}
+.contact .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.contact .form-control:focus {
+  border-color: #FFD700;
+  box-shadow: none;
+  outline: none;
+}
+.contact button[type="submit"] {
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact button[type="submit"]:hover {
+  background: #e0c200;
+}
+.footer {
+  background-image: url("assets/img/footer-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  padding: 40px 0 0 0;
+}
+.footer .footer-top {
+  padding-bottom: 30px;
+}
+.footer .logo .sitename {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.footer .footer-contact p {
+  font-size: 14px;
+  margin-bottom: 0;
+  line-height: 2;
+}
+.footer .footer-contact p strong {
+  font-weight: 600;
+}
+.footer .footer-links h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
   position: relative;
+  padding-bottom: 10px;
 }
-#footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.72);
-  z-index: -1;
-}
-
-/* bullets & lijsten */
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 .footer .footer-links ul li {
-  margin: 8px 0;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  padding: 8px 0;
+}
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+.footer .footer-links a {
+  color: #ccc;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1.2;
+}
+.footer .footer-links a:hover {
+  color: #fff;
 }
 .footer .footer-links ul li::before {
-  content: "•";
+  content: "»";
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 5px;
   color: #FFD700;
-  font-weight: 700;
 }
-
-/* Copyright */
+.footer .footer-links ul li a {
+  color: #fff;
+}
+.footer .footer-links ul li a:hover {
+  color: #FFD700;
+}
+.footer .footer-links ul ul {
+  padding-left: 20px;
+}
 .footer .copyright {
-  text-align: center;
-  padding: 25px 0;
-  font-size: 14px;
-  color: #bbb;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
-/* =====================
-   HERO (carousel hersteld)
-===================== */
-.hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+.footer .copyright span {
+  color: #ccc;
 }
-
-.hero .carousel,
-.hero .carousel-inner,
-.hero .carousel-item {
-  width: 100%;
-  height: 100%;
-}
-
-.hero .carousel-item {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.hero .carousel-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
-  background: rgba(0, 0, 0, 0.4); /* donkere laag over foto's */
-}
-
-.hero h2 {
-  color: #fff;
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-.hero p {
-  color: #eee;
-  font-size: 18px;
-  margin-bottom: 30px;
-  max-width: 600px;
-}
-
-.hero .btn-get-started {
-  background: #FFD700;
-  color: #111;
+.footer .copyright .sitename {
+  color: #FFD700;
   font-weight: 600;
-  padding: 12px 35px;
-  border-radius: 50px;
-  transition: 0.3s;
-  text-transform: uppercase;
 }
-
-.hero .btn-get-started:hover {
-  background: #d4af37;
-  color: #fff;
-}
-
-/* pijlen en indicators */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-}
-
-.carousel-indicators li {
-  background-color: #FFD700;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 30px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-   /* =====================
-   HERO – VISUELE UPGRADE
-===================== */
-
-/* Donkere overlay subtieler en dynamisch */
-.hero .carousel-container {
-  background: rgba(0, 0, 0, 0.55); /* iets donkerder */
-  animation: fadeInHero 1s ease-out;
-}
-
-@keyframes fadeInHero {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero titel met goudaccent */
-.hero h2 span {
-  color: #FFD700;
-  font-weight: 800;
-}
-
-/* Gouden glansknop */
-.hero .btn-get-started {
-  background: linear-gradient(135deg, #FFD700, #d4af37);
-  color: #111;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-.hero .btn-get-started:hover {
-  background: linear-gradient(135deg, #d4af37, #FFD700);
-  color: #fff;
-  transform: scale(1.05);
-}
-
-/* Gouden indicatoren */
-.carousel-indicators [data-bs-target] {
-  background-color: #FFD700;
-  opacity: 0.6;
-}
-.carousel-indicators .active {
-  opacity: 1;
-}
-
-/* Hero-pijlen (wit met goud hover) */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-  transition: all 0.3s ease;
-}
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-  filter: invert(83%) sepia(85%) saturate(749%) hue-rotate(3deg) brightness(105%) contrast(101%);
-}
-}
-/* Mobiel netter centreren */
-@media (max-width: 768px) {
-  #footer .footer-top {
-    text-align: center;
-  }
-  #footer .footer-about,
-  #footer .footer-links {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 22px;
-  }
-  #footer .footer-links ul {
-    display: inline-block;
-    text-align: left;
-  }
-}
-/* =====================
-   HERO – CUSTOM SLIDESHOW FIX
-===================== */
-
-#hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  margin-bottom: 60px;
-}
-
-/* Achtergrondfoto's */
-#hero img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-
-#hero img.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Donkere overlay zodat tekst leesbaar blijft */
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-}
-
-/* Hero inhoud (tekst & knop) */
-#hero .info {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  height: 100%;
-  padding: 0 2rem;
-  animation: fadeInHero 1s ease-out;
-}
-
-/* Titel */
-#hero .info h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: #fff;
-  font-size: clamp(28px, 3.5vw, 46px);
-  line-height: 1.2;
-  margin-bottom: 16px;
-}
-#hero .info h2 span {
-  color: #FFD700;
-}
-
-/* Tekst onder titel */
-#hero .info p {
-  color: #f3f3f3;
-  font-size: clamp(16px, 2vw, 20px);
-  max-width: 700px;
-  margin: 15px auto 0;
-  line-height: 1.5;
-}
-
-/* Knop */
-#hero .btn-get-started {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 36px;
-  border: 2px solid #FFD700;
-  border-radius: 50px;
-  color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: 0.3s ease;
-  background: linear-gradient(135deg, #FFD700, #d4af37);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-#hero .btn-get-started:hover {
-  background: linear-gradient(135deg, #d4af37, #FFD700);
-  color: #111;
-  transform: scale(1.05);
-}
-
-/* Navigatiepijlen */
-.hero-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 42px;
-  color: #FFD700;
-  z-index: 3;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s, transform 0.2s;
-}
-.hero-control:hover {
-  color: #fff;
-  transform: translateY(-50%) scale(1.2);
-}
-.hero-prev {
-  left: 25px;
-}
-.hero-next {
-  right: 25px;
-}
-
-/* Mobiel fix */
-@media (max-width: 768px) {
-  #hero .info h2 {
-    font-size: clamp(22px, 5.5vw, 32px);
-  }
-  #hero .info p {
-    font-size: 16px;
-  }
-  .hero-control {
-    font-size: 30px;
-  }
-}
-
-@keyframes fadeInHero {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* =====================
-   HERO - FINAL FIX (Custom Slideshow)
-===================== */
-
-#hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  margin-bottom: 60px;
-}
-
-/* Afbeeldingen */
-#hero img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1.8s ease-in-out;
-}
-
-#hero img.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Donkere overlay voor leesbaarheid */
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-}
-
-/* Tekstgedeelte */
-#hero .info {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-  padding: 0 1.5rem;
-  animation: fadeInHero 1s ease-out;
-}
-
-#hero .info h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: #fff;
-  font-size: clamp(26px, 3.8vw, 46px);
-  line-height: 1.2;
-  margin-bottom: 12px;
-}
-
-#hero .info h2 span {
-  color: #FFD700;
-}
-
-#hero .info p {
-  color: #f0f0f0;
-  font-size: clamp(16px, 2vw, 20px);
-  max-width: 700px;
-  line-height: 1.5;
-  margin: 0 auto 25px;
-}
-
-/* Knop */
-#hero .btn-get-started {
-  background: linear-gradient(135deg, #FFD700, #d4af37);
-  color: #111;
-  border: none;
-  border-radius: 50px;
-  padding: 12px 38px;
-  font-weight: 600;
-  text-transform: uppercase;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-}
-
-#hero .btn-get-started:hover {
-  background: linear-gradient(135deg, #d4af37, #FFD700);
-  color: #fff;
-  transform: scale(1.05);
-}
-
-/* Pijlen */
-.hero-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 42px;
-  color: #FFD700;
-  cursor: pointer;
-  z-index: 3;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.hero-control:hover {
-  color: #fff;
-  transform: translateY(-50%) scale(1.2);
-}
-
-.hero-prev {
-  left: 25px;
-}
-.hero-next {
-  right: 25px;
-}
-
-/* Animatie */
-@keyframes fadeInHero {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mobiel */
-@media (max-width: 768px) {
-  #hero .info h2 { font-size: clamp(22px, 5vw, 32px); }
-  #hero .info p { font-size: 15px; }
-  .hero-control { font-size: 30px; }
-}
-/* =========================================================
-   CME Curaçao – Hero, Header & Footer Final Fix v2 LCWF
-   ========================================================= */
-
-/* ===== HEADER LOGO DIKKER ===== */
-.header .logo h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800; /* dikker font */
-  font-size: 28px;
-  color: #fff;
-  letter-spacing: -0.5px;
-}
-.header .logo-c {
-  color: #FFD700;
-  font-weight: 800;
-}
-.header.scrolled .logo h1 {
-  color: #111;
-}
-.header.scrolled .logo-c {
-  color: #FFD700;
-}
-
-/* ===== HERO ===== */
-#hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Achtergrondfoto’s met sterkere dimming (geen blur) */
-#hero img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-  filter: brightness(0.4) contrast(1.1); /* donkere look */
-}
-
-#hero img.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Overlay subtiel voor extra leesbaarheid */
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
-/* Tekstpositie midden scherm (centraal op PC) */
-#hero .info {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  max-width: 850px;
-  padding: 0 1.5rem;
-  text-align: center;
-  animation: fadeInHero 1s ease-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Tekst hero */
-#hero .info h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: clamp(30px, 4vw, 48px);
-  margin-bottom: 16px;
-  color: #fff; /* alles wit */
-}
-#hero .info h2 span {
-  color: #fff; /* Camille’s ook wit */
-}
-
-/* Paragraaf */
-#hero .info p {
-  color: #f5f5f5;
-  font-size: clamp(17px, 2vw, 20px);
-  line-height: 1.6;
-  margin-bottom: 35px;
-  max-width: 720px;
-}
-
-/* Knop transparant met goud rand */
-#hero .btn-get-started {
-  display: inline-block;
-  border: 2px solid #FFD700;
-  background: transparent;
-  color: #fff;
-  padding: 12px 38px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-#hero .btn-get-started:hover {
-  background: #FFD700;
-  color: #111;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Hero pijlen */
-.hero-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 42px;
-  color: #FFD700;
-  cursor: pointer;
-  z-index: 3;
-  transition: color 0.3s, transform 0.2s;
-}
-.hero-control:hover {
-  color: #fff;
-  transform: translateY(-50%) scale(1.2);
-}
-.hero-prev { left: 25px; }
-.hero-next { right: 25px; }
-
-/* Mobiel layout fix - tekst hoger */
-@media (max-width: 768px) {
-  #hero {
-    align-items: flex-start;
-    padding-top: 140px;
-  }
-  #hero .info {
-    margin-top: 40px;
-  }
-  #hero .info h2 {
-    font-size: clamp(24px, 5vw, 34px);
-  }
-  #hero .info p {
-    font-size: 15px;
-    margin-bottom: 25px;
-  }
-  .hero-control {
-    font-size: 30px;
-  }
-}
-
-/* ===== FOOTER FIX ===== */
-#footer {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(0.9); /* alleen dim, geen blur */
-  position: relative;
-}
-#footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
-
-/* Footer logo dikker */
-.footer .sitename {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  color: #fff;
-}
-.footer .sitename .logo-c {
-  color: #FFD700;
-}
-.footer .sitename .logo-dot {
-  color: #FFD700;
-}
-
-/* Animatie */
-@keyframes fadeInHero {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* === HERO TEKST POSITIE FIX === */
-#hero .info {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-/* “Welkom bij” iets hoger */
-#hero .info h2 {
-  margin-top: -40px; /* duwt de tekst iets omhoog */
-  line-height: 1.3;
-  white-space: nowrap; /* houdt alles op 1 regel */
-}
-
-/* Zorgt dat alles goed in het midden staat op PC */
-@media (min-width: 992px) {
-  #hero .info {
-    top: -20px;
-    position: relative;
-  }
-}
-/* === HEADER ALTIJD GLASACHTIG === */
-.header,
-.header.scrolled {
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  box-shadow: none !important;
-}
-/* === HERO TEKST LAYOUT PC vs MOBIEL FIX === */
-
-/* Op PC: “Welkom bij” boven “Camille’s Multipurpose Employment” */
-@media (min-width: 992px) {
-  #hero .info h2 {
-    display: flex;
-    flex-direction: column; /* zet tekst onder elkaar */
-    align-items: center;
-    justify-content: center;
-    margin-top: -40px; /* optisch iets hoger */
-    line-height: 1.2;
-    white-space: normal; /* mag nu netjes afbreken */
-  }
-  #hero .info h2 span {
-    display: block; /* zorgt dat “Camille’s...” op de volgende regel komt */
-  }
-}
-
-/* Op mobiel blijft alles automatisch onder elkaar */
-@media (max-width: 991px) {
-  #hero .info h2 {
-    display: block;
-    white-space: normal;
-    margin-top: 0;
-    text-align: center;
-  }
-}
-/* === MOBIEL MENU STIJL === */
-@media (max-width: 991px) {
-  #navmenu ul {
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 15px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    padding: 15px 20px;
-    display: none;
-    z-index: 999;
-  }
-
-  #navmenu ul.active {
-    display: flex;
-  }
-
-  #navmenu li {
-    margin: 10px 0;
-  }
-
-  #navmenu a {
-    color: #111;
-    font-weight: 600;
-    font-size: 16px;
-  }
-}
-/* === PROJECTGRID RESPONSIVE FIX === */
-#cme-project-preview .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-#cme-project-preview .col-md-4 {
-  flex: 0 0 30%;
-  max-width: 30%;
-  display: flex;
-  justify-content: center;
-}
-
-#cme-project-preview .project-item {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 360px; /* houdt de kaarten mooi in balans */
-}
-
-#cme-project-preview .project-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-#cme-project-preview img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  object-position: center;
-}
-
-#cme-project-preview .project-info {
-  padding: 18px 15px 25px;
-  text-align: center;
-}
-
-/* Mobiel: blokken netjes onder elkaar */
-@media (max-width: 991px) {
-  #cme-project-preview .col-md-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-/* === KNOPSTIJL (GEOPTIMALISEERD) === */
-.btn-get-started {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1); /* zacht transparant effect */
-  color: #111; /* donkere tekst i.p.v. goud */
-  border: 2px solid #FFD700; /* goud randje */
-  border-radius: 50px;
-  padding: 10px 34px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(6px); /* glasachtig */
-  text-align: center;
-}
-
-.btn-get-started:hover {
-  background: #FFD700; /* goud vullen bij hover */
-  color: #111;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* Fix voor sommige browsers (PC) – voorkomt gekronkelde knoppen */
-.btn-get-started,
-.btn-get-started:focus,
-.btn-get-started:active {
-  outline: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-/* ====== ABOUT PAGE - LUXURY PARALLAX FIX (VISIBLE LOGO) ====== */
-.about-page {
-  background: #111; /* diepe, egale donkere achtergrond */
-  position: relative;
-}
-
-/* ===== Achtergrond met logo ===== */
-.about-page::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../img/logo.png") center center/35% no-repeat;
-  background-attachment: fixed;
-  opacity: 0.9;
-  filter: brightness(1.3) blur(1px);
-  z-index: -1; /* << belangrijk: nu achter alles */
-}
-
-/* ===== Mobiel: logo groter en iets hoger ===== */
-@media (max-width: 768px) {
-  .about-page::before {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.8)
-      ),
-      url("../img/logo.png") center 40%/85% no-repeat;
-    background-attachment: fixed;
-    opacity: 0.95;
-    filter: brightness(1.35) blur(1px);
-    z-index: -1;
-  }
-}
-
-/* ===== Tekst erboven blijft zichtbaar ===== */
-.about-page .section {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-  min-height: 100vh;
-  padding: 160px 30px 100px;
-}
-
-/* ===== Scroll fix ===== */
-.about-page main {
-  min-height: 120vh;
-  background: transparent;
-  padding-top: 120px;
-}
-
-
-/* Sectie-inhoud */
-.about-page .section {
-  position: relative;
-  background: transparent;
-  min-height: 100vh;
-  padding: 180px 30px 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-/* Mobiel: logo groter en iets hoger */
-@media (max-width: 768px) {
-  .about-page::before {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.75)
-      ),
-      url("../img/logo.png") center 38%/95% no-repeat;
-    opacity: 0.95;
-    filter: brightness(1.35) blur(1px);
-  }
-}
-
-/* Tekst erboven */
-.about-page .section * {
-  position: relative;
-  z-index: 2;
-  color: #f5f5f5;
-}
-
-/* Luxe titelstijl */
-.about-page h2 {
-  font-weight: 700;
-  font-size: 2.4rem;
-  color: #fff;
-  text-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
-  margin-bottom: 1.5rem;
-}
-
-/* Tekst */
-.about-page p {
-  font-size: 1.1rem;
-  line-height: 1.75;
-  color: #e0e0e0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-/* Header overlap fix */
-.about-page main {
-  background: transparent;
-  min-height: 100vh;
-  padding-top: 120px;
-}/* =====================
-   NAVIGATIE + ABOUT STIJLEN
-===================== */
-
-/* Sectie-inhoud */
-.about-page .section {
-  position: relative;
-  background: transparent;
-  min-height: 100vh;
-  padding: 180px 30px 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-/* Achtergrond met logo voor desktop */
-.about-page::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../img/logo.png") center center/25% no-repeat;
-  opacity: 0.9;
-  filter: brightness(1.3) blur(1px);
-  background-attachment: fixed;
-  z-index: 0;
-}
-
-/* Mobiel: logo groter en iets hoger */
-@media (max-width: 768px) {
-  .about-page::before {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.75)
-      ),
-      url("../img/logo.png") center 45%/75% no-repeat;
-    opacity: 0.95;
-    filter: brightness(1.35) blur(1px);
-  }
-}
-
-/* Tekst erboven */
-.about-page .section * {
-  position: relative;
-  z-index: 2;
-  color: #f5f5f5;
-}
-
-/* Luxe titelstijl */
-.about-page h2 {
-  font-weight: 700;
-  font-size: 2.4rem;
-  color: #fff;
-  text-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
-  margin-bottom: 1.5rem;
-}
-
-/* Tekst */
-.about-page p {
-  font-size: 1.1rem;
-  line-height: 1.75;
-  color: #e0e0e0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-/* Header overlap fix */
-.about-page main {
-  background: transparent;
-  min-height: 100vh;
-  padding-top: 120px;
-}
-
-/* ===== HEADER & NAV STIJL FIX ===== */
-
-/* Tekst standaard wit */
-.header .navmenu a {
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-/* Hover-effect goud */
-.header .navmenu a:hover {
-  color: #FFD700;
-}
-
-/* Active link goud */
-.header .navmenu a.active {
-  color: #FFD700;
-}
-
-/* CME Curaçao logo wit behalve C en punt */
-.header .sitename {
-  color: #fff;
-}
-
-/* C en punt blijven goud */
-.header .sitename .logo-c,
-.header .sitename .logo-dot {
-  color: #FFD700;
-}
-
-/* Wanneer header 'scrolled' is */
-.header.scrolled {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-}
-
-.header.scrolled .sitename {
-  color: #fff;
-}
-
-.header.scrolled .navmenu a {
-  color: #fff;
-}
-
-.header.scrolled .navmenu a:hover,
-.header.scrolled .navmenu a.active {
-  color: #FFD700;
-}
-/* ===== FIX: LOGO-GROOTTE + HEADER-KLEUR ===== */
-
-/* --- Logo zichtbaar, groot en gecentreerd --- */
-.about-page::before {
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../img/logo.png") center center/40% no-repeat; /* was 35% → iets groter */
-}
-
-/* --- Logo extra groot op pc --- */
-@media (min-width: 1024px) {
-  .about-page::before {
-    background-size: 140%; /* ongeveer 4× groter dan nu */
-    background-position: center 45%;
-  }
-}
-
-/* --- Logo extra groot op mobiel --- */
-@media (max-width: 768px) {
-  .about-page::before {
-    background-size: 170%; /* ongeveer 2× groter */
-    background-position: center 42%;
-  }
-}
-
-/* --- CME. Curaçao blijft wit bij scrollen --- */
-.header .sitename {
-  color: #fff !important;
-}
-.header.scrolled .sitename {
-  color: #fff !important;
-}
-.header .sitename .logo-c,
-.header .sitename .logo-dot {
-  color: #FFD700 !important;
-}
-
-/* ===== DIENSTEN ===== */
-.services .service-item i {
-  font-size: 4rem; /* was waarschijnlijk ~1rem → 4× groter */
-  color: #FFD700;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.services .service-item:hover i {
-  transform: scale(1.1);
-}
-
-/* Titel dikker en duidelijker */
-.services .service-item h4 {
-  font-weight: 700; /* dikker dan standaard */
-  font-size: 1.4rem;
-  color: #111;
-  margin-bottom: 10px;
-  text-transform: uppercase; /* optioneel: maakt titels krachtiger */
-}
-
-/* Tekst iets groter voor balans */
-.services .service-item p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #444;
-}
-/* ===== DIENSTEN - TEKST ZICHTBAAR MAKEN ===== */
-.services .service-item p {
-  color: #fff !important; /* maakt tekst helder wit */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* subtiele schaduw voor leesbaarheid */
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-/* ===========================
-   PROJECTEN - ZICHTBAARHEID & STIJL
-=========================== */
-
-/* Tekstkleur helder wit met subtiele schaduw */
-.projects .project-info h4,
-.projects .project-info p {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-}
-
-/* Zorg dat content niet onder header schuift */
-.projects {
-  padding-top: 120px;
-}
-
-/* Gouden glasachtige knop */
-.projects .project-info a {
-  display: inline-block;
-  padding: 10px 22px;
-  border: 1.5px solid #FFD700;
-  border-radius: 30px;
-  color: #FFD700;
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  margin-top: 10px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.projects .project-info a:hover {
-  background: rgba(255, 215, 0, 0.2);
-  color: #fff;
-  border-color: #FFD700;
-}
-
-/* Projecttegels zelf licht en uitnodigend */
-.projects .project-wrap {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.projects .project-wrap:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
-}
-
-/* Overlay over afbeelding voor meer contrast */
-.projects .project-wrap::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0.2));
-  z-index: 0;
-}
-
-.projects .project-info {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  z-index: 1;
-}
-
-/* ===== PROJECT DETAILS ===== */
-.project-details {
-  padding-top: 120px;
-  color: #fff;
-}
-
-.project-details h2, 
-.project-details h3, 
-.project-details p, 
-.project-details li {
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
-}
-
-.project-details .project-description {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 15px;
-  padding: 25px;
-  backdrop-filter: blur(8px);
-}
-
-/* ===========================
-   PROJECTEN LAYOUT FIX - NIET MEER OP ELKAAR
-=========================== */
-
-/* Geef elk projectblok ruimte */
-.projects .project-item {
-  margin-bottom: 60px !important;
-}
-
-/* Zorg dat project-wraps goed zichtbaar blijven */
-.projects .project-wrap {
-  display: block;
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  height: 100%;
-  min-height: 360px;
-}
-
-/* Afbeeldingen netjes tonen */
-.projects .project-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.projects .project-wrap:hover img {
-  transform: scale(1.05);
-}
-
-/* Tekst netjes over foto, met ruimte */
-.projects .project-info {
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-  right: 25px;
-  z-index: 2;
-  color: #fff;
-  text-align: left;
-}
-
-.projects .project-info h4 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #fff !important;
-}
-
-.projects .project-info p {
-  margin-bottom: 12px;
-  color: #f0f0f0 !important;
-}
-
-/* Extra ruimte onderaan de sectie zodat footer niet overlapt */
-.projects {
-  padding-bottom: 140px !important;
-}
-
-/* --- Mobiel vriendelijk --- */
-@media (max-width: 768px) {
-  .projects .project-item {
-    margin-bottom: 50px !important;
-  }
-  .projects .project-info {
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-  }
-}
-
-/* ===========================
-   TITEL EN ONDERTITEL WIT MAKEN (PROJECTEN)
-=========================== */
-
-.projects .section-header h2 {
-  color: #ffffff !important;
-  font-weight: 800;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
-}
-
-.projects .section-header p {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-  font-size: 1.05rem;
-  font-weight: 400;
-}
-
-/* Zorg dat de tekst niet achter overlay verdwijnt */
-.section-header {
-  position: relative;
-  z-index: 3;
-}
-
-/* Extra contrast op mobiele apparaten */
-@media (max-width: 768px) {
-  .projects .section-header h2 {
-    font-size: 1.8rem;
-  }
-  .projects .section-header p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-}
-/* ===========================
-   CONTACT PAGE FIX & STYLING
-=========================== */
-
-/* Ruimte onder header */
-#contact {
-  padding-top: 140px !important;
-  padding-bottom: 120px !important;
-  position: relative;
-  z-index: 1;
-}
-
-/* Glasachtige stijl voor de blokken */
-#contact .info-item {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(255, 215, 0, 0.4);
-  border-radius: 20px;
-  padding: 40px 30px;
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s ease;
-  text-align: left;
-}
-
-#contact .info-item:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.18);
-}
-
-/* Iconen groter + gouden kleur */
-#contact .info-item i {
-  font-size: 2.8rem; /* 175% van standaard */
-  color: #FFD700;
-  margin-bottom: 15px;
-}
-
-/* Tekst wit en leesbaar */
-#contact .info-item h3 {
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 6px;
-}
-
-#contact .info-item p {
-  color: #f5f5f5;
-  font-size: 1.05rem;
-  margin: 0;
-}
-
-/* Rijen even verdelen */
-#contact .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
-}
-
-#contact .col-lg-6,
-#contact .col-lg-3 {
-  flex: 1 1 30%;
-  min-width: 280px;
-}
-
-/* WhatsApp-knop */
-#contact .btn {
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-}
-
-#contact .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.55);
-}
-
-/* Mobiel weergave */
-@media (max-width: 768px) {
-  #contact {
-    padding-top: 110px !important;
-    padding-bottom: 100px !important;
-  }
-  #contact .info-item {
-    padding: 30px 20px;
-    text-align: center;
-  }
-  #contact .info-item i {
-    font-size: 2.4rem;
-  }
-}
-/* ===========================
-   HEADER FIX OP WITTE INDEXPAGINA
-=========================== */
-
-body.index-page .header {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-}
-
-body.index-page .header .navmenu a {
-  color: #fff;
-}
-
-body.index-page .header .navmenu a:hover {
-  color: #FFD700;
-}
-
-/* Zorg dat logo wit blijft */
-body.index-page .sitename {
-  color: #fff !important;
-}
-body.index-page .sitename .logo-c,
-body.index-page .sitename .logo-dot {
-  color: #FFD700 !important;
-}
-/* ===========================
-   DIENSTEN GLAS + GOUD RANDJE
-=========================== */
-
-.services .icon-box {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 215, 0, 0.5);
-  border-radius: 20px;
-  padding: 40px 25px;
-  transition: all 0.4s ease;
-  color: #fff;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.services .icon-box:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
-}
-
-/* Titels en tekst wit + helder */
-.services .icon-box h4,
-.services .icon-box p {
-  color: #fff !important;
-}
-
-/* Icons groter (215%) */
-.services .icon-box .icon i {
-  font-size: 3.2rem; /* 215% */
-  color: #FFD700;
-  margin-bottom: 15px;
-}
-/* =====================================
-   CME Curaçao - FIX ICONS, HEADER, DIENSTEN STIJL
-===================================== */
-
-/* === 1. HEADER OP WITTE INDEXPAGINA === */
-body.index-page .header {
-  background: rgba(0, 0, 0, 0.78) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: background 0.4s ease;
-}
-body.index-page .header .navmenu a {
-  color: #fff !important;
-}
-body.index-page .header .navmenu a:hover,
-body.index-page .header .navmenu a.active {
-  color: #FFD700 !important;
-}
-body.index-page .sitename {
-  color: #fff !important;
-}
-body.index-page .sitename .logo-c,
-body.index-page .sitename .logo-dot {
-  color: #FFD700 !important;
-}
-
-/* === 2. ICONS GROTER OP HOME (ONZE DIENSTEN) === */
-.index-page .services .service-item i {
-  font-size: 3.4rem !important; /* ~215% groter */
-  color: #FFD700;
-  margin-bottom: 16px;
-  transition: transform 0.3s ease;
-}
-.index-page .services .service-item:hover i {
-  transform: scale(1.15);
-}
-
-/* === 3. DIENSTENPAGINA - GLASACHTIG & GOUD RANDJE === */
-.services .service-item {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(255, 215, 0, 0.45);
-  border-radius: 20px;
-  padding: 40px 30px;
-  transition: all 0.4s ease;
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  text-align: left;
-}
-
-.services .service-item:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 28px rgba(255, 215, 0, 0.3);
-}
-
-.services .service-item i {
-  font-size: 3.2rem;
-  color: #FFD700;
-  margin-bottom: 15px;
-}
-
-.services .service-item h4,
-.services .service-item p {
-  color: #fff !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-}
-
-/* === Mobiel: nette weergave === */
-@media (max-width: 768px) {
-  .services .service-item {
-    text-align: center;
-    padding: 30px 20px;
-  }
-  .services .service-item i {
-    font-size: 2.8rem;
-  }
-}
-
-/* =====================================
-   CME Curaçao - FIX ICON SIZE + GELIJKE BLOKKEN + GLAS
-===================================== */
-
-/* --- HEADER OP WITTE INDEX PAGINA --- */
-body.index-page .header {
-  background: rgba(0, 0, 0, 0.78) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: background 0.4s ease;
-}
-body.index-page .header .navmenu a {
-  color: #fff !important;
-}
-body.index-page .header .navmenu a:hover,
-body.index-page .header .navmenu a.active {
-  color: #FFD700 !important;
-}
-body.index-page .sitename {
-  color: #fff !important;
-}
-body.index-page .sitename .logo-c,
-body.index-page .sitename .logo-dot {
-  color: #FFD700 !important;
-}
-
-/* --- HOME: ONZE DIENSTEN ICONS GROTER (werkt met .icon-box) --- */
-.index-page .icon-box .icon i {
-  font-size: 3.3rem !important; /* 215% groter */
-  color: #FFD700;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.index-page .icon-box:hover .icon i {
-  transform: scale(1.15);
-  color: #fff;
-}
-
-/* --- DIENSTENPAGINA: GLAS EFFECT + GOUD RAND --- */
-.services .service-item {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(255, 215, 0, 0.45);
-  border-radius: 20px;
-  padding: 40px 30px;
-  color: #fff;
-  text-align: left;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  transition: all 0.4s ease;
-  height: 100%;
-}
-.services .service-item:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #FFD700;
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
-}
-.services .service-item i {
-  font-size: 3.2rem !important;
-  color: #FFD700;
-  margin-bottom: 15px;
-}
-.services .service-item h4,
-.services .service-item p {
-  color: #fff !important;
-}
-
-/* --- Gelijke hoogte op desktop --- */
-@media (min-width: 992px) {
-  .services .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .services .col-lg-3 {
-    display: flex;
-  }
-  .services .service-item {
-    flex-grow: 1;
-  }
-}
-
-/* --- Mobiel netjes centreren --- */
-@media (max-width: 768px) {
-  .icon-box,
-  .service-item {
-    text-align: center;
-    padding: 30px 20px;
-  }
-  .icon-box .icon i,
-  .service-item i {
-    font-size: 2.8rem !important;
-  }
-/* === HOME: Onze diensten glas-effect licht === */
-#index .icon-box,
-.index-page .icon-box {
-  background: rgba(255, 255, 255, 0.25); /* bijna wit glas */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 20px;
-  padding: 35px 25px;
-  text-align: center;
-  color: #111;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-}
-
-.index-page .icon-box:hover {
-  background: rgba(255, 255, 255, 0.45);
-  border-color: #FFD700;
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
-  transform: translateY(-6px);
-}
-
-.index-page .icon-box .icon i {
-  font-size: 3.2rem;
-  color: #FFD700;
-  margin-bottom: 15px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.index-page .icon-box:hover .icon i {
-  color: #111;
-  transform: scale(1.1);
-}
-
-.index-page .icon-box h4,
-.index-page .icon-box p {
-  color: #111 !important;
-}
-/* === FIX: GLASACHTIGE STIJL VOOR HOME – OOK OP PC === */
-#services .icon-box,
-.index-page .icon-box {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  padding: 35px 25px;
-  text-align: center;
-  color: #111;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-}
-
-/* Hover-effect (goud accent en iets helderder glas) */
-#services .icon-box:hover,
-.index-page .icon-box:hover {
-  background: rgba(255, 255, 255, 0.45);
-  border-color: #FFD700;
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
-  transform: translateY(-6px);
-}
-
-/* Icoontjes groot en goudkleurig */
-#services .icon-box .icon i,
-.index-page .icon-box .icon i {
-  font-size: 3.4rem;
-  color: #FFD700;
-  margin-bottom: 15px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-#services .icon-box:hover .icon i,
-.index-page .icon-box:hover .icon i {
-  color: #111;
-  transform: scale(1.1);
-}
-
-/* Tekst */
-#services .icon-box h4,
-#services .icon-box p,
-.index-page .icon-box h4,
-.index-page .icon-box p {
-  color: #111 !important;
-}
-
-/* Zorg dat alle blokken dezelfde hoogte hebben */
-#services .icon-box {
-  min-height: 250px;
-}
-
-/* Mobiel aanpassing */
-@media (max-width: 768px) {
-  #services .icon-box {
-    background: rgba(255, 255, 255, 0.25);
-    min-height: auto;
-  }
-}
-/* === CME-SERVICES GLAZE + GOUD RAND (WERKT OP PC & MOBIEL) === */
-#cme-services .icon-box {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  padding: 35px 25px;
-  text-align: center;
-  color: #111;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-}
-
-/* Hover-effect goud en iets helderder glas */
-#cme-services .icon-box:hover {
-  background: rgba(255, 255, 255, 0.45);
-  border-color: #FFD700;
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
-  transform: translateY(-6px);
-}
-
-/* Icoontjes groot en goudkleurig */
-#cme-services .icon-box .icon i {
-  font-size: 3.4rem; /* 215% groter */
-  color: #FFD700;
-  margin-bottom: 15px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-#cme-services .icon-box:hover .icon i {
-  color: #111;
-  transform: scale(1.1);
-}
-
-/* Tekst kleur */
-#cme-services .icon-box h4,
-#cme-services .icon-box p {
-  color: #111 !important;
-}
-
-/* Gelijke hoogte op PC */
-@media (min-width: 992px) {
-  #cme-services .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #cme-services .col-lg-3 {
-    display: flex;
-  }
-  #cme-services .icon-box {
-    flex-grow: 1;
-  }
-}
-
-/* Mobiel aanpassing */
-@media (max-width: 768px) {
-  #cme-services .icon-box {
-    background: rgba(255, 255, 255, 0.25);
-    text-align: center;
-    min-height: auto;
-  }
-  #cme-services .icon-box .icon i {
-    font-size: 2.8rem;
-  }
-}
-/* === FIX: GLAS & GOUD VOOR PC (FORCE DESKTOP VIEW) === */
-@media (min-width: 992px) {
-  #cme-services .icon-box {
-    background: rgba(255, 255, 255, 0.25) !important;
-    backdrop-filter: blur(6px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
-    border: 1px solid rgba(255, 215, 0, 0.45) !important;
-    border-radius: 20px !important;
-    padding: 40px 30px !important;
-    color: #111 !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.4s ease !important;
-  }
-
-  #cme-services .icon-box:hover {
-    background: rgba(255, 255, 255, 0.45) !important;
-    border-color: #FFD700 !important;
-    transform: translateY(-6px) !important;
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25) !important;
-  }
-
-  #cme-services .icon-box .icon i {
-    font-size: 3.4rem !important;
-    color: #FFD700 !important;
-    margin-bottom: 15px !important;
-    transition: color 0.3s ease, transform 0.3s ease !important;
-  }
-
-  #cme-services .icon-box:hover .icon i {
-    color: #111 !important;
-    transform: scale(1.1) !important;
-  }
-
-  #cme-services .icon-box h4,
-  #cme-services .icon-box p {
-    color: #111 !important;
-  }
-}
-/* === FINAL FIX FOR DESKTOP GLASS BOXES === */
-@media (min-width: 992px) {
-  #cme-services .row {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px; /* ruimte tussen kolommen zodat glas zichtbaar blijft */
-  }
-
-  #cme-services .col-lg-3 {
-    flex: 1 1 calc(25% - 25px);
-    display: flex;
-  }
-
-  #cme-services .icon-box {
-    background: rgba(255, 255, 255, 0.25) !important;
-    backdrop-filter: blur(6px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
-    border: 1px solid rgba(255, 215, 0, 0.4) !important;
-    border-radius: 20px !important;
-    padding: 40px 30px !important;
-    text-align: center !important;
-    color: #111 !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.4s ease !important;
-    width: 100%;
-  }
-
-  #cme-services .icon-box:hover {
-    background: rgba(255, 255, 255, 0.45) !important;
-    border-color: #FFD700 !important;
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25) !important;
-    transform: translateY(-6px) !important;
-  }
-
-  #cme-services .icon-box .icon i {
-    font-size: 3.4rem !important;
-    color: #FFD700 !important;
-    margin-bottom: 15px !important;
-    transition: color 0.3s ease, transform 0.3s ease !important;
-  }
-
-  #cme-services .icon-box:hover .icon i {
-    color: #111 !important;
-    transform: scale(1.1) !important;
-  }
-
-  #cme-services .icon-box h4,
-  #cme-services .icon-box p {
-    color: #111 !important;
-  }
-}
-/* === CME SERVICES - UNIVERSAL FIX === */
-#cme-services .icon-box {
-  position: relative !important;
-  background: rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(6px) !important;
-  -webkit-backdrop-filter: blur(6px) !important;
-  border: 1px solid rgba(255, 215, 0, 0.45) !important;
-  border-radius: 20px !important;
-  padding: 40px 30px !important;
-  text-align: center !important;
-  color: #111 !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.4s ease !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  min-height: 320px !important; /* maakt alle blokken even hoog */
-}
-
-/* Hover-effect */
-#cme-services .icon-box:hover {
-  background: rgba(255, 255, 255, 0.45) !important;
-  border-color: #FFD700 !important;
-  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25) !important;
-  transform: translateY(-6px) !important;
-}
-
-/* Icon styling */
-#cme-services .icon-box .icon i {
-  font-size: 3.4rem !important;
-  color: #FFD700 !important;
-  margin-bottom: 15px !important;
-  transition: color 0.3s ease, transform 0.3s ease !important;
-}
-
-/* Hover icon kleur */
-#cme-services .icon-box:hover .icon i {
-  color: #111 !important;
-  transform: scale(1.1) !important;
-}
-
-/* Tekst styling */
-#cme-services .icon-box h4,
-#cme-services .icon-box p {
-  color: #111 !important;
-}
-
-/* Zorg dat de rijen niet te dicht op elkaar zitten */
-#cme-services .row {
-  row-gap: 25px !important;
-  column-gap: 25px !important;
-}
-
-/* Desktop layout fix */
-@media (min-width: 992px) {
-  #cme-services .col-lg-3 {
-    flex: 1 1 calc(25% - 25px) !important;
-    display: flex !important;
-  }
-}
-/* === Achtergrond fix voor 'Onze diensten' === */
-#cme-services {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.4));
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 80px 0;
-}   
-@media (min-width: 992px) {
-  #cme-services {
-    background: linear-gradient(to bottom, rgba(240,240,240,0.9), rgba(220,220,220,0.9));
-  }
-}
-/* === Projectknoppen tijdelijk verbergen === */
-.projects .project-info a {
-  display: none !important;
-}
-/* === VERBERG ALLE BEKIJK-PROJECT KNOPPEN OP ALLE PAGINA'S === */
-.projects .project-info a,
-#cme-project-preview .project-info a {
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-/* === FORCE HIDE 'BEKIJK PROJECT' BUTTONS OP ALLE SCHERMEN === */
-.projects .project-info a,
-#cme-project-preview .project-info a,
-.section.projects .project-info a,
-.section .project-info a,
-a.btn-view,
-a.btn-get-started[href*="project"],
-a[href*="project-details"],
-a[href*="project.html"] {
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* === EXTRA DESKTOP FORCE === */
-@media (min-width: 992px) {
-  .projects .project-info a,
-  #cme-project-preview .project-info a,
-  .section.projects .project-info a,
-  .section .project-info a,
-  a.btn-view,
-  a.btn-get-started[href*="project"],
-  a[href*="project-details"],
-  a[href*="project.html"] {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    height: 0 !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-}
-   
-/* ======== MENU KLEUREN & HAMBURGER FIX ======== */
-
-/* Mobiel menu icoon wit maken */
-.mobile-nav-toggle.bi-list,
-.mobile-nav-toggle.bi-x {
-  color: #fff !important;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* Mobiel menu links zwart maken */
-@media (max-width: 991px) {
-  #navmenu ul {
-    background: rgba(255, 255, 255, 0.95) !important;
-    border-radius: 12px;
-    padding: 15px;
-  }
-
-  #navmenu ul li a {
-    color: #000 !important;
-    font-weight: 600;
-  }
-
-  #navmenu ul li a.active {
-    color: #d4af37 !important; /* goud accent voor actieve link */
-  }
-}
-
-/* Desktop: hamburgermenu verbergen */
-@media (min-width: 992px) {
-  .mobile-nav-toggle {
-    display: none !important;
-  }
-}
-/* --- Fix: Bekijk project-knop zichtbaar op mobiel --- */
-.project-wrap {
-  position: relative;
-  overflow: hidden;
-}
-
-.project-info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.55);
-  color: white;
-  text-align: center;
-  padding: 15px;
-  transition: all 0.3s ease;
-  z-index: 5;
-}
-
-.project-info a {
-  display: inline-block;
-  background: gold;
-  color: black;
-  padding: 6px 18px;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: 8px;
-  transition: background 0.3s ease;
-}
-
-.project-info a:hover {
-  background: #fff4c2;
-}
-
-/* Mobiel: tekst en knop altijd zichtbaar */
-@media (max-width: 992px) {
-  .project-info {
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-}   
-/* === EXCEPTIE: Laat Brakapeut-knop zien === */
-.projects .project-info a[href="project1.html"] {
-  display: inline-block !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  height: auto !important;
-  padding: 8px 18px !important;
-  margin-top: 10px !important;
-}
-/* ================================
-   🧩 CME Curaçao – Responsive Fix Patch
-   ================================ */
-
-/* Zorg dat desktop (grote schermen) dezelfde basis heeft als mobiel */
-@media (min-width: 1200px) {
-  #cme-services .icon-box,
-  .projects .project-wrap,
-  .services-grid .icon-box {
-    background: rgba(255, 255, 255, 0.25) !important;
-    border: 1px solid rgba(255, 215, 0, 0.45) !important;
-    border-radius: 20px !important;
-    backdrop-filter: blur(6px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
-    transition: all 0.4s ease-in-out !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  /* Hover effect voor PC (gouden rand en lichte schaduw) */
-  #cme-services .icon-box:hover,
-  .services-grid .icon-box:hover,
-  .projects .project-wrap:hover {
-    border-color: gold !important;
-    box-shadow: 0 8px 22px rgba(255, 215, 0, 0.25) !important;
-    transform: translateY(-3px);
-  }
-
-  /* Fix dat hover niet dingen verschuift */
-  .projects .project-wrap img {
-    transition: transform 0.3s ease;
-  }
-
-  .projects .project-wrap:hover img {
-    transform: scale(1.03);
-  }
-
-  /* Zorg dat de 'Bekijk project' knoppen op desktop zichtbaar blijven */
-  .projects .project-info a {
-    display: inline-block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  /* Glas effect blijft behouden ook bij bredere schermen */
-  .services-grid .icon-box {
-    color: white !important;
-  }
-
-  /* Prevent overwriting door bootstrap bij >1400px */
-  .container,
-  .container-xl,
-  .container-xxl {
-    max-width: 1320px !important;
-  }
-}
-/* === FIX: Toon 'Bekijk project' knop voor Brakapeut op alle apparaten === */
-.projects .project-info a[href="project1.html"] {
-  display: inline-block !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  height: auto !important;
-  padding: 8px 18px !important;
-  margin-top: 10px !important;
-  background: gold !important;
-  color: black !important;
-  border-radius: 25px !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-  transition: background 0.3s ease !important;
-}
-.projects .project-info a[href="project1.html"]:hover {
-  background: #fff4c2 !important;
-}
-/* === Project details tekstruimte fix === */
-.project-details .project-description {
-  padding: 35px 30px !important; /* meer ruimte rondom de tekst */
-  margin-top: 15px !important; /* kleine afstand van de foto erboven */
-  line-height: 1.7;
-}
-/* === Projectdetails spacing fix – meer ruimte tussen blur en tekst === */
-.project-details .project-description {
-  padding-top: 50px !important;   /* meer ruimte boven de tekst */
-  padding-bottom: 40px !important; /* iets luchtiger onderaan */
-  margin-top: 25px !important;     /* duwt het blok iets naar beneden */
-  border-radius: 18px;             /* optioneel: zachte rand */
-}
-   /* === Fix Bootstrap blauwe links en kleuren === */
-:root {
-  --bs-link-color: #FFD700 !important;
-  --bs-link-hover-color: #d4af37 !important;
-}
-
-a {
-  color: #FFD700 !important;
-  text-decoration: none !important;
-  transition: 0.3s ease !important;
-}
-
-a:hover {
-  color: #d4af37 !important;
-  text-decoration: none !important;
-}
-@media (min-width: 992px) {
-  .mobile-nav-toggle {
-    display: none !important;
-  }
-
-  #navmenu ul {
-    display: flex !important;
-  }
-
-  #navmenu ul.active {
-    display: flex !important;
-  }
-}
-
-@media (max-width: 991px) {
-  #navmenu ul {
-    display: none;
-  }
-
-  #navmenu ul.active {
-    display: block;
-  }
-
-  .mobile-nav-toggle {
-    display: block !important;
-  }
-}   
- @media (min-width: 1200px) {
-  a,
-  .footer a,
-  .header a {
-    color: #FFD700 !important;
-  }
-}  
-.logo .sitename,
-h1.sitename {
-  font-weight: 700 !important;
-  letter-spacing: 0.5px;
-}   
