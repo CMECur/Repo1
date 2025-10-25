@@ -1,176 +1,228 @@
+<!-- projects.html -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Onze projecten – CME Curaçao</title>
-  <meta name="description" content="Onze projecten – Een overzicht van bouw- en renovatieprojecten uitgevoerd door CME Curaçao. Bekijk onze recent afgeronde projecten en cases.">
-  <meta name="keywords" content="projecten, CME, bouwprojecten, renovatie, portfolio, Curaçao">
-  <meta name="author" content="Camille’s Multipurpose Employment">
+  <!-- ✅ SEO INSTELLINGEN -->
+  <title>Projecten – CME Curaçao</title>
+  <meta name="description" content="Bekijk de recente bouw- en renovatieprojecten van CME Curaçao, uitgevoerd met kwaliteit en vakmanschap.">
+  <meta name="keywords" content="bouwbedrijf Curaçao, renovatie projecten, bouwprojecten, CME Curaçao, projecten Curaçao">
+  <meta name="author" content="CME Curaçao">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cm-employment.com/projects.html">
 
-  <!-- CSS en Fonts -->
+  <!-- ✅ OPEN GRAPH -->
+  <meta property="og:title" content="CME Curaçao – Bouw & Renovatie">
+  <meta property="og:description" content="Energy in Adversity – betrouwbaar bouwbedrijf op Curaçao.">
+  <meta property="og:image" content="https://cm-employment.com/assets/img/hero-carousel/hero-carousel-1.jpg">
+  <meta property="og:url" content="https://cm-employment.com/projects.html">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CME Curaçao – Bouw & Renovatie">
+  <meta name="twitter:description" content="Professioneel bouwbedrijf op Curaçao, gespecialiseerd in ruwbouw, renovatie en afwerking.">
+  <meta name="twitter:image" content="https://cm-employment.com/assets/img/hero-carousel/hero-carousel-1.jpg">
+
+  <!-- ✅ FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"> 
+
+  <!-- Fonts & Vendor CSS -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body>
-
-  <!-- ======= Header ======= -->
+<body class="about-page">
 <header id="header" class="header d-flex align-items-center fixed-top">
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-    <!-- Logo / sitenaam -->
     <a href="index.html" class="logo d-flex align-items-center">
       <h1 class="sitename mb-0">
         <span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao
       </h1>
     </a>
 
-    <!-- Navigatie menu -->
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Over ons</a></li>
         <li><a href="services.html">Diensten</a></li>
-        <li><a href="projects.html">Projecten</a></li>
+        <li><a href="projects.html" class="active">Projecten</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </nav><!-- End navmenu -->
-
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide bi bi-x"></i>
+    </nav>
   </div>
-</header><!-- End Header -->
+</header>
 
-  <main id="main" class="main">
+<section id="projects" class="projects section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Onze recente projecten</h2>
+      <p>Een selectie van enkele projecten die wij met trots hebben uitgevoerd voor onze klanten.</p>
+    </div>
 
-    <!-- Titel sectie -->
-    <section class="page-title section py-5">
-      <div class="container" data-aos="fade-up">
-        <h1>Onze projecten</h1>
-      </div>
-    </section>
+    <div class="row gy-4 projects-container" data-aos="fade-up" data-aos-delay="100">
 
-    <!-- Projecten overzicht -->
-    <section id="projects-list" class="projects section py-5">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <!-- Project 1 -->
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-            <div class="project-item">
-              <img src="assets/img/projects/remodeling-1.jpg" alt="Brakapéut Project" class="img-fluid">
-              <div class="project-info">
-                <h4>Brakapéut Project</h4>
-                <p>Volledige woningrenovatie</p>
-                <a href="project1.html" class="btn btn-sm btn-outline-dark mt-2">Bekijk project</a>
-              </div>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-            <div class="project-item">
-              <img src="assets/img/projects/remodeling-2.jpg" alt="Privé Huis Budget Deal" class="img-fluid">
-              <div class="project-info">
-                <h4>Privé Huis Budget Deal</h4>
-                <p>Slimme bouw binnen beperkt budget</p>
-                <a href="project2.html" class="btn btn-sm btn-outline-dark mt-2">Bekijk project</a>
-              </div>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-            <div class="project-item">
-              <img src="assets/img/projects/construction-1.jpg" alt="Commerciële Unit" class="img-fluid">
-              <div class="project-info">
-                <h4>Commerciële Unit</h4>
-                <p>Constructie van een klein bedrijfsgebouw</p>
-                <a href="project3.html" class="btn btn-sm btn-outline-dark mt-2">Bekijk project</a>
-              </div>
-            </div>
-          </div>
-          <!-- Project 4 -->
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-            <div class="project-item">
-              <img src="assets/img/projects/repairs-2.jpg" alt="Villa Renovatie" class="img-fluid">
-              <div class="project-info">
-                <h4>Villa Renovatie</h4>
-                <p>Volledige afwerking en schilderwerk</p>
-                <a href="project4.html" class="btn btn-sm btn-outline-dark mt-2">Bekijk project</a>
-              </div>
-            </div>
-          </div>
-          <!-- Project 5 -->
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-            <div class="project-item">
-              <img src="assets/img/projects/construction-2.jpg" alt="Studio Uitbreiding" class="img-fluid">
-              <div class="project-info">
-                <h4>Studio Uitbreiding</h4>
-                <p>Dakversterking en nieuwe constructie</p>
-                <a href="project5.html" class="btn btn-sm btn-outline-dark mt-2">Bekijk project</a>
-              </div>
-            </div>
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/projects/project-1.jpg" class="img-fluid" alt="">
+          <div class="project-info">
+            <h4>Brakapeut Project</h4>
+            <p>Volledige ruwbouw en afwerking voor een woningproject.</p>
+            <a href="project1.html" class="stretched-link">Bekijk project</a>
           </div>
         </div>
       </div>
-    </section>
 
-  </main><!-- End Main -->
-
-  <!-- Footer (zelfde als elders) -->
-  <footer id="footer" class="footer dark-background">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Willemstad, Curaçao</p>
-            <p class="mt-3"><strong>Telefoon:</strong> <span>+59995114226</span></p>
-            <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/projects/project-2.jpg" class="img-fluid" alt="">
+          <div class="project-info">
+            <h4>Budget Deal Woning</h4>
+            <p>Een slim en betaalbaar bouwconcept voor particuliere klanten.</p>
+            <a href="project2.html" class="stretched-link">Bekijk project</a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nuttige links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="projects.html">Projecten</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/projects/project-3.jpg" class="img-fluid" alt="">
+          <div class="project-info">
+            <h4>Toezicht & Uitvoering</h4>
+            <p>Projectbegeleiding en kwaliteitscontrole voor zakelijke klant.</p>
+            <a href="project3.html" class="stretched-link">Bekijk project</a>
+          </div>
         </div>
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Onze diensten</h4>
-          <ul>
-            <li><a href="#">Ruwbouw &amp; Constructie</a></li>
-            <li><a href="#">Renovatie &amp; Afwerking</a></li>
-            <li><a href="#">Projectmanagement</a></li>
-            <li><a href="#">Toezicht &amp; Uitvoering</a></li>
-          </ul>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/projects/project-4.jpg" class="img-fluid" alt="">
+          <div class="project-info">
+            <h4>Appartement Complex</h4>
+            <p>Constructie van een modern appartementencomplex op Curaçao.</p>
+            <a href="project4.html" class="stretched-link">Bekijk project</a>
+          </div>
         </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-lg-4 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/projects/project-5.jpg" class="img-fluid" alt="">
+          <div class="project-info">
+            <h4>Privéwoning Luxe</h4>
+            <p>Een luxe woning met focus op duurzaamheid en design.</p>
+            <a href="project5.html" class="stretched-link">Bekijk project</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="footer">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename mb-0">
+            <span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao
+          </h1>
+        </a>
+        <p class="mt-3">“Energy in Adversity” – wij bouwen met energie, precisie en vakmanschap. CME Curaçao is gespecialiseerd in ruwbouw, renovatie en afwerking, en levert kwaliteit in elk project.</p>
+      </div>
+      <div class="col-lg-2 col-md-6 footer-links">
+        <h4>Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Over ons</a></li>
+          <li><a href="services.html">Diensten</a></li>
+          <li><a href="projects.html">Projecten</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 footer-contact text-center text-md-start">
+        <h4>Contact</h4>
+        <p>
+          Perseusweg 8A<br>
+          Willemstad, Curaçao<br><br>
+          <strong>Telefoon:</strong> +599 9 524 5971<br>
+          <strong>Email:</strong> info@cm-employment.com<br>
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 footer-newsletter">
+        <h4>Nieuwsbrief</h4>
+        <p>Schrijf u in voor onze nieuwsbrief en blijf op de hoogte van onze nieuwste projecten en aanbiedingen.</p>
+        <form action="#" method="post">
+          <input type="email" name="email" placeholder="E-mail"><input type="submit" value="Inschrijven">
+        </form>
       </div>
     </div>
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
+  </div>
+  <div class="container footer-bottom mt-4">
+    <div class="copyright">
+      &copy; 2025 <strong><span>CME Curaçao</span></strong>. Alle rechten voorbehouden.
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/menu.js"></script>
+<!-- Vendor JS -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  AOS.init({ once: true });
+  const header = document.querySelector('#header');
+  document.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll("#hero img");
+  const next = document.querySelector(".hero-next");
+  const prev = document.querySelector(".hero-prev");
+  let currentSlide = 0;
+  const showSlide = (index) => {
+    slides.forEach((img, i) => {
+      img.classList.toggle("active", i === index);
+    });
+  };
+  next.addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  });
+  prev.addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  });
+});
+</script>
 </body>
 </html>
