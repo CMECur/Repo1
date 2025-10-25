@@ -85,4 +85,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialiseer GLightbox
   GLightbox({ selector: '.glightbox' });
+ // === HEADER / MENU ===
+document.addEventListener('DOMContentLoaded', function () {
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('#navmenu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('bi-list');
+      navToggle.classList.toggle('bi-x');
+    });
+  }
+
+  // Scroll effect
+  const header = document.querySelector('#header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+}); 
 });
