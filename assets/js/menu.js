@@ -1,42 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.querySelector(".mobile-nav-toggle");
-  const navMenu = document.querySelector(".navmenu");
-  const header = document.querySelector(".header");
 
-  if (navToggle && navMenu) {
-    // open/sluit menu
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("mobile-nav-active");
-      navToggle.classList.toggle("bi-x");
-    });
+// Menu + hero slider (clean)
+document.addEventListener('DOMContentLoaded', () => {
+  // Header scroll effect (optional)
+  const header = document.getElementById('header');
+  function onScroll(){ header && header.classList.toggle('scrolled', window.scrollY > 20); }
+  window.addEventListener('scroll', onScroll); onScroll();
 
-    // sluit menu bij klik op link
-    document.querySelectorAll(".navmenu a").forEach(link => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("mobile-nav-active");
-        navToggle.classList.remove("bi-x");
-      });
+  // Mobile menu
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  const list = document.querySelector('#navmenu ul');
+  if(toggle && list){
+    toggle.addEventListener('click', () => {
+      list.classList.toggle('active');
+      toggle.classList.toggle('bi-list');
+      toggle.classList.toggle('bi-x');
     });
+    // close when clicking link
+    list.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+      list.classList.remove('active'); toggle.classList.add('bi-list'); toggle.classList.remove('bi-x');
+    }));
   }
 
-  // Header transparant of wit bij scroll
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
+  // Hero slideshow
+  const slides = document.querySelectorAll('#hero img');
+  if(slides.length){
+    let i=0; let t=null;
+    const show = idx => slides.forEach((im, k)=> im.classList.toggle('active', k===idx));
+    const next = () => { i=(i+1)%slides.length; show(i); };
+    const prev = () => { i=(i-1+slides.length)%slides.length; show(i); };
+    show(i);
+    t = setInterval(next, 6000);
+    document.querySelector('.hero-next')?.addEventListener('click', ()=>{ next(); clearInterval(t); t=setInterval(next,6000); });
+    document.querySelector('.hero-prev')?.addEventListener('click', ()=>{ prev(); clearInterval(t); t=setInterval(next,6000); });
+  }
 });
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const navToggle = document.querySelector(".mobile-nav-toggle");
-    const navMenu   = document.querySelector("#navmenu ul");
-
-    navToggle.addEventListener("click", function() {
-      navMenu.classList.toggle("active");
-      this.classList.toggle("bi-list");
-      this.classList.toggle("bi-x");
-    });
-  });
-</script>
