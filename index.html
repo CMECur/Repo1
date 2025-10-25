@@ -166,5 +166,17 @@
   <!-- Main JS bestanden -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/menu.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+    const navMenu = document.querySelector("#navmenu ul");
+
+    navToggle.addEventListener("click", function() {
+      navMenu.classList.toggle("active");
+      this.classList.toggle("bi-list");
+      this.classList.toggle("bi-x"); // wisselt icoon naar X
+    });
+  });
+</script>
 </body>
 </html>
