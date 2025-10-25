@@ -416,3 +416,55 @@ img.img-fluid {
   color: #FFD700;
   font-weight: 600;
 }
+/* ==== HEADER FIX VOOR INDEX ==== */
+.header {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+.header.scrolled {
+  background: #000;
+}
+.logo-c { color: #FFD700; font-weight: 700; }
+.logo-dot { color: #FFD700; }
+.header .sitename { color: #fff; font-size: 22px; font-weight: 600; }
+
+.navmenu a {
+  color: #fff;
+  padding: 8px 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.navmenu a:hover, .navmenu a.active {
+  color: #FFD700;
+}
+.mobile-nav-toggle {
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobiel menu */
+@media (max-width: 991px) {
+  .navmenu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: none;
+    flex-direction: column;
+  }
+  .navmenu.active {
+    display: flex;
+  }
+  .navmenu a {
+    color: #fff;
+    padding: 10px 0;
+  }
+}
