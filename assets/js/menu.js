@@ -28,3 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+    const navMenu   = document.querySelector("#navmenu ul");
+
+    navToggle.addEventListener("click", function() {
+      navMenu.classList.toggle("active");
+      this.classList.toggle("bi-list");
+      this.classList.toggle("bi-x");
+    });
+  });
+</script>
