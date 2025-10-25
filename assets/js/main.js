@@ -1,4 +1,27 @@
 // CME Curaçao - Custom Main JS
+/**
+ * apply .scrolled class to body as page is scrolled
+ */
+function toggleScrolled() {
+  const selectBody = document.querySelector('body');
+  const selectHeader = document.querySelector('#header');
+  if (window.scrollY > 100) {
+    selectBody.classList.add('scrolled');
+    selectHeader.classList.add('scrolled');
+  } else {
+    selectBody.classList.remove('scrolled');
+    selectHeader.classList.remove('scrolled');
+  }
+}
+window.addEventListener('load', toggleScrolled);
+document.addEventListener('scroll', toggleScrolled);
+
+/**
+ * Initiate PureCounter (voor eventuele cijfers animatie)
+ */
+new PureCounter();
+
+// ... (overige functies voor o.a. glightbox, isotope, swiper initialisatie) ...
 AOS.init({ once: true });
 
 const header = document.querySelector('#header');
