@@ -416,55 +416,84 @@ img.img-fluid {
   color: #FFD700;
   font-weight: 600;
 }
-/* ==== HEADER FIX VOOR INDEX ==== */
+/* ==== HEADER GLOBAAL ==== */
 .header {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   padding: 10px 0;
   z-index: 999;
   transition: all 0.3s ease;
 }
+
 .header.scrolled {
   background: #000;
 }
+
+/* Logo styling */
 .logo-c { color: #FFD700; font-weight: 700; }
 .logo-dot { color: #FFD700; }
-.header .sitename { color: #fff; font-size: 22px; font-weight: 600; }
+.header .sitename {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px; /* minder ruimte tussen letters */
+}
+
+/* Navmenu standaard (desktop) */
+.navmenu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
 
 .navmenu a {
   color: #fff;
-  padding: 8px 15px;
   font-weight: 500;
+  font-size: 16px;
   text-decoration: none;
   transition: 0.3s;
 }
-.navmenu a:hover, .navmenu a.active {
+
+.navmenu a:hover,
+.navmenu a.active {
   color: #FFD700;
 }
+
+/* Hamburger knop (alleen op mobiel zichtbaar) */
 .mobile-nav-toggle {
   font-size: 28px;
   color: #fff;
   background: none;
   border: none;
   cursor: pointer;
+  display: none; /* standaard onzichtbaar */
 }
 
-/* Mobiel menu */
+/* ==== MOBIEL MENU ==== */
 @media (max-width: 991px) {
-  .navmenu {
+  .mobile-nav-toggle {
+    display: block; /* zichtbaar op mobiel */
+  }
+
+  .navmenu ul {
     position: absolute;
     top: 70px;
     right: 20px;
     background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
     border-radius: 10px;
     padding: 15px 20px;
-    display: none;
-    flex-direction: column;
+    display: none; /* standaard verborgen */
   }
-  .navmenu.active {
-    display: flex;
+
+  .navmenu ul.active {
+    display: flex; /* opengeklapt */
   }
+
   .navmenu a {
-    color: #fff;
     padding: 10px 0;
+    font-size: 18px;
   }
 }
