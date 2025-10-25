@@ -1,9 +1,44 @@
 /* =========================================================
    CME. Curaçao – Website hoofdstijl (opgeschoond)
    ========================================================= */
-/* Logo-kleuren */
-.logo-c { color: #FFD700; font-weight: 700; }
-.logo-dot { color: #FFD700; }
+/* Logo-kleuren (goudgeel voor 'C' en '.') */
+.logo-c {
+  color: #FFD700;
+  font-weight: 700;
+}
+.logo-dot {
+  color: #FFD700;
+}
+
+/* ...overige CSS... */
+
+/* Mobile menu: standaard verborgen, tonen bij actief */
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.navmenu.mobile-nav-active ul {
+  display: block;
+}
+/* Menu linkjes op mobiel onder elkaar */
+.navmenu li {
+  margin: 10px 0;
+}
+.navmenu a {
+  color: #111;
+  text-decoration: none;
+}
+
+/* ...overige CSS... */
+
+/* Formuliervelden focus-state: geen blauw outline */
+.form-control:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+  outline: none;
+}
 
 /* Basisstijl en layout */
 body {
