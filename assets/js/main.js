@@ -85,11 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialiseer GLightbox
   GLightbox({ selector: '.glightbox' });
-// === HEADER EN MENU FIX ===
+  
+// === HEADER EN MENU GLOBAAL FIX ===
 document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.querySelector(".mobile-nav-toggle");
   const navMenu = document.querySelector("#navmenu ul");
+  const header = document.querySelector("#header");
 
+  // Mobiel toggle
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
       navMenu.classList.toggle("active");
@@ -98,18 +101,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Verberg hamburger op desktop
-  function checkScreenWidth() {
+  // Zorg dat hamburger verdwijnt en menu altijd zichtbaar op desktop
+  function adjustMenu() {
     if (window.innerWidth > 991) {
       navMenu.classList.remove("active");
-      navToggle.classList.add("bi-list");
-      navToggle.classList.remove("bi-x");
+      navToggle.style.display = "none";
+      navMenu.style.display = "flex";
+    } else {
+      navToggle.style.display = "block";
+      navMenu.style.display = "none";
     }
   }
-  window.addEventListener("resize", checkScreenWidth);
 
-  // Scroll-effect
-  const header = document.querySelector("#header");
+  window.addEventListener("resize", adjustMenu);
+  adjustMenu();
+
+  // Scroll effect header
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) header.classList.add("scrolled");
     else header.classList.remove("scrolled");
