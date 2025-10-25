@@ -121,4 +121,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.scrollY > 50) header.classList.add("scrolled");
     else header.classList.remove("scrolled");
   });
+  // === MOBIEL MENU OPEN/DICHT ===
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".mobile-nav-toggle");
+  const navMenu = document.querySelector("#navmenu ul");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      navToggle.classList.toggle("bi-list");
+      navToggle.classList.toggle("bi-x");
+    });
+  }
+});
 });
