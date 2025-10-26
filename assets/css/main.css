@@ -232,7 +232,15 @@ h1, h2, h3, h4, h5, h6 {
   #hero .info {
     text-align: center;
   }
-
+@media (max-width: 768px) {
+  #hero img {
+    object-fit: contain; /* toon hele foto */
+    height: 100%; /* behoud verhouding */
+  }
+  #hero {
+    height: auto; /* laat hero meeschalen met fotohoogte */
+  }
+}
   #hero .info h2 {
     display: flex;
     flex-direction: column;
