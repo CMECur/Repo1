@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
    HEADER – Glas Effect
 ===================== */
 .header {
-  background: rgba(255, 255, 255, 0.10); /* lichter glas */
+  background: rgba(255, 255, 255, 0.08); /* lichter glas */
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
