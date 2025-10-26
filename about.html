@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Over ons - CME Curaçao</title>
-  <meta name="description" content="Over ons - CME Curaçao bouwt met kwaliteit, passie en energie in elk project.">
+  <meta name="description" content="CME Curaçao – Bouwbedrijf met kwaliteit, ervaring en vakmanschap op Curaçao. Energy in Adversity.">
+  <meta name="keywords" content="bouw, renovatie, Curaçao, aannemer, CME, constructie, architectuur">
   <link rel="icon" href="assets/img/favicon.png" />
 
   <!-- Fonts & Vendor CSS -->
@@ -19,92 +20,155 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* === Extra styling (zoals in oude versie) === */
+    /* ===== Header & Logo ===== */
+    header.header {
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .logo img {
+      width: 250px; /* 500% groter */
+      height: auto;
+    }
+    .logo span {
+      font-weight: 800;
+      font-size: 28px;
+    }
+    .logo span.gold {
+      color: #FFD700;
+      font-weight: 900;
+    }
+
+    /* ===== Navigatie ===== */
+    .navmenu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .navmenu a {
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .navmenu a:hover, .navmenu a.active {
+      color: #FFD700;
+    }
+    .mobile-nav-toggle {
+      display: none;
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+    }
+    @media (max-width: 991px) {
+      .navmenu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        width: 220px;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: right;
+      }
+      .navmenu.show { display: flex; }
+      .mobile-nav-toggle { display: block; }
+    }
+
+    /* ===== Hero Section ===== */
     #about-hero {
       position: relative;
-      background: url("assets/img/logo.png") center center no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("assets/img/logo.png") center center no-repeat;
       background-size: 200px auto;
-      background-color: rgba(0,0,0,0.7);
       color: white;
       text-align: center;
       padding: 160px 20px 120px;
       overflow: hidden;
     }
-    #about-hero::before {
+    #about-hero h1 {
+      font-size: 46px;
+      font-weight: 800;
+      color: white;
+      text-transform: uppercase;
+    }
+    #about-hero p {
+      color: #e0e0e0;
+      font-size: 18px;
+      max-width: 800px;
+      margin: 20px auto 0;
+      line-height: 1.6;
+    }
+
+    /* ===== Main Content ===== */
+    section.about-content {
+      background: #0b0b0b; /* Luxury zwart */
+      color: #f8f8f8;
+      padding: 80px 0;
+    }
+    .about-glass {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 50px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .about-glass h2 {
+      color: #FFD700;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    .about-glass p {
+      color: #d1d1d1;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    /* ===== Footer ===== */
+    footer.footer {
+      position: relative;
+      background: url("assets/img/footer-bg.png") center/cover no-repeat;
+      color: white;
+      padding: 80px 0 40px;
+      text-align: center;
+    }
+    footer.footer::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      backdrop-filter: blur(8px);
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
       z-index: 0;
     }
-    #about-hero .content {
+    footer.footer .container {
       position: relative;
       z-index: 1;
     }
-    #about-hero h1 {
-      font-size: 42px;
-      font-weight: 700;
-      color: #fff;
+    footer.footer h3 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #FFD700;
     }
-    #about-hero p {
-      color: #ddd;
-      font-size: 18px;
-      max-width: 800px;
-      margin: 0 auto;
+    footer.footer p {
+      color: #ccc;
+      margin: 10px 0 20px;
     }
-
-    /* Glas-effect container */
-    .about-glass {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px;
-      color: #fff;
-    }
-
-    /* Navigatie - zichtbaar op desktop, hamburger alleen mobiel */
-    .navmenu {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .navmenu a {
-      color: #fff;
-      font-weight: 600;
+    footer.footer .social-icons a {
+      color: #FFD700;
+      font-size: 22px;
+      margin: 0 8px;
       transition: 0.3s;
     }
-    .navmenu a:hover,
-    .navmenu a.active {
-      color: #d4af37;
-    }
-    .mobile-nav-toggle {
-      display: none;
-      font-size: 28px;
+    footer.footer .social-icons a:hover {
       color: white;
-      cursor: pointer;
     }
-
-    @media (max-width: 991px) {
-      .navmenu {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 70px;
-        right: 15px;
-        width: 200px;
-        border-radius: 10px;
-        text-align: right;
-        padding: 20px;
-      }
-      .navmenu.show {
-        display: flex;
-      }
-      .mobile-nav-toggle {
-        display: block;
-      }
+    footer.footer small {
+      display: block;
+      margin-top: 20px;
+      color: #999;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -112,10 +176,10 @@
 <body class="about-page">
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top" style="backdrop-filter: blur(8px); background: rgba(0,0,0,0.6);">
+  <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center text-white fw-bold fs-4">
-        <span style="color:#d4af37;">C</span>ME<span style="color:white;"> Curaçao</span>
+      <a href="index.html" class="logo d-flex align-items-center text-white">
+        <span class="gold">C</span><span>ME.</span> <span style="margin-left:6px;">CURAÇAO</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -129,45 +193,47 @@
 
       <i class="mobile-nav-toggle bi bi-list"></i>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
+  <!-- ======= Hero ======= -->
   <section id="about-hero" class="d-flex align-items-center justify-content-center">
-    <div class="content" data-aos="fade-up">
+    <div data-aos="fade-up">
       <h1>Over ons</h1>
-      <p>Camille’s Multipurpose Employment (CME Curaçao) is een dynamisch bouwbedrijf dat streeft naar perfectie in elk detail. 
-      Ons motto <strong>"Energy in Adversity"</strong> staat voor kracht, doorzettingsvermogen en kwaliteit. 
+      <p>Camille’s Multipurpose Employment (CME Curaçao) is een dynamisch bouwbedrijf dat streeft naar perfectie in elk detail.<br>
+      Ons motto <strong>"Energy in Adversity"</strong> staat voor kracht, doorzettingsvermogen en kwaliteit.<br>
       Wij combineren lokale kennis met internationaal vakmanschap om duurzame projecten te realiseren die de toekomst van Curaçao vormgeven.</p>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
-  <!-- ======= Main About Content ======= -->
-  <main id="main" class="main">
-    <section id="about" class="py-5">
-      <div class="container" data-aos="fade-up">
-        <div class="about-glass mt-5">
-          <h2 class="mb-4 text-center" style="color:#d4af37;">Wie wij zijn</h2>
-          <p class="text-center">
-            CME Curaçao levert een breed scala aan bouw- en renovatiediensten. 
-            Van ruwbouw tot afwerking, wij werken met oog voor detail en passie voor kwaliteit. 
-            Elk project, groot of klein, krijgt onze volledige toewijding en energie. 
-          </p>
-          <p class="text-center mt-3">
-            Wij geloven in samenwerking, duurzaamheid en vakmanschap. 
-            Met onze ervaring in diverse sectoren helpen wij klanten hun visie te realiseren, 
-            altijd met respect voor planning, budget en kwaliteit.
-          </p>
-        </div>
+  <!-- ======= Content ======= -->
+  <section class="about-content">
+    <div class="container" data-aos="fade-up">
+      <div class="about-glass text-center">
+        <h2>Wie wij zijn</h2>
+        <p>
+          CME Curaçao levert een compleet pakket aan bouw- en renovatiediensten, van fundering tot afwerking.
+          Elk project wordt met passie en oog voor detail uitgevoerd, waarbij kwaliteit en duurzaamheid centraal staan.
+        </p>
+        <p>
+          Wij geloven in samenwerking en transparantie, met als doel een resultaat waar zowel wij als onze klanten trots op kunnen zijn.
+        </p>
       </div>
-    </section>
-  </main><!-- End #main -->
+    </div>
+  </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-    <div class="container text-center text-white py-4">
-      <p>© 2025 <span style="color:#d4af37;">CME Curaçao</span> – Energy in Adversity</p>
+    <div class="container">
+      <h3>CME Curaçao</h3>
+      <p>Energy in Adversity</p>
+      <div class="social-icons mb-3">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <small>© 2025 CME Curaçao – Alle rechten voorbehouden</small>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
