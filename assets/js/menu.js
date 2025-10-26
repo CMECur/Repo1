@@ -1,36 +1,76 @@
+// ==========================================================
+// CME Curaçao - Hoofdscript (Header + Menu + Hero Slider)
+// ==========================================================
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Header scroll effect ---
+  const header = document.getElementById("header");
+  function handleScroll() {
+    if (header) header.classList.toggle("scrolled", window.scrollY > 20);
+  }
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
 
-// Menu + hero slider (clean)
-document.addEventListener('DOMContentLoaded', () => {
-  // Header scroll effect (optional)
-  const header = document.getElementById('header');
-  function onScroll(){ header && header.classList.toggle('scrolled', window.scrollY > 20); }
-  window.addEventListener('scroll', onScroll); onScroll();
+  // --- Mobiel menu ---
+  const navToggle = document.querySelector(".mobile-nav-toggle");
+  const navMenu = document.querySelector("#navmenu ul");
 
-  // Mobile menu
-  const toggle = document.querySelector('.mobile-nav-toggle');
-  const list = document.querySelector('#navmenu ul');
-  if(toggle && list){
-    toggle.addEventListener('click', () => {
-      list.classList.toggle('active');
-      toggle.classList.toggle('bi-list');
-      toggle.classList.toggle('bi-x');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      navToggle.classList.toggle("bi-list");
+      navToggle.classList.toggle("bi-x");
     });
-    // close when clicking link
-    list.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
-      list.classList.remove('active'); toggle.classList.add('bi-list'); toggle.classList.remove('bi-x');
-    }));
+
+    // Sluit menu bij klik op link
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        navToggle.classList.add("bi-list");
+        navToggle.classList.remove("bi-x");
+      });
+    });
   }
 
-  // Hero slideshow
-  const slides = document.querySelectorAll('#hero img');
-  if(slides.length){
-    let i=0; let t=null;
-    const show = idx => slides.forEach((im, k)=> im.classList.toggle('active', k===idx));
-    const next = () => { i=(i+1)%slides.length; show(i); };
-    const prev = () => { i=(i-1+slides.length)%slides.length; show(i); };
-    show(i);
-    t = setInterval(next, 6000);
-    document.querySelector('.hero-next')?.addEventListener('click', ()=>{ next(); clearInterval(t); t=setInterval(next,6000); });
-    document.querySelector('.hero-prev')?.addEventListener('click', ()=>{ prev(); clearInterval(t); t=setInterval(next,6000); });
+  // --- Hero slideshow ---
+  const slides = document.querySelectorAll("#hero img");
+  if (slides.length) {
+    let index = 0;
+    let timer = null;
+
+    const showSlide = (i) => {
+      slides.forEach((img, k) => img.classList.toggle("active", k === i));
+    };
+
+    const nextSlide = () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    };
+
+    const prevSlide = () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    };
+
+    // Start automatisch
+    showSlide(index);
+    timer = setInterval(nextSlide, 6000);
+
+    // Handmatige controls
+    document.querySelector(".hero-next")?.addEventListener("click", () => {
+      nextSlide();
+      clearInterval(timer);
+      timer = setInterval(nextSlide, 6000);
+    });
+
+    document.querySelector(".hero-prev")?.addEventListener("click", () => {
+      prevSlide();
+      clearInterval(timer);
+      timer = setInterval(nextSlide, 6000);
+    });
+  }
+
+  // --- Init animaties (AOS) ---
+  if (typeof AOS !== "undefined") {
+    AOS.init({ once: true });
   }
 });
