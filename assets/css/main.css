@@ -336,6 +336,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   letter-spacing: -0.3px;
 }
+.footer .logo-c,
+.footer .logo-dot {
+  font-weight: 1000 !important; /* ook deze vet maken */
+}
 
 @media (max-width: 768px) {
   .footer {
