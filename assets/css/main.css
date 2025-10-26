@@ -662,7 +662,7 @@ header.header {
 @media (max-width: 991px) {
   .navmenu { display: none; }
 }
-
+}
 /* ===== MOBIEL MENU CORRECTIE ===== */
 @media (max-width: 991px) {
   .navmenu {
@@ -739,4 +739,5 @@ header.header {
 
 .footer .footer-links a:hover {
   color: #FFD700;
+}
 }
