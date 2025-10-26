@@ -222,7 +222,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   transform: scale(1.05);
 }
-
+@media (min-width: 992px) {
+  #hero .info h2 {
+    white-space: nowrap;
+  }
+}
 /* =====================
    SECTIES
 ===================== */
