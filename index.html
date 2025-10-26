@@ -386,7 +386,52 @@ document.addEventListener("DOMContentLoaded", () => {
   z-index: 2;
 }
 </style>
+<style>
+/* HERO – Tekst & knop gecentreerd + stijl */
+#hero .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+}
 
+#hero .info h2 {
+  font-size: 2.5rem; /* groter */
+  font-weight: 900;  /* dikker */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+#hero .info span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#hero .btn-get-started {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+#hero .btn-get-started:hover {
+  background: rgba(255, 215, 0, 0.3);
+  border-color: #FFD700;
+  transform: scale(1.05);
+}
+</style>
 <script>
   // --- MOBIEL MENU ---
   document.addEventListener("DOMContentLoaded", function() {
