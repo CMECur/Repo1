@@ -328,26 +328,3 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ===== Hero Overlay & Zoom Fix ===== */
-#hero::after {
-  background: rgba(0, 0, 0, 0.60); /* ✨ donkerder overlay */
-}
-
-@media (max-width: 768px) {
-  #hero img {
-    transform: scale(1.2); /* iets meer uitgezoomd op mobiel */
-  }
-}
-/* ===== Footer Overlay & Hoogte Fix ===== */
-.footer::before {
-  background: rgba(0, 0, 0, 0.55); /* ✨ zelfde donkerte als hero */
-  backdrop-filter: blur(3px);
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 120px 0 70px; /* meer ruimte zodat alles binnen valt */
-    background-size: 260%; /* nog iets verder uitgezoomd */
-  }
-}
-
