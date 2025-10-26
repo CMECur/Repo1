@@ -255,8 +255,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.18); /* lichte overlay */
-  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.08); /* lichte overlay */
+  backdrop-filter: blur(0.5px);
   z-index: 0;
 }
 
@@ -304,8 +304,8 @@
 
 @media (max-width: 768px) {
   .footer {
-    background-size: 250%; /* iets verder uitgezoomd */
-    padding: 80px 0 30px;  /* meer ruimte zodat footer past */
+    background-size: 270%; /* iets verder uitgezoomd */
+    padding: 90px 0 40px;  /* meer ruimte zodat footer past */
   }
 }
 </style>  
@@ -371,10 +371,12 @@ document.addEventListener("DOMContentLoaded", () => {
   height: 100vh;
   object-fit: cover;
   object-position: center;
-  transform: scale(1); /* iets uitgezoomd voor cinematic effect */
+  transform: scale(1.1); /* iets uitgezoomd voor cinematic effect */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+transition: opacity 1s ease-in-out, transform 10s ease; /* fade + subtiele zoom */
+}  
 #hero img.active {
   opacity: 1;
 }
@@ -408,18 +410,19 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 #hero .info h2 {
-  font-size: 2rem; /* iets kleiner */
-  font-weight: 800;
+  font-size: 1.6rem; /* kleiner */
+  font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 #hero .info span {
-  display: inline; /* ✅ op één rij */
-  font-size: 2.5rem; /* groter */
+  display: inline;
+  font-size: 2.8rem; /* groter */
   font-weight: 900;
   text-transform: uppercase;
-  margin-left: 8px;
+  margin-left: 10px;
+  letter-spacing: 0.5px;
 }
 #hero .btn-get-started {
   display: inline-block;
