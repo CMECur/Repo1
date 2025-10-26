@@ -219,25 +219,13 @@
   </div>
 </footer>
   <!-- JS -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script>
-    AOS.init({ once:true });
-
-    const navToggle=document.querySelector('.mobile-nav-toggle');
-    const navMenu=document.getElementById('navmenu');
-    navToggle.addEventListener('click',()=>{
-      navMenu.classList.toggle('show');
-      navToggle.classList.toggle('bi-x');
-    });
-  </script>
-  <script>
+ <script>
   const toggle = document.querySelector('.mobile-nav-toggle');
-  const menu = document.querySelector('.navmenu ul');
-
+  const menu = document.querySelector('.navmenu');
+  
   toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    toggle.classList.toggle('bi-x'); // verandert hamburger in kruisje
+    menu.classList.toggle('show');
+    toggle.classList.toggle('bi-x');
   });
 </script>
 </body>
