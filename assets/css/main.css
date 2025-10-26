@@ -30,9 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =====================
-   HEADER
-===================== */
-/* =====================
    HEADER – Glas Effect
 ===================== */
 .header {
@@ -49,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 0;
 }
 .header.scrolled {
-  background: rgba(0, 0, 0, 0.45); /* iets donkerder bij scroll */
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .logo-c {
@@ -104,7 +101,6 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Mobiel menu */
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -138,9 +134,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =====================
    HERO SLIDER
-===================== */
-/* =====================
-   HERO SLIDER (GEFIXT)
 ===================== */
 #hero {
   position: relative;
@@ -200,6 +193,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-left: 8px;
 }
+
 /* Hero – Lees meer knop glasachtig */
 #hero .btn-get-started {
   display: inline-block;
@@ -222,25 +216,24 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   transform: scale(1.05);
 }
+
 /* Hero – Welkom bij boven en CME op één rij (PC) */
 @media (min-width: 992px) {
   #hero .info {
     text-align: center;
   }
-
   #hero .info h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     white-space: normal;
   }
-
   #hero .info h2 span {
-    white-space: nowrap; /* Camille’s Multipurpose Employment op één rij */
+    white-space: nowrap;
   }
 }
 
-/* ✅ Hero – mobiel proporties */
+/* Hero – mobiel proporties */
 @media (max-width: 768px) {
   #hero img {
     object-fit: contain;
@@ -250,17 +243,7 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
   }
 }
-  #hero .info h2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    white-space: normal;
-  }
 
-  #hero .info h2 span {
-    white-space: nowrap; /* Camille’s Multipurpose Employment op één rij */
-  }
-}
 /* =====================
    SECTIES
 ===================== */
@@ -320,23 +303,18 @@ h1, h2, h3, h4, h5, h6 {
 /* =====================
    FOOTER
 ===================== */
-/* =====================
-   FOOTER
-===================== */
 .footer {
   background: url("../img/footer-bg.jpg") center center / cover no-repeat;
   color: #fff;
   padding: 80px 0 20px;
   position: relative;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .footer::before {
   content: "";
   position: absolute;
   inset: 0;
+  background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(3px);
   z-index: 0;
 }
@@ -348,30 +326,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .sitename {
   font-size: 22px;
-  font-weight: 1200; /* dikker gemaakt */
+  font-weight: 1200;
   color: #fff;
   letter-spacing: -0.3px;
 }
+
 .footer .logo-c,
 .footer .logo-dot {
-  font-weight: 1000 !important; /* ook deze vet maken */
+  font-weight: 1000 !important;
 }
 
 @media (max-width: 768px) {
   .footer {
     padding: 120px 0 70px;
     background-position: center;
-    background-size: 200%; /* minder zoom */
+    background-size: 200%;
   }
-}
-.footer::before {
-  background: rgba(0, 0, 0, 0.65); /* donkerder overlay */
 }
 
 .footer .footer-links h4 {
   font-size: 16px;
   font-weight: 700;
-  color: #FFD700; /* goud */
+  color: #FFD700;
   margin-bottom: 15px;
 }
 
@@ -388,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .footer-links ul li::before {
-  content: "›"; /* pijltje */
+  content: "›";
   color: #FFD700;
   font-weight: bold;
   margin-right: 8px;
