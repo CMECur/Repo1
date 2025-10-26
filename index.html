@@ -325,16 +325,19 @@
   </script>
     
 <!-- ✅ HERO FIX SCRIPT -->
+    
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll("#hero img");
   const next = document.querySelector(".hero-next");
   const prev = document.querySelector(".hero-prev");
   let current = 0;
-  let interval;
 
   function showSlide(i) {
-    slides.forEach((img, idx) => img.classList.toggle("active", idx === i));
+    slides.forEach((img, idx) => {
+      img.style.opacity = idx === i ? "1" : "0";
+      img.style.zIndex = idx === i ? "2" : "1";
+    });
   }
 
   function nextSlide() {
@@ -342,28 +345,19 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(current);
   }
 
-  function prevSlideFunc() {
+  function prevSlide() {
     current = (current - 1 + slides.length) % slides.length;
     showSlide(current);
   }
 
-  function startAuto() {
-    interval = setInterval(nextSlide, 5000);
-  }
-
-  function resetAuto() {
-    clearInterval(interval);
-    startAuto();
-  }
-
-  next.addEventListener("click", () => { nextSlide(); resetAuto(); });
-  prev.addEventListener("click", () => { prevSlideFunc(); resetAuto(); });
+  next.addEventListener("click", nextSlide);
+  prev.addEventListener("click", prevSlide);
 
   showSlide(current);
-  startAuto();
+  setInterval(nextSlide, 5000); // automatische overgang
 });
 </script>
-
+    
 <!-- ✅ HERO OVERLAY FIX -->
 <style>
 #hero {
