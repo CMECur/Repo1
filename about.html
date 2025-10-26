@@ -1,158 +1,56 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Over ons - CME Curaçao</title>
-  <meta name="description" content="CME Curaçao – Bouwbedrijf met kwaliteit, ervaring en vakmanschap op Curaçao. Energy in Adversity.">
-  <meta name="keywords" content="bouw, renovatie, Curaçao, aannemer, CME, constructie, architectuur">
-  <link rel="icon" href="assets/img/favicon.png" />
+  <meta name="description" content="CME Curaçao – bouwbedrijf op Curaçao dat staat voor kwaliteit, vakmanschap en betrouwbaarheid. Energy in Adversity.">
+  <meta name="keywords" content="bouwbedrijf, renovatie, afwerking, projectmanagement, Curaçao, CME, Camille’s Multipurpose Employment">
+  <link rel="icon" href="assets/img/favicon.png">
 
   <!-- Fonts & Vendor CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <style>
-    /* ===== HEADER ===== */
-    header.header {
-      backdrop-filter: blur(12px);
-      background: rgba(0, 0, 0, 0.55);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .logo span {
-      font-weight: 900;
-      font-size: 30px;
-      letter-spacing: 1px;
-    }
-    .logo .gold { color: #FFD700; }
-
-    .navmenu { display:flex; align-items:center; gap:24px; }
-    .navmenu a {
-      color:#fff; font-weight:600; transition:0.3s;
-    }
-    .navmenu a:hover,.navmenu a.active { color:#FFD700; }
-
-    .mobile-nav-toggle {
-      display:none; font-size:28px; color:white; cursor:pointer;
-    }
-
-    @media (max-width: 768px) {
-      .navmenu {
-        display:none; flex-direction:column;
-        background:rgba(0,0,0,0.9);
-        position:absolute; top:70px; right:15px;
-        width:220px; border-radius:12px; padding:20px;
-      }
-      .navmenu.show { display:flex; }
-      .mobile-nav-toggle { display:block; }
-    }
-
-    /* ===== HERO ===== */
-    #about-hero {
-      position:relative;
-      background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("assets/img/logo.png") center center no-repeat;
-      background-size:600px auto; /* 5x groter logo */
-      color:white; text-align:center;
-      padding:180px 20px 140px;
-      overflow:hidden;
-    }
-    #about-hero::after {
-      content:"";
-      position:absolute; inset:0;
-      background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));
-      mix-blend-mode:overlay;
-    }
-    #about-hero h1 { font-size:46px; font-weight:900; color:#fff; text-transform:uppercase; }
-    #about-hero p {
-      color:#e0e0e0; font-size:18px;
-      max-width:800px; margin:20px auto 0; line-height:1.6;
-      position:relative; z-index:2;
-    }
-
-    /* ===== MAIN ===== */
-    section.about-content {
-      background:#111; color:#f8f8f8; padding:90px 0;
-    }
-    .about-glass {
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,215,0,0.2);
-      backdrop-filter:blur(10px);
-      border-radius:20px;
-      padding:50px; max-width:900px; margin:auto;
-      transition:all 0.4s ease;
-    }
-    .about-glass:hover {
-      background:rgba(255,255,255,0.15);
-      border-color:#FFD700;
-      transform:translateY(-3px);
-    }
-    .about-glass h2 {
-      color:#FFD700; font-weight:800; margin-bottom:25px;
-    }
-    .about-glass p {
-      color:#e5e5e5; line-height:1.8; font-size:17px;
-    }
-
-    /* ===== FOOTER ===== */
-    footer.footer {
-      position:relative;
-      background:url("assets/img/footer-bg.jpg") center/cover no-repeat;
-      color:white; padding:100px 0 40px;
-      text-align:center;
-    }
-    footer.footer::before {
-      content:"";
-      position:absolute; inset:0;
-      background:rgba(0,0,0,0.75);
-      backdrop-filter:blur(6px);
-      z-index:0;
-    }
-    footer.footer .container {
-      position:relative; z-index:1;
-    }
-    footer.footer h3 {
-      font-size:30px; font-weight:900; color:#FFD700;
-    }
-    footer.footer p { color:#ccc; margin:10px 0 25px; }
-    footer.footer .social-icons a {
-      color:#FFD700; font-size:22px; margin:0 8px; transition:0.3s;
-    }
-    footer.footer .social-icons a:hover { color:white; }
-    footer.footer small {
-      display:block; margin-top:25px; color:#aaa; font-size:14px;
-    }
-  </style>
 </head>
 
 <body class="about-page">
-  <!-- HEADER -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center text-white">
-        <span class="gold">C</span><span>ME</span><span class="gold">.</span><span> CURAÇAO</span>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename mb-0">
+          <span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao
+        </h1>
       </a>
+
       <nav id="navmenu" class="navmenu">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">Over ons</a>
-        <a href="services.html">Diensten</a>
-        <a href="projects.html">Projecten</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">Over ons</a></li>
+          <li><a href="services.html">Diensten</a></li>
+          <li><a href="projects.html">Projecten</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <i class="mobile-nav-toggle bi bi-list"></i>
+
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="about-hero" class="d-flex align-items-center justify-content-center">
-    <div data-aos="fade-up">
+  <!-- ======= Hero ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container text-center" data-aos="fade-up">
       <h1>Over ons</h1>
-      <p>
+      <p class="lead">
         Camille’s Multipurpose Employment (CME Curaçao) is een dynamisch bouwbedrijf dat streeft naar perfectie in elk detail.<br>
         Ons motto <strong>"Energy in Adversity"</strong> staat voor kracht, doorzettingsvermogen en kwaliteit.<br>
         Wij combineren lokale kennis met internationaal vakmanschap om duurzame projecten te realiseren die de toekomst van Curaçao vormgeven.
@@ -160,72 +58,86 @@
     </div>
   </section>
 
-  <!-- CONTENT -->
-  <section class="about-content">
+  <!-- ======= Over Sectie ======= -->
+  <section id="about" class="section py-5">
     <div class="container" data-aos="fade-up">
-      <div class="about-glass text-center">
-        <h2>Wie wij zijn</h2>
-        <p>
-          CME Curaçao levert een compleet pakket aan bouw- en renovatiediensten, van fundering tot afwerking.
-          Elk project wordt met passie en oog voor detail uitgevoerd, waarbij kwaliteit en duurzaamheid centraal staan.
-        </p>
-        <p>
-          Wij geloven in samenwerking en transparantie, met als doel een resultaat waar zowel wij als onze klanten trots op kunnen zijn.
-        </p>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="p-5 rounded-4" style="
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            text-align: center;
+          ">
+            <h2 class="text-warning mb-4 fw-bold">Wie wij zijn</h2>
+            <p class="text-light mb-3">
+              CME Curaçao levert een compleet pakket aan bouw- en renovatiediensten, van fundering tot afwerking.
+              Elk project wordt met passie en oog voor detail uitgevoerd, waarbij kwaliteit en duurzaamheid centraal staan.
+            </p>
+            <p class="text-light">
+              Wij geloven in samenwerking en transparantie, met als doel een resultaat waar zowel wij als onze klanten trots op kunnen zijn.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-<footer id="footer" class="footer">
-  <div class="container footer-top">
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 footer-about">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <span class="sitename"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</span>        </a>
-        <div class="footer-contact pt-3">
-          <p>Willemstad, Curaçao</p>
-          <p class="mt-3"><strong>Telefoon:</strong> <span>+59995114226</span></p>
-          <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Willemstad, Curaçao</p>
+            <p class="mt-3"><strong>Telefoon:</strong> <span>+59995114226</span></p>
+            <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nuttige links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Over ons</a></li>
+            <li><a href="services.html">Diensten</a></li>
+            <li><a href="projects.html">Projecten</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Onze diensten</h4>
+          <ul>
+            <li><a href="#">Ruwbouw &amp; Constructie</a></li>
+            <li><a href="#">Renovatie &amp; Afwerking</a></li>
+            <li><a href="#">Projectmanagement</a></li>
+            <li><a href="#">Toezicht &amp; Uitvoering</a></li>
+          </ul>
         </div>
       </div>
-
-      <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Nuttige links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="projects.html">Projecten</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-3 col-md-3 footer-links">
-        <h4>Onze diensten</h4>
-        <ul>
-          <li><a href="#">Ruwbouw &amp; Constructie</a></li>
-          <li><a href="#">Renovatie &amp; Afwerking</a></li>
-          <li><a href="#">Projectmanagement</a></li>
-          <li><a href="#">Toezicht &amp; Uitvoering</a></li>
-        </ul>
-      </div>
     </div>
-  </div>
 
-  <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
-  </div>
-</footer>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
+    </div>
+  </footer>
+
   <!-- JS -->
- <script>
-  const toggle = document.querySelector('.mobile-nav-toggle');
-  const menu = document.querySelector('.navmenu');
-  
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-    toggle.classList.toggle('bi-x');
-  });
-</script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+    const navMenu = document.querySelector("#navmenu ul");
+    navToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+      this.classList.toggle("bi-list");
+      this.classList.toggle("bi-x");
+    });
+  </script>
 </body>
 </html>
