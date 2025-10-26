@@ -589,3 +589,49 @@ img.img-fluid {
     to { transform: translateX(0); opacity: 1; }
   }
 }
+/* ===== FIX MOBIEL MENU (VERBORGEN + GLASACHTIG) ===== */
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 10001;
+  }
+
+  .navmenu ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: rgba(25, 25, 25, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 25px 25px;
+    border-left: 1px solid rgba(255, 215, 0, 0.25);
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .navmenu ul.active {
+    display: flex;
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  .navmenu a {
+    color: #fefefe;
+    font-size: 18px;
+    margin: 12px 0;
+    font-weight: 500;
+  }
+
+  .navmenu a:hover,
+  .navmenu a.active {
+    color: #FFD700;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+}
