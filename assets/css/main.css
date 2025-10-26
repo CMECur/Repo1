@@ -548,18 +548,44 @@ img.img-fluid {
   border: none;
 }
 @media (max-width: 991px) {
-  .mobile-nav-toggle { display: block; }
-  .navmenu ul {
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    flex-direction: column;
-    background: rgba(255,255,255,0.95);
-    border-radius: 10px;
-    padding: 10px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: none;
+  .mobile-nav-toggle { 
+    display: block; 
+    z-index: 10000;
   }
-  .navmenu ul.active { display: flex; }
-  .navmenu a { color: #111; }
+
+  .navmenu ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 25px;
+    border-left: 2px solid rgba(255, 215, 0, 0.3);
+    display: none;
+    z-index: 9999;
+  }
+
+  .navmenu ul.active {
+    display: flex;
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  .navmenu a {
+    color: #f1f1f1;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .navmenu a:hover,
+  .navmenu a.active {
+    color: #FFD700;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
 }
