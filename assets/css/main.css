@@ -635,3 +635,31 @@ img.img-fluid {
     to { transform: translateX(0); opacity: 1; }
   }
 }
+/* ===== HEADER FIX ===== */
+header.header {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo span {
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.gold {
+  color: #FFD700;
+  font-weight: 900;
+}
+
+@media (min-width: 992px) {
+  .mobile-nav-toggle { display: none !important; }
+  .navmenu { display: flex !important; }
+}
+
+@media (max-width: 991px) {
+  .navmenu { display: none; }
+}
+}
