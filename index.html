@@ -227,7 +227,19 @@
   padding-bottom: 20px;
 }
 </style>
-
+<style>
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* zelfde overlay als hero */
+  z-index: 0;
+}
+.footer .container {
+  position: relative;
+  z-index: 1;
+}
+</style>
   <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
