@@ -662,4 +662,44 @@ header.header {
 @media (max-width: 991px) {
   .navmenu { display: none; }
 }
+
+/* ===== MOBIEL MENU CORRECTIE ===== */
+@media (max-width: 991px) {
+  .navmenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 80px 30px;
+    display: none;
+    z-index: 9999;
+  }
+
+  .navmenu.show {
+    display: flex;
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  .navmenu a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .navmenu a:hover {
+    color: #FFD700;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
 }
