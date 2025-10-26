@@ -134,30 +134,28 @@ h1, h2, h3, h4, h5, h6 {
 /* =====================
    HERO SLIDER
 ===================== */
+/* =====================
+   HERO SLIDER (GEFIXT)
+===================== */
 #hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: #000; /* fallback */
-}
-
-#hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* ✨ zachtere overlay */
-  backdrop-filter: blur(2px);
-  z-index: 1;
+  background: #000;
 }
 
 #hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   object-fit: cover;
   object-position: center;
+  opacity: 0;
   transform: scale(1.1);
-  opacity: 0; /* ✅ voeg dit toe */
-  transition: opacity 1s ease-in-out, transform 10s ease;
+  transition: opacity 1.2s ease-in-out, transform 10s ease;
+  z-index: 1;
 }
 
 #hero img.active {
@@ -165,58 +163,38 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
 }
 
+#hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 3;
+}
+
 #hero .info {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   text-align: center;
-  z-index: 2;
+  color: #fff;
+  z-index: 4;
 }
 
 #hero .info h2 {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #fff;
 }
 
 #hero .info span {
   display: inline;
   font-size: 2.5rem;
   font-weight: 900;
-  text-transform: uppercase;
   color: #FFD700;
+  text-transform: uppercase;
   margin-left: 8px;
 }
-
-#hero .btn-get-started {
-  display: inline-block;
-  background: #FFD700;
-  color: #000;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-#hero .btn-get-started:hover {
-  background: #e6c100;
-}
-
-.hero-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: #FFD700;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.hero-prev { left: 20px; }
-.hero-next { right: 20px; }
 
 /* =====================
    SECTIES
@@ -288,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* ✨ veel lichter */
+  background: rgba(0, 0, 0, 0.35); /* ✨ veel lichter */
   backdrop-filter: blur(2px);
   z-index: 0;
 }
@@ -299,9 +277,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .sitename {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 900; /* ✨ dikker */
   color: #fff;
+  letter-spacing: -0.3px;
 }
 
 .footer .logo-c,
@@ -354,4 +333,10 @@ h1, h2, h3, h4, h5, h6 {
 .footer .copyright .sitename {
   color: #FFD700;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 100px 0 60px; /* ✨ meer ruimte onderaan */
+    background-size: 240%; /* licht uitgezoomd */
+  }
 }
