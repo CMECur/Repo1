@@ -222,23 +222,32 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   transform: scale(1.05);
 }
-@media (min-width: 992px) {
-  #hero .info h2 {
-    white-space: nowrap;
-  }
-}
 /* Hero – Welkom bij boven en CME op één rij (PC) */
 @media (min-width: 992px) {
   #hero .info {
     text-align: center;
   }
+
+  #hero .info h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: normal;
+  }
+
+  #hero .info h2 span {
+    white-space: nowrap; /* Camille’s Multipurpose Employment op één rij */
+  }
+}
+
+/* ✅ Hero – mobiel proporties */
 @media (max-width: 768px) {
   #hero img {
-    object-fit: contain; /* toon hele foto */
-    height: 100%; /* behoud verhouding */
+    object-fit: contain;
+    height: 100%;
   }
   #hero {
-    height: auto; /* laat hero meeschalen met fotohoogte */
+    height: auto;
   }
 }
   #hero .info h2 {
