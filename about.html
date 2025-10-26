@@ -231,5 +231,14 @@
       navToggle.classList.toggle('bi-x');
     });
   </script>
+  <script>
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  const menu = document.querySelector('.navmenu ul');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    toggle.classList.toggle('bi-x'); // verandert hamburger in kruisje
+  });
+</script>
 </body>
 </html>
