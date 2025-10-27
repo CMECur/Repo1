@@ -377,6 +377,14 @@ body.index-page #hero::after {
   font-size: 15px;
   line-height: 1.6;
 }
+/* ======= Dienstenpagina – tekstkleur fix ======= */
+.services-page #services h2,
+.services-page #services h4,
+.services-page #services p,
+.services-page #services .text-light,
+.services-page #services .text-white {
+  color: #111 !important;
+}
 /* =====================
    PROJECT PREVIEW – Compact luxe
 ===================== */
