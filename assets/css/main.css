@@ -362,8 +362,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .sitename {
   font-size: 22px;
-  font-weight: 1000; /* dikker gemaakt */
+  font-weight: 1100; /* extra bold effect */
   color: #fff;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
 }
 
 .footer .logo-c,
