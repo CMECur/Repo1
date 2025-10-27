@@ -515,11 +515,11 @@ body:not(.index-page) .header {
   }
 }
 /* ABOUT hero – desktop tuning (mobiel blijft zoals het is) */
-.about-hero{
-  position:relative;
-  min-height:90vh;
-  background: url("assets/img/banner%20(2).jpg") center/cover no-repeat;
-  overflow:hidden;
+..about-hero {
+  position: relative;
+  min-height: 90vh;
+  background: url("assets/img/banner2.jpg") center/cover no-repeat;
+  overflow: hidden;
 }
 .about-hero::before{
   content:"";
