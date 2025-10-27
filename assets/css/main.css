@@ -188,15 +188,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
 
-/* Witte bedrijfsnaam */
 #hero .info .company-name {
   display: inline-block;
   color: #fff;
   font-size: 2.6rem;
   font-weight: 900;
-  border-bottom: 3px solid #FFD700;
-  padding-bottom: 5px;
-  white-space: nowrap; /* houdt alles op één lijn */
+  position: relative;
+}
+
+/* decoratieve lijn, niet tegen de tekst geplakt */
+#hero .info .company-name::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  background: #FFD700;
+  margin: 14px auto 0; /* ruimte tussen tekst en lijn */
+  border-radius: 2px;
+  opacity: 0.95;
 }
 
 /* Tekst */
