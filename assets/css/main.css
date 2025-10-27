@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =====================
-   HERO SLIDER – Luxe Versie
+   HERO SLIDER – Luxe scherp, niet wazig
 ===================== */
 #hero {
   position: relative;
@@ -147,14 +147,13 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   opacity: 0;
-  transform: scale(1);
   transition: opacity 1.2s ease-in-out, transform 10s ease;
   z-index: 1;
-  filter: brightness(1.05) contrast(1.1) saturate(1.05);
+  filter: brightness(1) contrast(1.05);
 }
 
 #hero img.active {
@@ -162,20 +161,16 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
 }
 
-/* 🔥 Nieuwe overlay – donker maar helder/luxueus */
+/* Donkere overlay, geen blur */
 #hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.55)
-  );
-  backdrop-filter: brightness(1.05) blur(2px);
+  background: rgba(0, 0, 0, 0.55); /* donkerder maar helder */
   z-index: 3;
 }
 
-/* Tekst in hero */
+/* Tekst */
 #hero .info {
   position: absolute;
   top: 50%;
@@ -184,76 +179,78 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: #fff;
   z-index: 4;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-/* "Welkom bij" goud */
+/* Welkom bij goud, bedrijfsnaam wit met lijn */
 #hero .info h2 {
+  color: #FFD700;
   font-size: 1.8rem;
-  font-weight: 700;
   margin-bottom: 10px;
-  color: #FFD700; /* goud */
 }
 
-/* Bedrijfsnaam wit + gouden streep */
 #hero .info span {
   display: block;
+  color: #fff;
   font-size: 2.6rem;
   font-weight: 900;
-  color: #fff; /* wit */
-  text-transform: uppercase;
-  margin-top: 6px;
   position: relative;
 }
 
 #hero .info span::after {
   content: "";
-  display: block;
-  width: 80px;
+  width: 90px;
   height: 3px;
   background: #FFD700;
+  display: block;
   margin: 10px auto 0;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-/* Tekst */
+/* Tekst met subtiele glow */
 #hero .info p {
-  color: #f5f5f5;
-  font-size: 1rem;
-  line-height: 1.6;
   margin-top: 15px;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  color: #f2f2f2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Luxe knop */
+/* Knop */
 #hero .btn-get-started {
-  display: inline-block;
   margin-top: 30px;
   padding: 12px 35px;
   font-size: 1rem;
-  font-weight: 600;
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 215, 0, 0.7);
+  border: 1px solid rgba(255, 215, 0, 0.6);
   border-radius: 10px;
-  backdrop-filter: blur(6px) saturate(150%);
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+  background: rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
 }
 #hero .btn-get-started:hover {
-  background: rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.25);
   border-color: #FFD700;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.5);
 }
 
-/* 📱 Mobiel */
+/* 📱 Mobiel: foto niet ingezoomd */
 @media (max-width: 768px) {
-  #hero .info h2 {
-    font-size: 1.3rem;
+  #hero {
+    height: 100vh;
   }
+
+  #hero img {
+    object-fit: contain; /* niet ingezoomd */
+    height: 100vh;
+  }
+
+  #hero::after {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  #hero .info h2 {
+    font-size: 1.4rem;
+  }
+
   #hero .info span {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 }
 /* =====================
