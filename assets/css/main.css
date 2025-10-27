@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =====================
-   HERO SLIDER – Luxe scherp, niet wazig
+   HERO SLIDER – Vol scherm, niet ingezoomd, scherp
 ===================== */
 #hero {
   position: relative;
@@ -148,12 +148,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* vult volledig het hero-gebied */
   object-position: center;
   opacity: 0;
-  transition: opacity 1.2s ease-in-out, transform 10s ease;
+  transition: opacity 1.2s ease-in-out;
   z-index: 1;
-  filter: brightness(1) contrast(1.05);
+  filter: brightness(1) contrast(1.1);
 }
 
 #hero img.active {
@@ -161,12 +161,12 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
 }
 
-/* Donkere overlay, geen blur */
+/* Donker overlay, geen blur */
 #hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* donkerder maar helder */
+  background: rgba(0, 0, 0, 0.55);
   z-index: 3;
 }
 
@@ -181,36 +181,28 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 4;
 }
 
-/* Welkom bij goud, bedrijfsnaam wit met lijn */
+/* "Welkom bij" goud */
 #hero .info h2 {
   color: #FFD700;
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
+/* Bedrijfsnaam wit + lijn */
 #hero .info span {
-  display: block;
+  display: inline-block;
   color: #fff;
   font-size: 2.6rem;
   font-weight: 900;
-  position: relative;
+  border-bottom: 3px solid #FFD700;
+  padding-bottom: 5px;
 }
 
-#hero .info span::after {
-  content: "";
-  width: 90px;
-  height: 3px;
-  background: #FFD700;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 3px;
-}
-
-/* Tekst met subtiele glow */
+/* Tekst */
 #hero .info p {
   margin-top: 15px;
   color: #f2f2f2;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 /* Knop */
@@ -230,23 +222,19 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 18px rgba(255, 215, 0, 0.5);
 }
 
-/* 📱 Mobiel: foto niet ingezoomd */
+/* 📱 Mobiel fix: vult hero volledig, niet ingezoomd */
 @media (max-width: 768px) {
   #hero {
     height: 100vh;
   }
 
   #hero img {
-    object-fit: contain; /* niet ingezoomd */
+    object-fit: cover;
     height: 100vh;
   }
 
-  #hero::after {
-    background: rgba(0, 0, 0, 0.6);
-  }
-
   #hero .info h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   #hero .info span {
