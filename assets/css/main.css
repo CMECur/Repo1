@@ -602,13 +602,14 @@ body.index-page #hero::after {
     font-size: 1.9rem;
   }
 }
-//* ======= 'Wie wij zijn'-foto met overlay, behoud natuurlijke grootte ======= */
+/* ======= 'Wie wij zijn'-foto – luxe, gebalanceerde versie ======= */
 .about-image-overlay {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 100%;
-  max-width: 500px; /* natuurlijke grootte, pas eventueel aan */
+  max-width: 520px; /* natuurlijke, luxueuze breedte */
   margin: 0 auto;
+  border-radius: 12px;
 }
 
 .about-image-overlay img {
@@ -616,12 +617,12 @@ body.index-page #hero::after {
   height: auto;
   border-radius: 12px;
   display: block;
+  object-fit: cover;
   position: relative;
   z-index: 0;
-  object-fit: cover;
 }
 
-/* Overlay */
+/* Donkere overlay */
 .about-image-overlay::after {
   content: "";
   position: absolute;
@@ -632,7 +633,7 @@ body.index-page #hero::after {
   pointer-events: none;
 }
 
-/* Desktop: tekst naast de foto met mooie balans */
+/* Desktop: naast elkaar, lucht ertussen */
 @media (min-width: 992px) {
   #about .row {
     display: flex;
@@ -641,15 +642,15 @@ body.index-page #hero::after {
 
   #about .col-lg-6:first-child {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* foto rechts uitgelijnd in zijn kolom */
   }
 
   #about .col-lg-6:last-child {
-    padding-left: 40px; /* ruimte tussen tekst en foto */
+    padding-left: 60px; /* lucht tussen foto en tekst */
   }
 
   .about-image-overlay {
-    max-width: 460px; /* iets kleiner voor natuurlijke look */
+    max-width: 520px;
   }
 }
 /* ======= Consistente goudkleur ======= */
