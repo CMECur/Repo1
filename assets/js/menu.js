@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Hero slideshow ---
+  if (document.body.classList.contains("index-page")) {
   const slides = document.querySelectorAll("#hero img");
   if (slides.length) {
     let index = 0;
