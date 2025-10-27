@@ -553,3 +553,11 @@ body:not(.index-page) .header {
     font-size: 0.95rem;
   }
 }
+/* ======= About: Foto donkere overlay ======= */
+.about-page #about img {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  filter: brightness(0.82) contrast(1.05); /* subtiel donkerder en iets scherper */
+}
