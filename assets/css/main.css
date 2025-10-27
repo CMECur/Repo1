@@ -384,4 +384,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .footer-links a:hover {
   color: #FFD700;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .footer {
+    background-position: center center;
+    background-size: cover; /* bedekt nu volledig */
+    padding: 120px 0 70px;
+  }
 }
