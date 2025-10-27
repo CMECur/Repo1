@@ -235,12 +235,13 @@ h1, h2, h3, h4, h5, h6 {
 /* 📱 Mobiel: foto uitgezoomd binnen kader en donkerder overlay */
 @media (max-width: 768px) {
   #hero img {
-    object-fit: contain; /* uitgezoomd, binnen hero */
+    object-fit: cover; /* vult hele hero zonder zwarte randen */
+    object-position: center center;
     height: 100vh;
   }
 
   #hero::after {
-    background: rgba(0, 0, 0, 0.65); /* iets donkerder overlay */
+    background: rgba(0, 0, 0, 0.68); /* iets donkerder overlay */
   }
 
   #hero .info h2 {
