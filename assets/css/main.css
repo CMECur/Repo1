@@ -343,6 +343,40 @@ body.index-page #hero::after {
   justify-content: center;
   align-items: center;
 }
+/* ======= Dienstenpagina – gebruik dezelfde stijl als index ======= */
+/* ======= Dienstenpagina – gebruik dezelfde stijl als index ======= */
+.services-page #services {
+  background: #fff;
+  color: #111;
+}
+
+.services-page #services .service-item {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.services-page #services .service-item:hover {
+  border-color: #FFD700;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.services-page #services h4 {
+  font-weight: 600;
+  color: #111;
+}
+
+.services-page #services p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
 /* =====================
    PROJECT PREVIEW – Compact luxe
 ===================== */
