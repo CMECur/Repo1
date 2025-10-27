@@ -602,3 +602,8 @@ body.index-page #hero::after {
 .text-warning, .text-gold {
   color: var(--gold) !important;
 }
+/* ======= Fix: achtergrondkleur voor index-pagina secties ======= */
+body.index-page main {
+  background: #fff;
+  color: #111;
+}
