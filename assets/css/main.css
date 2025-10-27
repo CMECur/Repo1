@@ -331,7 +331,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .sitename {
   font-size: 22px;
-  font-weight: 1000;
+  font-weight: 1000; /* dikker gemaakt */
   color: #fff;
 }
 
@@ -341,14 +341,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFD700;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 120px 0 70px;
-    background-position: center;
-    background-size: 200%;
-  }
-}
-
+/* Titels van kolommen */
 .footer .footer-links h4 {
   font-size: 16px;
   font-weight: 700;
@@ -356,6 +349,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
 }
 
+/* Links in de footer */
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
@@ -386,10 +380,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFD700;
   text-decoration: underline;
 }
+
+/* 📱 Mobiele versie van de footer */
 @media (max-width: 768px) {
   .footer {
     background-position: center center;
-    background-size: cover; /* bedekt nu volledig */
-    padding: 120px 0 70px;
+    background-size: cover; /* vult het hele vlak zonder grijze randen */
+    padding: 120px 0 70px;  /* voldoende ruimte boven en onder */
   }
 }
