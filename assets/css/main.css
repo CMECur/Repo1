@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =====================
-   PROJECT PREVIEW – Luxe Card (wit thema)
+   PROJECT PREVIEW – Compact luxe
 ===================== */
 #project-preview {
   background: #fff;
@@ -313,10 +313,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #project-preview .project-card {
   background: #fff;
-  border: 1px solid rgba(255, 215, 0, 0.5);
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
   transition: all 0.4s ease;
 }
 
@@ -327,17 +329,19 @@ h1, h2, h3, h4, h5, h6 {
 
 #project-preview .project-img img {
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
 #project-preview .project-card:hover .project-img img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 #project-preview .project-content {
   padding: 25px 30px;
-  color: #111; /* zwart */
+  color: #111;
+  text-align: left;
 }
 
 #project-preview .project-content h3 {
@@ -347,20 +351,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #project-preview .project-content p {
-  color: #444; /* donkergrijs voor leesbaarheid */
+  color: #444;
+  line-height: 1.6;
 }
 
+/* Knop – zelfde als hero maar zwart tekst */
 #project-preview .btn-get-started {
-  color: #111;
-  border: 1px solid #FFD700;
-  background: transparent;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.6);
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 #project-preview .btn-get-started:hover {
-  background: #FFD700;
-  color: #000;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  background: rgba(255, 215, 0, 0.25);
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.4);
+  transform: scale(1.05);
 }
 /* =====================
    FOOTER
