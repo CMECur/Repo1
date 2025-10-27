@@ -107,16 +107,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .navmenu ul {
-    position: absolute;
-    top: 65px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-    border-radius: 10px;
-    display: none;
-  }
+  position: absolute;
+  top: 65px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.45); /* half transparant zwart */
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  display: none;
+  transition: all 0.3s ease;
+}
 
   .navmenu ul.active {
     display: flex;
