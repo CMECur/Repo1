@@ -515,52 +515,77 @@ body.index-page #hero::after {
   }
 }
 /* =====================
-   ABOUT HERO – lichte grijze achtergrond
+   ABOUT HERO – met foto, geen overlay
 ===================== */
-.about-hero.simple-bg {
-  background: #f4f4f4; /* lichtgrijze achtergrond */
-  color: #111;
-  padding: 160px 20px 100px; /* ruimte onder de vaste header */
+.about-hero {
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.about-hero.simple-bg h2 {
+/* Achtergrondfoto */
+.about-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-hero .hero-bg .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1) contrast(1.05); /* helder, geen donkere filter */
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Tekstlaag */
+.about-hero .content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 900px;
+  padding: calc(110px + 2rem) 24px 3rem;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6); /* leesbaarheid */
+}
+
+.about-hero .content h2 {
   color: var(--gold);
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
 
-.about-hero.simple-bg h1 {
+.about-hero .content h1 {
   font-weight: 800;
   font-size: 2.4rem;
-  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.about-hero.simple-bg p {
-  max-width: 900px;
-  margin: 0 auto;
-  line-height: 1.7;
-  color: #333;
+.about-hero .content p {
+  color: #f5f5f5;
   font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 1rem;
 }
 
 /* 📱 Mobiel */
 @media (max-width: 768px) {
-  .about-hero.simple-bg {
-    padding: 120px 20px 80px;
+  .about-hero {
+    min-height: 100vh;
   }
 
-  .about-hero.simple-bg h1 {
+  .about-hero .content h1 {
     font-size: 1.9rem;
   }
-}
-/* ======= About: Foto donkere overlay ======= */
-.about-page #about img {
-  position: relative;
-  display: block;
-  width: 100%;
-  border-radius: 10px;
-  filter: brightness(0.65) contrast(1.1); /* subtiel donkerder en iets scherper */
+
+  .about-hero .hero-bg .hero-image {
+    filter: brightness(1) contrast(1.05);
+  }
 }
 /* ======= Consistente goudkleur ======= */
 :root {
