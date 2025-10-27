@@ -602,51 +602,28 @@ body.index-page #hero::after {
     font-size: 1.9rem;
   }
 }
-/* ======= Wie wij zijn - Foto en tekst ======= */
-.about-section .row {
-  align-items: center;
+/* ======= About - Tekst zonder foto ======= */
+.about-section {
+  padding: 100px 0;
+  background: #fff;
+  color: #111;
 }
 
-.about-section .image-wrapper {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  max-width: 500px;
-  margin: 0 auto;
+.about-section .container {
+  max-width: 900px;
 }
 
-.about-section .image-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.about-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
 }
 
-/* overlay zonder layout te breken */
-.about-section .image-wrapper::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.68);
-  z-index: 1;
-}
-
-/* Desktop layout */
-@media (min-width: 992px) {
-  .about-section .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about-section .col-lg-6:first-child {
-    flex: 0 0 auto;
-    margin-right: 60px; /* lucht tussen foto en tekst */
-  }
-
-  .about-section .col-lg-6:last-child {
-    flex: 1;
-  }
+.about-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #444;
 }
 /* ======= Contact Boxes - Glasstijl ======= */
 .contact-box {
