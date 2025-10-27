@@ -331,14 +331,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .sitename {
   font-size: 22px;
-  font-weight: 1200;
+  font-weight: 1000;
   color: #fff;
-  letter-spacing: -0.3px;
 }
 
 .footer .logo-c,
 .footer .logo-dot {
-  font-weight: 1000 !important;
+  font-weight: 900 !important;
+  color: #FFD700;
 }
 
 @media (max-width: 768px) {
