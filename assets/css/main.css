@@ -602,6 +602,25 @@ body.index-page #hero::after {
     font-size: 1.9rem;
   }
 }
+/* ======= Overlay over de 'Wie wij zijn'-foto ======= */
+.about-image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.about-image-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.68); /* zwarte overlay met 68% dekking */
+  border-radius: 12px; /* gelijk aan je rounded-4 */
+  z-index: 1;
+}
+
+.about-image-overlay img {
+  position: relative;
+  z-index: 0;
+}
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
