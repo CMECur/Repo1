@@ -646,7 +646,21 @@ body.index-page #hero::after {
     object-fit: cover;
   }
 }
+/* ======= Overlay op 'Wie wij zijn'-foto (zonder layout wijziging) ======= */
+#about img[alt="Over CME Curaçao"] {
+  position: relative;
+  display: block;
+}
 
+#about img[alt="Over CME Curaçao"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.68);
+  border-radius: 12px;
+  z-index: 1;
+  pointer-events: none;
+}
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
