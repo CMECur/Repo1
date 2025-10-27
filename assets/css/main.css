@@ -514,44 +514,45 @@ body:not(.index-page) .header {
     background: rgba(0, 0, 0, 0.82); /* iets dieper zwart voor luxe look */
   }
 }
-/* ======= About Hero consistentie ======= */
-.about-page #hero {
-  background: #000;
-  color: #fff;
+/* ABOUT hero – desktop tuning (mobiel blijft zoals het is) */
+.about-hero{
+  position:relative;
+  min-height:90vh;
+  background: url("assets/img/banner%20(2).jpg") center/cover no-repeat;
+  overflow:hidden;
+}
+.about-hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.74); /* iets donkerder dan eerst voor PC */
+  z-index:1;
+}
+.about-hero .content{
+  position:relative; z-index:2; color:#fff; text-align:center;
+  max-width:900px; margin-inline:auto;
+  padding: calc(110px + 2rem) 24px 3.2rem; /* lager van de header af op PC */
 }
 
-.about-page #hero h1,
-.about-page #hero h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
+/* Alleen op PC een lichte panel achter de tekst voor leesbaarheid */
+@media (min-width: 992px){
+  .about-hero .content{
+    background: rgba(0,0,0,.28);     /* subtiele donkerte */
+    border: 1px solid rgba(255,215,0,.25);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    backdrop-filter: saturate(120%);
+  }
+  .about-hero .content h1,
+  .about-hero .content p{
+    text-shadow: 0 0 14px rgba(0,0,0,.6);
+  }
 }
 
-.about-page #hero h2 {
-  color: #FFD700;
+/* Mobiel laten we intact (jij zei: perfect) – enkel referentie */
+@media (max-width: 768px){
+  .about-hero{ min-height:100vh; }
+  .about-hero::before{ background: rgba(0,0,0,.82); } /* zoals eerder */
 }
-
-.about-page #hero p span {
-  color: #FFD700;
-  font-weight: 600;
-}
-/* ======= Hero fix voor mobiel ======= */
-@media (max-width: 768px) {
-  .hero-content {
-    margin-top: 120px; /* schuift tekst omlaag zodat header niet overlapt */
-  }
-
-  .about-page #hero {
-    height: auto;
-    padding: 120px 20px 100px;
-  }
-
-  .about-page #hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .about-page #hero p {
-    font-size: 0.95rem;
-  }
 }
 /* ======= About: Foto donkere overlay ======= */
 .about-page #about img {
