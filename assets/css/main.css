@@ -508,3 +508,9 @@ body:not(.index-page) .header {
     background: rgba(0, 0, 0, 0.78); /* donkerder overlay */
   }
 }
+@media (max-width: 768px) {
+  #hero::after,
+  .footer::before {
+    background: rgba(0, 0, 0, 0.82); /* iets dieper zwart voor luxe look */
+  }
+}
