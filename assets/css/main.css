@@ -335,7 +335,14 @@ body.index-page #hero::after {
   word-break: break-word; /* breekt lange woorden */
   text-align: center;
 }
-
+/* ======= Diensten-hokjes altijd even hoog ======= */
+.services-grid .icon-box {
+  min-height: 250px; /* pas aan indien nodig */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* =====================
    PROJECT PREVIEW – Compact luxe
 ===================== */
