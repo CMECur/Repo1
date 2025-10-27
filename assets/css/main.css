@@ -173,7 +173,7 @@ body:not(.index-page) .header {
 }
 
 /* Donkere overlay */
-#hero::after {
+body.index-page #hero::after {
   content: "";
   position: absolute;
   inset: 0;
