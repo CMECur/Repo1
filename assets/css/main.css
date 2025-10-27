@@ -563,9 +563,12 @@ body:not(.index-page) .header {
   display: block;
   width: 100%;
   border-radius: 10px;
-  filter: brightness(0.82) contrast(1.05); /* subtiel donkerder en iets scherper */
+  filter: brightness(0.65) contrast(1.1); /* subtiel donkerder en iets scherper */
 }
 /* ======= Consistente goudkleur ======= */
-.text-warning {
-  color: #FFD700 !important;
+:root {
+  --gold: #FFD700;
+}
+.text-warning, .text-gold {
+  color: var(--gold) !important;
 }
