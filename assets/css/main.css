@@ -425,17 +425,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .sitename {
+  font-family: "Poppins", sans-serif; /* zelfde font als header */
   font-size: 24px;
-  font-weight: 900; /* hoogste beschikbare dikte */
+  font-weight: 900; /* echte bold, ondersteund door Poppins */
   color: #fff;
   letter-spacing: 0.4px;
-  -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.4); /* subtiel omlijnt wit */
-  text-shadow: 0 0 5px rgba(255, 215, 0, 0.25);
+  text-transform: none;
+  text-shadow:
+    0 0 5px rgba(255, 215, 0, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.5); /* subtiel diepte-effect */
 }
 
 .footer .logo-c,
 .footer .logo-dot {
-  font-weight: 1000 !important;
+  font-weight: 900 !important; /* gelijk aan header */
   color: #FFD700;
 }
 
