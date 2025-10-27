@@ -514,7 +514,7 @@ body.index-page #hero::after {
   }
 }
 /* =====================
-   ABOUT HERO – met overlay en correcte schaal op mobiel
+   ABOUT HERO – overlay + flexibele foto (responsive zonder inzoomen)
 ===================== */
 .about-hero {
   position: relative;
@@ -527,7 +527,7 @@ body.index-page #hero::after {
   color: #fff;
 }
 
-/* Achtergrondfoto */
+/* Achtergrond + overlay */
 .about-hero .hero-bg {
   position: absolute;
   inset: 0;
@@ -536,32 +536,33 @@ body.index-page #hero::after {
 }
 
 .about-hero .hero-bg::after {
-  /* donkere overlay */
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.82); /* overlay zoals je wilde */
+  background: rgba(0, 0, 0, 0.82); /* overlay */
   z-index: 2;
 }
 
+/* ✅ Foto: vult het scherm netjes, blijft zichtbaar, niet ingezoomd */
 .about-hero .hero-bg .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* toont hele foto */
-  object-position: center;
-  filter: brightness(1) contrast(1.1);
-  transition: transform 0.4s ease-in-out;
-  position: relative;
+  object-fit: cover; /* vult de hero zonder zwarte randen */
+  object-position: center top;
+  transform: scale(1);
+  filter: brightness(1) contrast(1.08);
+  transition: object-position 0.3s ease-in-out, transform 0.3s ease-in-out;
   z-index: 1;
+  position: relative;
 }
 
-/* Tekstlaag */
+/* Tekst */
 .about-hero .content {
   position: relative;
-  z-index: 3; /* boven overlay */
+  z-index: 3;
   max-width: 900px;
   padding: calc(110px + 2rem) 24px 3rem;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65);
 }
 
 .about-hero .content h2 {
@@ -583,17 +584,16 @@ body.index-page #hero::after {
   margin-top: 1rem;
 }
 
-/* 📱 Mobiel */
+/* 📱 Mobiel: automatisch iets uitgezoomd zodat alles zichtbaar blijft */
 @media (max-width: 768px) {
   .about-hero {
     min-height: 100vh;
   }
 
-  /* toon de hele foto zonder zoom */
   .about-hero .hero-bg .hero-image {
-    object-fit: contain;
-    object-position: center;
-    transform: scale(1); /* geen zoom */
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1.05); /* subtiel uitgezoomd voor balans */
   }
 
   .about-hero .content h1 {
