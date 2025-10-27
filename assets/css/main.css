@@ -484,12 +484,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .footer {
     background-position: center center;
-    background-size: contain; /* uitgezoomd binnen kader */
+    background-size: cover; /* vult hele footer */
     background-repeat: no-repeat;
     padding: 120px 0 70px;
   }
 
   .footer::before {
-    background: rgba(0, 0, 0, 0.7); /* donkerder overlay */
+    background: rgba(0, 0, 0, 0.75); /* donkerder overlay */
   }
 }
