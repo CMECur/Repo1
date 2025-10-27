@@ -553,7 +553,6 @@ body:not(.index-page) .header {
   .about-hero{ min-height:100vh; }
   .about-hero::before{ background: rgba(0,0,0,.82); } /* zoals eerder */
 }
-}
 /* ======= About: Foto donkere overlay ======= */
 .about-page #about img {
   position: relative;
