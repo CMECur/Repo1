@@ -74,4 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof AOS !== "undefined") {
     AOS.init({ once: true });
   }
+    // Fix: zet body transparantie juist voor index
+  if (document.body.classList.contains("index-page")) {
+    document.body.style.backgroundColor = "#000";
+  }  
 });
