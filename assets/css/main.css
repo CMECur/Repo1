@@ -602,55 +602,50 @@ body.index-page #hero::after {
     font-size: 1.9rem;
   }
 }
-/* ======= 'Wie wij zijn'-foto – luxe, gebalanceerde versie ======= */
-.about-image-overlay {
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 520px; /* natuurlijke, luxueuze breedte */
-  margin: 0 auto;
-  border-radius: 12px;
+/* ======= Wie wij zijn - Foto en tekst ======= */
+.about-section .row {
+  align-items: center;
 }
 
-.about-image-overlay img {
+.about-section .image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about-section .image-wrapper img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   display: block;
   object-fit: cover;
-  position: relative;
-  z-index: 0;
 }
 
-/* Donkere overlay */
-.about-image-overlay::after {
+/* overlay zonder layout te breken */
+.about-section .image-wrapper::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.68);
-  border-radius: 12px;
   z-index: 1;
-  pointer-events: none;
 }
 
-/* Desktop: naast elkaar, lucht ertussen */
+/* Desktop layout */
 @media (min-width: 992px) {
-  #about .row {
+  .about-section .row {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
-  #about .col-lg-6:first-child {
-    display: flex;
-    justify-content: flex-end; /* foto rechts uitgelijnd in zijn kolom */
+  .about-section .col-lg-6:first-child {
+    flex: 0 0 auto;
+    margin-right: 60px; /* lucht tussen foto en tekst */
   }
 
-  #about .col-lg-6:last-child {
-    padding-left: 60px; /* lucht tussen foto en tekst */
-  }
-
-  .about-image-overlay {
-    max-width: 520px;
+  .about-section .col-lg-6:last-child {
+    flex: 1;
   }
 }
 /* ======= Consistente goudkleur ======= */
