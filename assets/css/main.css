@@ -332,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 14px;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 800px;
+  max-width: 700px; /* iets compacter */
   margin: 0 auto;
   transition: all 0.4s ease;
 }
@@ -344,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #project-preview .project-img img {
   width: 100%;
-  height: 400px;
+  height: 340px;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -370,7 +370,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
-/* Knop – zelfde als hero maar zwart tekst */
+/* Knop – zelfde stijl als Hero, maar met zwarte tekst */
 #project-preview .btn-get-started {
   display: inline-block;
   margin-top: 25px;
@@ -378,9 +378,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   font-weight: 600;
   color: #000;
-  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 215, 0, 0.6);
   border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
 }
 
