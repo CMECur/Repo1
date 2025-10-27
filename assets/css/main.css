@@ -233,14 +233,30 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Hero – mobiel proporties */
 @media (max-width: 768px) {
-  #hero img {
-    object-fit: contain;
-    height: 100%;
-  }
   #hero {
-    height: auto;
+    height: 100vh; /* vult weer het hele scherm */
+  }
+
+  #hero img {
+    object-fit: cover; /* foto vult het vak volledig */
+    height: 100vh;
+  }
+
+  #hero .info {
+    padding: 0 20px; /* tekst iets ademruimte */
+  }
+
+  #hero .info h2 {
+    font-size: 1.3rem;
+  }
+
+  #hero .info span {
+    font-size: 1.8rem;
+  }
+
+  #hero .info p {
+    font-size: 0.95rem;
   }
 }
 
