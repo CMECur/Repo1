@@ -534,3 +534,22 @@ body:not(.index-page) .header {
   color: #FFD700;
   font-weight: 600;
 }
+/* ======= Hero fix voor mobiel ======= */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 120px; /* schuift tekst omlaag zodat header niet overlapt */
+  }
+
+  .about-page #hero {
+    height: auto;
+    padding: 120px 20px 100px;
+  }
+
+  .about-page #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-page #hero p {
+    font-size: 0.95rem;
+  }
+}
