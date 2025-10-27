@@ -539,7 +539,7 @@ body.index-page #hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.82); /* overlay */
+  background: rgba(0, 0, 0, 0.79); /* overlay */
   z-index: 2;
 }
 
