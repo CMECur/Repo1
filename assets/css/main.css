@@ -263,7 +263,18 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
   }
 }
+@media (max-width: 768px) {
+  #hero .info h2 {
+    display: block; /* Zet tekst weer onder elkaar */
+    text-align: center;
+  }
 
+  #hero .info h2 span {
+    display: block; /* "Camille’s Multipurpose Employment" onder "Welkom bij" */
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
 /* =====================
    SECTIES
 ===================== */
