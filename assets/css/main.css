@@ -515,7 +515,7 @@ body:not(.index-page) .header {
   }
 }
 /* =====================
-   ABOUT HERO – met echte foto en heldere tekst
+   ABOUT HERO – helder beeld zonder overlay
 ===================== */
 .about-hero {
   position: relative;
@@ -525,6 +525,7 @@ body:not(.index-page) .header {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: #000; /* fallback */
 }
 
 /* Achtergrondfoto */
@@ -540,7 +541,7 @@ body:not(.index-page) .header {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.9) contrast(1.1); /* iets donkerder, maar zonder overlay */
+  filter: brightness(1) contrast(1.05); /* helder en scherp, geen donkere filter */
   transition: filter 0.3s ease-in-out;
 }
 
@@ -551,6 +552,7 @@ body:not(.index-page) .header {
   color: #fff;
   max-width: 900px;
   padding: calc(110px + 2rem) 24px 3rem;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6); /* zorgt dat witte tekst leesbaar blijft zonder overlay */
 }
 
 .about-hero .content h2 {
@@ -561,32 +563,15 @@ body:not(.index-page) .header {
 
 .about-hero .content h1 {
   font-weight: 800;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   line-height: 1.2;
-  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.8); /* beter contrast */
 }
 
 .about-hero .content p {
   color: #f5f5f5;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-top: 1rem;
-}
-
-/* 💻 Desktop */
-@media (min-width: 992px) {
-  .about-hero .content {
-    padding-top: 150px;
-  }
-
-  .about-hero .content h1 {
-    font-size: 2.8rem;
-  }
-
-  .about-hero .hero-bg .hero-image {
-    filter: brightness(0.8) contrast(1.1); /* iets dieper op desktop */
-  }
 }
 
 /* 📱 Mobiel */
@@ -596,11 +581,11 @@ body:not(.index-page) .header {
   }
 
   .about-hero .content h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 
   .about-hero .hero-bg .hero-image {
-    filter: brightness(0.85) contrast(1.1);
+    filter: brightness(1) contrast(1.05);
   }
 }
 /* ======= About: Foto donkere overlay ======= */
