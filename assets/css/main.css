@@ -621,6 +621,32 @@ body.index-page #hero::after {
   position: relative;
   z-index: 0;
 }
+
+/* ======= About – foto en tekst naast elkaar fix ======= */
+@media (min-width: 992px) {
+  #about .row {
+    display: flex;
+    align-items: center;
+  }
+
+  #about .col-lg-6:first-child,
+  #about .col-lg-6:last-child {
+    flex: 1;
+  }
+
+  .about-image-overlay {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .about-image-overlay img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
