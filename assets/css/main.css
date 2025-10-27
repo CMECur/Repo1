@@ -648,6 +648,21 @@ body.index-page #hero::after {
     flex: 1;
   }
 }
+/* ======= Contact Boxes - Glasstijl ======= */
+.contact-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(15px) saturate(160%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%);
+  transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+  border-color: #FFD700;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
