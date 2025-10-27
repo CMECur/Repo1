@@ -612,7 +612,7 @@ body.index-page #hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.68); /* zwarte overlay met 68% dekking */
+  background: rgba(0, 0, 0, 0.65); /* zwarte overlay met 68% dekking */
   border-radius: 12px; /* gelijk aan je rounded-4 */
   z-index: 1;
 }
