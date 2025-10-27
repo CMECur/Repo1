@@ -319,36 +319,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =====================
-   PROJECT PREVIEW – Luxe Card
+   PROJECT PREVIEW – Luxe Card (wit thema)
 ===================== */
 #project-preview {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
+  background: #fff;
   padding: 60px 0;
 }
 
 #project-preview .project-card {
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  background: #fff;
+  border: 1px solid rgba(255, 215, 0, 0.5);
   border-radius: 16px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: all 0.4s ease;
 }
 
 #project-preview .project-card:hover {
   border-color: #FFD700;
-  box-shadow: 0 0 35px rgba(255, 215, 0, 0.4);
-}
-
-#project-preview .project-img {
-  overflow: hidden;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
 }
 
 #project-preview .project-img img {
   width: 100%;
-  transition: transform 0.6s ease;
+  height: auto;
+  transition: transform 0.5s ease;
 }
 
 #project-preview .project-card:hover .project-img img {
@@ -357,20 +352,30 @@ h1, h2, h3, h4, h5, h6 {
 
 #project-preview .project-content {
   padding: 25px 30px;
-  color: #fff;
+  color: #111; /* zwart */
 }
 
 #project-preview .project-content h3 {
-  color: #FFD700;
+  color: #111;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
 #project-preview .project-content p {
-  color: #ddd;
+  color: #444; /* donkergrijs voor leesbaarheid */
 }
 
 #project-preview .btn-get-started {
-  margin-top: 20px;
+  color: #111;
+  border: 1px solid #FFD700;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+#project-preview .btn-get-started:hover {
+  background: #FFD700;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 /* =====================
    FOOTER
