@@ -129,11 +129,15 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename"><span class="logo-c">C</span>ME<span class="logo-dot">.</span> Curaçao</span>
           </a>
-          <p class="mt-3">“Energy in Adversity” – wij bouwen met energie, precisie en vakmanschap. CME Curaçao is gespecialiseerd in ruwbouw, renovatie en afwerking, en levert kwaliteit in elk project.</p>
+          <div class="footer-contact pt-3">
+            <p>Willemstad, Curaçao</p>
+            <p class="mt-3"><strong>Telefoon:</strong> <span>+59995114226</span></p>
+            <p><strong>E-mail:</strong> <span>info@cm-employment.com</span></p>
+          </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Links</h4>
+          <h4>Nuttige links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">Over ons</a></li>
@@ -143,28 +147,35 @@
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-3 footer-contact">
-          <h4>Contact</h4>
-          <p>Willemstad, Curaçao</p>
-          <p><strong>Telefoon:</strong> +5999 511 4226</p>
-          <p><strong>Email:</strong> info@cm-employment.com</p>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Onze diensten</h4>
+          <ul>
+            <li><a href="#">Ruwbouw &amp; Constructie</a></li>
+            <li><a href="#">Renovatie &amp; Afwerking</a></li>
+            <li><a href="#">Projectmanagement</a></li>
+            <li><a href="#">Toezicht &amp; Uitvoering</a></li>
+          </ul>
         </div>
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© 2025 <strong class="sitename">CME Curaçao</strong>. Alle rechten voorbehouden.</p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Camille’s Multipurpose Employment</strong> <span>Alle rechten voorbehouden.</span></p>
     </div>
   </footer>
 
   <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script>
     AOS.init({ once: true });
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+    const navMenu = document.querySelector("#navmenu ul");
+    navToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+      this.classList.toggle("bi-list");
+      this.classList.toggle("bi-x");
+    });
   </script>
-
 </body>
 </html>
