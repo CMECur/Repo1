@@ -174,5 +174,17 @@
   <script>
     AOS.init({ once: true });
   </script>
+  <script>
+  // Mobile nav toggle
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('.navmenu ul');
+
+  if (mobileNavToggle && navMenu) {
+    mobileNavToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileNavToggle.classList.toggle('bi-x'); // verandert icoon van ☰ naar ✕
+    });
+  }
+</script>
 </body>
 </html>
