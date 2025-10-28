@@ -276,49 +276,54 @@ body.index-page #hero::after {
 }
 
 
-/* ======= Hero tekst – mobiel vloeiender, breder en met fade-in (premium animatie) ======= */
+/* ======= Hero tekst – mobiel vloeiender, breder en met sequentiële fade-in ======= */
 @media (max-width: 768px) {
 
-  /* Fade-in animaties */
+  /* één keyframe voor alles */
   @keyframes heroFadeUp {
     0% { opacity: 0; transform: translateY(18px); }
     100% { opacity: 1; transform: translateY(0); }
   }
 
+  /* 1) Gouden "Welkom bij" komt als eerste */
   body.index-page #hero .info h2 {
     color: var(--gold);
     font-size: 1.3rem;
-    opacity: 0;
-    transform: translateY(18px);
-    animation: heroFadeUp 1s ease forwards 0.2s; /* komt eerst */
     text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    opacity: 0; transform: translateY(18px);
+    animation: heroFadeUp 0.9s ease forwards 0.2s;
   }
 
+  /* 2) Bedrijfsnaam komt erna */
   body.index-page #hero .info .company-name {
     font-size: 1.9rem;
-    opacity: 0;
-    transform: translateY(18px);
-    animation: heroFadeUp 1s ease forwards 0.5s; /* komt iets later */
+    opacity: 0; transform: translateY(18px);
+    animation: heroFadeUp 0.9s ease forwards 0.45s;
   }
 
+  /* 3) Beschrijving als laatste – breder zodat het 3–4 regels wordt */
   body.index-page #hero .info p {
     line-height: 1.8;
     font-size: 1rem;
     letter-spacing: 0.2px;
-    color: rgba(255, 255, 255, 0.92);
+    color: rgba(255,255,255,0.92);
     text-align: center;
     margin: 14px auto 0;
-    max-width: 420px; /* ✅ breder voor 3–4 regels */
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-    
-    opacity: 0;
-    transform: translateY(14px);
-    animation: heroFadeUp 1.4s ease forwards 0.8s; /* tekst als laatste */
+    max-width: 420px;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+
+    opacity: 0; transform: translateY(14px);
+    animation: heroFadeUp 1.1s ease forwards 0.75s;
   }
 
-  body.index-page #hero .info {
-    padding: 0 10px;
+  /* 4) Knop sluit de sequence af */
+  body.index-page #hero .btn-get-started {
+    opacity: 0; transform: translateY(12px);
+    animation: heroFadeUp 0.9s ease forwards 1.0s;
   }
+
+  /* Kleine padding voor ademruimte */
+  body.index-page #hero .info { padding: 0 10px; }
 }
 /* =====================
    SECTIES
