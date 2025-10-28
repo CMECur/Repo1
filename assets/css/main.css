@@ -377,6 +377,44 @@ body.index-page #hero::after {
   font-size: 15px;
   line-height: 1.6;
 }
+/* ======= Diensten Hero – titel centreren & groter ======= */
+.services-page .about-hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh; /* hero vult bijna heel scherm */
+  padding-top: 0;
+}
+
+.services-page .about-hero .content h2 {
+  font-size: 2.2rem;      /* 2 stapjes groter dan subkoppen */
+  font-weight: 800;       /* dikker */
+  color: #fff;            /* wit, luxe */
+  letter-spacing: 0.5px;
+  margin-bottom: 0.6rem;
+}
+
+/* Desktop: perfect centreren */
+@media (min-width: 992px) {
+  .services-page .about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .services-page .about-hero .content {
+    min-height: auto;
+    padding-top: 0;
+  }
+}
+
+/* Subtitels zoals “Bouw & Constructie” behouden huidige maat */
+.services-page h4 {
+  font-size: 1.4rem; /* als voorbeeld, lager dan Diensten */
+  font-weight: 600;
+}
 /* ======= Dienstenpagina – tekstkleur fix ======= */
 .services-page #services h2,
 .services-page #services h4,
