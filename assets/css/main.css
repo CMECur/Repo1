@@ -417,6 +417,18 @@ body.index-page #hero::after {
   font-size: 1.4rem; /* als voorbeeld, lager dan Diensten */
   font-weight: 600;
 }
+
+/* ======= Diensten Hero – Mobiel goud & groter ======= */
+@media (max-width: 768px) {
+  .services-page .about-hero .content h2 {
+    font-size: 2.2rem;          /* iets groter dan standaard mobiel */
+    font-weight: 800;           /* stevig dik */
+    color: var(--gold);         /* goudgeel consistent met desktop */
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3); /* subtiele glans */
+  }
+}
+
 /* ======= Dienstenpagina – tekstkleur fix ======= */
 .services-page #services h2,
 .services-page #services h4,
