@@ -274,6 +274,27 @@ body.index-page #hero::after {
     white-space: nowrap;
   }
 }
+
+
+/* ======= Hero tekst – mobiel vloeiender en natuurlijker ======= */
+@media (max-width: 768px) {
+  body.index-page #hero .info p {
+    line-height: 1.9;               /* meer ademruimte tussen zinnen */
+    font-size: 1rem;                /* iets groter voor leesbaarheid */
+    letter-spacing: 0.2px;          /* subtiele lucht */
+    color: rgba(255, 255, 255, 0.92); /* iets zachter wit, luxer */
+    text-align: center;             /* netjes gecentreerd */
+    margin: 12px auto 0;
+    max-width: 90%;                 /* voorkomt te brede tekst */
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5); /* subtiele diepte */
+  }
+
+  /* Laat de tekst visueel wat meer ademen onder de titel */
+  body.index-page #hero .info {
+    padding: 0 15px;
+  }
+}
+
 /* =====================
    SECTIES
 ===================== */
