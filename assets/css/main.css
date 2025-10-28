@@ -682,6 +682,30 @@ body.index-page #hero::after {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-4px);
 }
+
+/* ======= Project1 – uniforme thumbnails ======= */
+.project-gallery .thumb {
+  border: 2px solid #FFD700;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: #000; /* voorkomt witte flits bij laden */
+}
+
+.project-gallery .thumb img {
+  display: block;
+  width: 100%;
+  height: 220px;           /* gelijke hoogte op mobiel/tablet */
+  object-fit: cover;       /* netjes gecropt */
+}
+
+/* iets groter op desktop */
+@media (min-width: 992px) {
+  .project-gallery .thumb img {
+    height: 260px;         /* maak groter als je wilt (bv. 280px) */
+  }
+}
+
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
