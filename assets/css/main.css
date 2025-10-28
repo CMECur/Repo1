@@ -276,7 +276,7 @@ body.index-page #hero::after {
 }
 
 
-//* ======= Hero tekst – mobiel vloeiender, breder en met sequentiële fade-in ======= */
+/* ======= Hero tekst – mobiel vloeiender, breder en met sequentiële fade-in ======= */
 @media (max-width: 768px) {
 
   /* één keyframe voor alles */
@@ -311,7 +311,7 @@ body.index-page #hero::after {
     color: rgba(255, 255, 255, 0.92);
     text-align: center;
     margin: 14px auto 22px;  /* extra ruimte boven knop */
-    max-width: 500px;        /* ✅ breder → minder regels */
+    max-width: 600px;        /* ✅ breder → minder regels */
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 
     opacity: 0;
