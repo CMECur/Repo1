@@ -389,11 +389,13 @@ body.index-page #hero::after {
 }
 
 .services-page .about-hero .content h2 {
-  font-size: 2.2rem;      /* 2 stapjes groter dan subkoppen */
-  font-weight: 800;       /* dikker */
-  color: #fff;            /* wit, luxe */
-  letter-spacing: 0.5px;
+  font-size: 2.8rem;       /* iets groter dan vorige (ongeveer +2 maten) */
+  font-weight: 900;        /* extra dik voor premium look */
+  color: var(--gold);      /* goudgeel, consistent met huisstijl */
+  letter-spacing: 0.6px;
   margin-bottom: 0.6rem;
+  text-transform: none;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.35); /* subtiele glans */
 }
 
 /* Desktop: perfect centreren */
