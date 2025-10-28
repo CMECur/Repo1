@@ -276,22 +276,22 @@ body.index-page #hero::after {
 }
 
 
-/* ======= Hero tekst – mobiel vloeiender en natuurlijker ======= */
+/* ======= Hero tekst – mobiel vloeiender en breder (3–4 regels) ======= */
 @media (max-width: 768px) {
   body.index-page #hero .info p {
-    line-height: 1.9;               /* meer ademruimte tussen zinnen */
-    font-size: 1rem;                /* iets groter voor leesbaarheid */
-    letter-spacing: 0.2px;          /* subtiele lucht */
-    color: rgba(255, 255, 255, 0.92); /* iets zachter wit, luxer */
-    text-align: center;             /* netjes gecentreerd */
-    margin: 12px auto 0;
-    max-width: 90%;                 /* voorkomt te brede tekst */
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5); /* subtiele diepte */
+    line-height: 1.8;               
+    font-size: 1rem;                
+    letter-spacing: 0.2px;          
+    color: rgba(255, 255, 255, 0.92);
+    text-align: center;             
+    margin: 14px auto 0;
+    max-width: 420px;               /* ✅ breder, dus minder regels */
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
   }
 
-  /* Laat de tekst visueel wat meer ademen onder de titel */
+  /* Hero padding iets hoger voor balans met de titel */
   body.index-page #hero .info {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 
