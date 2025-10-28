@@ -276,22 +276,38 @@ body.index-page #hero::after {
 }
 
 
-/* ======= Hero tekst – mobiel vloeiender en breder (3–4 regels) ======= */
+/* ======= Hero tekst – mobiel vloeiender, breder en met fade-in ======= */
 @media (max-width: 768px) {
   body.index-page #hero .info p {
-    line-height: 1.8;               
-    font-size: 1rem;                
-    letter-spacing: 0.2px;          
+    line-height: 1.8;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
     color: rgba(255, 255, 255, 0.92);
-    text-align: center;             
+    text-align: center;
     margin: 14px auto 0;
-    max-width: 420px;               /* ✅ breder, dus minder regels */
+    max-width: 420px; /* ✅ breder voor 3–4 regels */
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    
+    opacity: 0;
+    transform: translateY(12px);
+    animation: heroTextFade 1.4s ease forwards 0.4s; /* fade-in + lift */
   }
 
-  /* Hero padding iets hoger voor balans met de titel */
+  /* Hero padding iets hoger voor balans */
   body.index-page #hero .info {
     padding: 0 10px;
+  }
+
+  /* Fade-in animatie zelf */
+  @keyframes heroTextFade {
+    0% {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
