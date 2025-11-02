@@ -888,6 +888,33 @@ body.index-page #hero::after {
   border-color: #FFD700;
   box-shadow: 0 0 15px rgba(255,215,0,0.4);
 }
+
+/* ======= Blog Artikel – Afbeelding overlay (50% van hero) ======= */
+.blog-page .article .img-fluid {
+  position: relative;
+  display: block;
+}
+
+.blog-page .article .img-fluid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.41);
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.blog-page .article .img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.blog-page .article .img-fluid {
+  position: relative;
+}
+.blog-page .article .img-fluid + img {
+  z-index: 1;
+}
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
