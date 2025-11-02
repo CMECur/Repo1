@@ -825,6 +825,69 @@ body.index-page #hero::after {
     margin-bottom: 20px;
   }
 }
+/* ======= Luxe Project & Blog Cards ======= */
+#preview-section .project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px) saturate(140%);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+#preview-section .project-card:hover {
+  transform: translateY(-5px);
+  border-color: #FFD700;
+  box-shadow: 0 0 25px rgba(255,215,0,0.3);
+}
+
+#preview-section .project-img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+#preview-section .project-card:hover .project-img img {
+  transform: scale(1.05);
+}
+
+#preview-section .project-content {
+  padding: 24px 28px;
+  color: #111;
+  background: rgba(255,255,255,0.9);
+}
+
+#preview-section .project-content h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+#preview-section .project-content p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#preview-section .btn-get-started {
+  display: inline-block;
+  color: #000;
+  font-weight: 600;
+  border: 1px solid rgba(255,215,0,0.6);
+  border-radius: 8px;
+  padding: 10px 28px;
+  background: rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+}
+
+#preview-section .btn-get-started:hover {
+  background: rgba(255,215,0,0.25);
+  border-color: #FFD700;
+  box-shadow: 0 0 15px rgba(255,215,0,0.4);
+}
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
