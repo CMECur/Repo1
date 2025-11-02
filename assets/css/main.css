@@ -889,6 +889,60 @@ body.index-page #hero::after {
   box-shadow: 0 0 15px rgba(255,215,0,0.4);
 }
 
+/* ======= Luxe Blog Card – glas, goud, hover ======= */
+.luxe-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,215,0,0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.luxe-card:hover {
+  transform: translateY(-5px);
+  border-color: #FFD700;
+  box-shadow: 0 0 25px rgba(255,215,0,0.3);
+}
+
+.luxe-card .project-img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.luxe-card:hover .project-img img {
+  transform: scale(1.05);
+}
+
+.luxe-card .project-content {
+  background: rgba(255,255,255,0.9);
+  padding: 24px 30px;
+  color: #111;
+}
+
+/* Glazen gouden knop */
+.btn-glass-gold {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  border: 1px solid rgba(255,215,0,0.6);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-glass-gold:hover {
+  background: rgba(255,215,0,0.25);
+  border-color: #FFD700;
+  box-shadow: 0 0 18px rgba(255,215,0,0.4);
+}
+
+
 
 /* ======= Consistente goudkleur ======= */
 :root {
