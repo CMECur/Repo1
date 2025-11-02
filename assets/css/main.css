@@ -815,7 +815,16 @@ body.index-page #hero::after {
     height: 260px;         /* maak groter als je wilt (bv. 280px) */
   }
 }
+/* ======= Blog preview naast project preview ======= */
+#preview-section .project-card {
+  height: 100%;
+}
 
+@media (max-width: 991px) {
+  #preview-section .project-card {
+    margin-bottom: 20px;
+  }
+}
 /* ======= Consistente goudkleur ======= */
 :root {
   --gold: #FFD700;
