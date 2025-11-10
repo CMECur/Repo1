@@ -942,7 +942,29 @@ body.index-page #hero::after {
   box-shadow: 0 0 18px rgba(255,215,0,0.4);
 }
 
+/* ======= Blogfoto's – uniforme hoogte + halve overlay ======= */
+.blog-photo-wrap {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
+.blog-photo-wrap img {
+  display: block;
+  width: 100%;
+  height: 320px;      /* zelfde hoogte voor alle blogfoto's */
+  object-fit: cover;  /* mooi gecropt, geen vervorming */
+  object-position: center;
+}
+
+/* overlay ~ helft van de hero (0.41 ipv 0.82) */
+.blog-photo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.41);
+}
 
 /* ======= Consistente goudkleur ======= */
 :root {
